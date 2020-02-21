@@ -32,17 +32,17 @@ func stringsToFloats(xs []string) []float64 {
 func splitStringsToFloats(xs []string) [][]float64 {
 	xxf := [][]float64{}
 	for _, s0 := range xs {
-		ss := strings.Split(s0, ",")
-		for i, s := range ss {
-			val, err := strconv.ParseFloat(s, 64)
-			check(err)
-			if x := xxf[i]; x == nil {
-				xxf[i] = []float64{val}
-			} else {
+		if len(s0) > 0 {
+			ss := strings.Split(s0, ",")
+			for i, s := range ss {
+				val, err := strconv.ParseFloat(s, 64)
+				check(err)
+				if len(xxf) < i+1 {
+					xxf = append(xxf, []float64{})
+				}
 				xxf[i] = append(xxf[i], val)
 			}
 		}
-
 	}
 	return xxf
 }
@@ -56,8 +56,9 @@ func ReadCSV(src []byte) SourceData {
 	if _, err := strconv.ParseFloat(lines[0], 64); err != nil {
 		header := lines[0]
 		lines = lines[1:]
-		if headers := strings.Split(header, ","); headers[0] == "milliseconds" {
-			//Have timing date
+		if headers := strings.Split(header, ","); headers[0] == "milliseconds" && len(headers[1]) > 1 {
+			//Have timing data
+			data.label = headers[1]
 			splitStrings := splitStringsToFloats(lines)
 			data.timing = splitStrings[0]
 			data.values = splitStrings[1]
