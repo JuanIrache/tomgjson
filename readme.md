@@ -20,3 +20,4 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 ## Might-Do
 
 - Enable creating static fields? Non interpolable fields? Text fields?
+- Support files with multiple streams (sharing time)
