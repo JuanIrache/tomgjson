@@ -22,9 +22,11 @@ type SourceData struct {
 func stringsToFloats(xs []string) []float64 {
 	xf := []float64{}
 	for _, s := range xs {
-		val, err := strconv.ParseFloat(s, 64)
-		check(err)
-		xf = append(xf, val)
+		if len(s) > 0 {
+			val, err := strconv.ParseFloat(s, 64)
+			check(err)
+			xf = append(xf, val)
+		}
 	}
 	return xf
 }
