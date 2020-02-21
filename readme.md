@@ -7,7 +7,7 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 - Read from CSV
   - If headers, use for labelling
   - If specified time (milliseconds?), use it
-  - If specified date, use it
+  - If specified date, use it (maybe epoch, same column as milliseconds?)
   - Otherwise, if specified frame rate, use it
 - General
   - Pad number strings
@@ -16,3 +16,7 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 - Create documentation
 - Create tutorial
 - Use in production tool
+
+## Might-Do
+
+- Enable creating static fields? Non interpolable fields? Text fields?
