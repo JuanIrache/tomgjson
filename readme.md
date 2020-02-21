@@ -15,7 +15,7 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
   - Recreate mgJSON structure
 - Convert to mgJSON
 - Support files with multiple streams (sharing time)
-- Create documentation
+- Create documentation (tests/examples)
 - Create tutorial
 - Use in production tool
 
