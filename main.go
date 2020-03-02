@@ -15,10 +15,10 @@ func check(e error) {
 }
 
 func main() {
-	src, err := ioutil.ReadFile("./samples/timed-data.csv")
+	src, err := ioutil.ReadFile("./samples/only-data.csv")
 	check(err)
 
-	converted := readcsv.ReadCSV(src)
+	converted := readcsv.ReadCSV(src, 25.0)
 
 	fmt.Println(converted)
 

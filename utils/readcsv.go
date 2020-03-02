@@ -42,7 +42,7 @@ func splitStringsToFloats(xs []string) [][]float64 {
 }
 
 // ReadCSV formats a compatible CSV as a struct ready for mgJSON
-func ReadCSV(src []byte) SourceData {
+func ReadCSV(src []byte, fr float64) SourceData {
 	var data SourceData
 	//To-Do check if can split bytes before converting to string
 	lines := strings.Split(string(src), "\r\n")
@@ -65,10 +65,19 @@ func ReadCSV(src []byte) SourceData {
 		}
 	} else {
 		data.streams = []Stream{{
-			//To-Do use file name?
 			label:  "Data",
 			values: splitStringsToFloats(lines)[0],
 		}}
+	}
+
+	if len(data.streams[0].values) < 1 {
+		log.Panic("No valid data found")
+	}
+
+	if len(data.timing) < 1 {
+		for i := 0; i < len(data.streams[0].values); i++ {
+			data.timing = append(data.timing, float64(i)*fr)
+		}
 	}
 
 	//Fill timing if missing
