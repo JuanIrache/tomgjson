@@ -11,6 +11,7 @@ type SourceData struct {
 	streams []stream
 }
 
+// For now, only the fields we are using are specified
 type mgjson struct {
 	Version                string `json:"version"`
 	Creator                string `json:"creator"`
@@ -60,6 +61,8 @@ type mgjson struct {
 }
 
 func FormatMgjson(sd SourceData, creator string) mgjson {
+
+	//Hardcode non configurable values (for now)
 	data := mgjson{
 		Version:                "MGJSON2.0.0",
 		Creator:                creator,

@@ -6,7 +6,7 @@ The first iteration will be very limited in terms of customization.
 
 ## Examples
 
-See some working examples of the file format [here](https://github.com/JuanIrache/mgjson)
+See some working examples of the file format and the spec [here](https://github.com/JuanIrache/mgjson)
 
 ## Sample projects
 
