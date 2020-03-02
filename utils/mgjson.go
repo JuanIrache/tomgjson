@@ -14,7 +14,7 @@ type SourceData struct {
 type mgjson struct {
 	Version                string `json:"version"`
 	Creator                string `json:"creator"`
-	DynamicSamplesPresentB string `json:"dynamicSamplesPresentB"`
+	DynamicSamplesPresentB bool   `json:"dynamicSamplesPresentB"`
 	DynamicDataInfo        struct {
 		UseTimecodeB bool `json:"useTimecodeB"`
 		UtcInfo      struct {
@@ -59,8 +59,16 @@ type mgjson struct {
 	} `json:"dataDynamicSamples"`
 }
 
-func FormatMgjson(sd SourceData) mgjson {
-	var data mgjson
+func FormatMgjson(sd SourceData, creator string) mgjson {
+	data := mgjson{
+		Version:                "MGJSON2.0.0",
+		Creator:                creator,
+		DynamicSamplesPresentB: true,
+	}
+
+	data.DynamicDataInfo.UseTimecodeB = false
+	data.DynamicDataInfo.UtcInfo.PrecisionLength = 3
+	data.DynamicDataInfo.UtcInfo.IsGMT = true
 
 	return data
 }
