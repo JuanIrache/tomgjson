@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 	"io/ioutil"
 	"log"
+	"os"
 
 	utils "github.com/juanirache/tomgjson/utils"
 )
@@ -19,7 +20,17 @@ func main() {
 	check(err)
 
 	converted := utils.ReadCSV(src, 25.0)
+	mgjson := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
 
-	fmt.Println(converted)
+	f, err := os.Create("./out.mgjson")
+	check(err)
+
+	defer f.Close()
+
+	doc, err := json.Marshal(mgjson)
+	check(err)
+
+	_, err = f.Write(doc)
+	check(err)
 
 }
