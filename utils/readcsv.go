@@ -79,7 +79,7 @@ func ReadCSV(src []byte) SourceData {
 		data.streams = []Stream{{
 			//To-Do use file name?
 			label:  "Data",
-			values: stringsToFloats(lines),
+			values: splitStringsToFloats(lines)[0],
 		}}
 	}
 
