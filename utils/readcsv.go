@@ -12,11 +12,15 @@ func check(e error) {
 	}
 }
 
+type Stream struct {
+	label  string
+	values []float64
+}
+
 // SourceData structures data relevant for mgJSON files
 type SourceData struct {
-	label  string
-	timing []float64
-	values []float64
+	timing  []float64
+	streams []Stream
 }
 
 func stringsToFloats(xs []string) []float64 {
@@ -49,7 +53,7 @@ func splitStringsToFloats(xs []string) [][]float64 {
 	return xxf
 }
 
-// ReadCSV formats a compatible CSV as a struct
+// ReadCSV formats a compatible CSV as a struct ready for mgJSON
 func ReadCSV(src []byte) SourceData {
 	var data SourceData
 	//To-Do check if can split bytes before converting to string
@@ -58,20 +62,25 @@ func ReadCSV(src []byte) SourceData {
 	if _, err := strconv.ParseFloat(lines[0], 64); err != nil {
 		header := lines[0]
 		lines = lines[1:]
-		if headers := strings.Split(header, ","); headers[0] == "milliseconds" && len(headers[1]) > 1 {
-			//Have timing data
-			data.label = headers[1]
-			splitStrings := splitStringsToFloats(lines)
+		splitStrings := splitStringsToFloats(lines)
+		headers := strings.Split(header, ",")
+		if headers[0] == "milliseconds" && len(headers[1]) > 1 {
 			data.timing = splitStrings[0]
-			data.values = splitStrings[1]
-		} else {
-			data.label = header
-			data.values = stringsToFloats(lines)
+			splitStrings = splitStrings[1:]
+			headers = headers[1:]
+		}
+		for i, vv := range splitStrings {
+			data.streams = append(data.streams, Stream{
+				label:  headers[i],
+				values: vv,
+			})
 		}
 	} else {
-		//To-Do use file name?
-		data.label = "Data"
-		data.values = stringsToFloats(lines)
+		data.streams = []Stream{{
+			//To-Do use file name?
+			label:  "Data",
+			values: stringsToFloats(lines),
+		}}
 	}
 
 	//Fill timing if missing
