@@ -5,10 +5,7 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 ## To-Do
 
 - Read from CSV
-  - Support files with multiple streams (sharing time)
-  - If specified time (milliseconds?), use it
-  - If specified date, use it (maybe epoch, same column as milliseconds?)
-  - Otherwise, if specified frame rate, use it, or use PAL standard
+  - If specified frame rate, use it, or use PAL standard
   - Test with other csv standards or enconding (\r\n?)
 - General
   - Pad number strings
