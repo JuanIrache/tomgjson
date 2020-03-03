@@ -22,7 +22,7 @@ func main() {
 	converted := utils.ReadCSV(src, 25.0)
 	mgjson := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
 
-	f, err := os.Create("./out.mgjson")
+	f, err := os.Create("./out.json")
 	check(err)
 
 	defer f.Close()
