@@ -87,7 +87,7 @@ type mgjson struct {
 }
 
 func sides(n float64) (string, string) {
-	sides := strings.Split(strconv.FormatFloat(n, 'f', -1, 64), ".")
+	sides := strings.Split(strconv.FormatFloat(math.Abs(n), 'f', -1, 64), ".")
 	if len(sides) == 1 {
 		sides = append(sides, "0")
 	}
@@ -155,17 +155,11 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 		})
 
 		streamSamples := []sample{}
-
 		for _, v := range stream.values {
-			integer, decimal := sides(v)
-			paddedInteger := fmt.Sprintf("%0"+fmt.Sprint(digitsInteger)+"v", integer)
-			paddedDecimal := fmt.Sprintf("%-0"+fmt.Sprint(digitsDecimal)+"v", decimal)
-			if paddedInteger[0] != "-"[0] {
-				paddedInteger = "+" + paddedInteger
-			}
+			paddedValue := fmt.Sprintf("%+0*.*f", digitsInteger+digitsDecimal+2, digitsDecimal, v)
 			streamSamples = append(streamSamples, sample{
 				Time:  "x",
-				Value: paddedInteger + "." + paddedDecimal,
+				Value: paddedValue,
 			})
 		}
 
