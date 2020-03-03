@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"strconv"
 	"strings"
 )
 
@@ -66,14 +67,14 @@ type singleDataOutline struct {
 	MatchName             string   `json:"matchName"`
 }
 
-type samples []struct {
+type sample struct {
 	Time  string `json:"time"`
 	Value string `json:"value"`
 }
 
 type dataDynamicSample struct {
-	SampleSetID string  `json:"sampleSetID"`
-	Samples     samples `json:"samples"`
+	SampleSetID string   `json:"sampleSetID"`
+	Samples     []sample `json:"samples"`
 }
 
 type mgjson struct {
@@ -85,11 +86,15 @@ type mgjson struct {
 	DataDynamicSamples     []dataDynamicSample `json:"dataDynamicSamples"`
 }
 
-func mMax(a, b int) int {
-	if a > b {
-		return a
+func sides(n float64) (string, string) {
+	sides := strings.Split(strconv.FormatFloat(n, 'f', -1, 64), ".")
+	if len(sides) == 1 {
+		sides = append(sides, "0")
 	}
-	return b
+	if len(sides) != 2 {
+		log.Panicf("Badly formatted float: %v %v", n, sides)
+	}
+	return sides[0], sides[1]
 }
 
 func FormatMgjson(sd SourceData, creator string) mgjson {
@@ -121,12 +126,7 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 		for _, v := range stream.values {
 			min = math.Min(min, v)
 			max = math.Max(min, v)
-			sides := strings.Split(fmt.Sprintf("%f", v), ".")
-			if len(sides) != 2 {
-				log.Panic("Number does not seem to be float")
-			}
-			integer := sides[0]
-			decimal := sides[1]
+			integer, decimal := sides(v)
 			digitsInteger = mMax(digitsInteger, len(integer))
 			digitsDecimal = mMax(digitsDecimal, len(decimal))
 		}
@@ -152,6 +152,23 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 			HasExpectedFrequencyB: false,
 			SampleCount:           len(stream.values),
 			MatchName:             sName,
+		})
+
+		streamSamples := []sample{}
+
+		for _, v := range stream.values {
+			integer, decimal := sides(v)
+			paddedInteger := fmt.Sprintf("%0"+fmt.Sprint(digitsInteger)+"v", integer)
+			paddedDecimal := fmt.Sprintf("%-0"+fmt.Sprint(digitsDecimal)+"v", decimal)
+			streamSamples = append(streamSamples, sample{
+				Time:  "x",
+				Value: paddedInteger + "." + paddedDecimal,
+			})
+		}
+
+		data.DataDynamicSamples = append(data.DataDynamicSamples, dataDynamicSample{
+			SampleSetID: sName,
+			Samples:     streamSamples,
 		})
 	}
 
