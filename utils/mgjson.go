@@ -140,8 +140,7 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 					Pattern: pattern{
 						DigitsInteger: digitsInteger,
 						DigitsDecimal: digitsDecimal,
-						//To-Do signed
-						IsSigned: false,
+						IsSigned:      true,
 					},
 					Range: mRange{
 						Occuring: minmax{min, max},
@@ -161,6 +160,9 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 			integer, decimal := sides(v)
 			paddedInteger := fmt.Sprintf("%0"+fmt.Sprint(digitsInteger)+"v", integer)
 			paddedDecimal := fmt.Sprintf("%-0"+fmt.Sprint(digitsDecimal)+"v", decimal)
+			if paddedInteger[0] != "-"[0] {
+				paddedInteger = "+" + paddedInteger
+			}
 			streamSamples = append(streamSamples, sample{
 				Time:  "x",
 				Value: paddedInteger + "." + paddedDecimal,
