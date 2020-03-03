@@ -6,12 +6,6 @@ import (
 	"strings"
 )
 
-func check(e error) {
-	if e != nil {
-		log.Panic(e)
-	}
-}
-
 func splitStringsToFloats(xs []string) [][]float64 {
 	xxf := [][]float64{}
 	for _, s0 := range xs {
