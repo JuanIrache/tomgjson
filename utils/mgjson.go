@@ -2,7 +2,9 @@ package utils
 
 import (
 	"fmt"
+	"log"
 	"math"
+	"strings"
 )
 
 type stream struct {
@@ -87,6 +89,13 @@ type mgjson struct {
 	DataDynamicSamples     dataDynamicSamples `json:"dataDynamicSamples"`
 }
 
+func mMax(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
 func FormatMgjson(sd SourceData, creator string) mgjson {
 
 	//Hardcode non configurable values (for now)
@@ -111,9 +120,19 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 		sName := fmt.Sprintf("%d_%v", i, stream.label)
 		min := math.Inf(1)
 		max := math.Inf(-1)
+		digitsInteger := 0
+		digitsDecimal := 0
 		for _, v := range stream.values {
 			min = math.Min(min, v)
 			max = math.Max(min, v)
+			sides := strings.Split(fmt.Sprintf("%f", v), ".")
+			if len(sides) != 2 {
+				log.Panic("Number does not seem to be float")
+			}
+			integer := sides[0]
+			decimal := sides[1]
+			digitsInteger = mMax(digitsInteger, len(integer))
+			digitsDecimal = mMax(digitsDecimal, len(decimal))
 		}
 		data.DataOutline = append(data.DataOutline, singleDataOutline{
 			ObjectType:  "dataDynamic",
@@ -123,9 +142,8 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 				Type: "numberString",
 				NumberStringProperties: numberStringProperties{
 					Pattern: pattern{
-						// To-Do calculate digits
-						DigitsInteger: 5,
-						DigitsDecimal: 0,
+						DigitsInteger: digitsInteger,
+						DigitsDecimal: digitsDecimal,
 						IsSigned:      false,
 					},
 					Range: mRange{
