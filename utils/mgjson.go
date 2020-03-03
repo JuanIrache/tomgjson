@@ -140,7 +140,8 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 					Pattern: pattern{
 						DigitsInteger: digitsInteger,
 						DigitsDecimal: digitsDecimal,
-						IsSigned:      false,
+						//To-Do signed
+						IsSigned: false,
 					},
 					Range: mRange{
 						Occuring: minmax{min, max},
