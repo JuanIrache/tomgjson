@@ -66,8 +66,6 @@ type singleDataOutline struct {
 	MatchName             string   `json:"matchName"`
 }
 
-type dataOutline []singleDataOutline
-
 type samples []struct {
 	Time  string `json:"time"`
 	Value string `json:"value"`
@@ -78,15 +76,13 @@ type dataDynamicSample struct {
 	Samples     samples `json:"samples"`
 }
 
-type dataDynamicSamples []dataDynamicSample
-
 type mgjson struct {
-	Version                string             `json:"version"`
-	Creator                string             `json:"creator"`
-	DynamicSamplesPresentB bool               `json:"dynamicSamplesPresentB"`
-	DynamicDataInfo        dynamicDataInfo    `json:"dynamicDataInfo"`
-	DataOutline            dataOutline        `json:"dataOutline"`
-	DataDynamicSamples     dataDynamicSamples `json:"dataDynamicSamples"`
+	Version                string              `json:"version"`
+	Creator                string              `json:"creator"`
+	DynamicSamplesPresentB bool                `json:"dynamicSamplesPresentB"`
+	DynamicDataInfo        dynamicDataInfo     `json:"dynamicDataInfo"`
+	DataOutline            []singleDataOutline `json:"dataOutline"`
+	DataDynamicSamples     []dataDynamicSample `json:"dataDynamicSamples"`
 }
 
 func mMax(a, b int) int {
@@ -110,8 +106,8 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 				IsGMT:           true,
 			},
 		},
-		DataOutline:        dataOutline{},
-		DataDynamicSamples: dataDynamicSamples{},
+		DataOutline:        []singleDataOutline{},
+		DataDynamicSamples: []dataDynamicSample{},
 	}
 
 	largestMgjsonNum := 2147483648.0
