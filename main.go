@@ -16,7 +16,7 @@ func check(e error) {
 }
 
 func main() {
-	src, err := ioutil.ReadFile("./samples/only-data.csv")
+	src, err := ioutil.ReadFile("./samples/multiple-data.csv")
 	check(err)
 
 	converted := utils.ReadCSV(src, 25.0)
