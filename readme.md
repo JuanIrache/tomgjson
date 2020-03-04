@@ -28,6 +28,7 @@ These apps can output mgJSON files:
 - Read from GPX
   - Read standard track
   - Interpret additional data (speeds, acceleration, course direction...)
+- Structure module properly
 - Create documentation (tests/examples)
 - Create tutorial
 - Use in production tool
