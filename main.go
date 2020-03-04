@@ -15,10 +15,10 @@ func check(e error) {
 }
 
 func main() {
-	src, err := ioutil.ReadFile("./samples/multiple-data.csv")
+	src, err := ioutil.ReadFile("./samples/gps-path.gpx")
 	check(err)
 
-	converted := utils.ReadCSV(src, 25.0)
+	converted := utils.ReadGPX(src)
 	doc := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
 
 	f, err := os.Create("./out.json")
