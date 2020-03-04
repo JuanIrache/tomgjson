@@ -4,10 +4,6 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 
 The first iteration will be very limited in terms of customization.
 
-## Examples
-
-See some working examples of the file format and the spec [here](https://github.com/JuanIrache/mgjson)
-
 ## Sample projects
 
 You can find sample projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com#ae). Look for the Lite templates.
