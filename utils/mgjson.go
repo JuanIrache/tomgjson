@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"math"
@@ -98,7 +99,8 @@ func sides(n float64) (string, string) {
 	return sides[0], sides[1]
 }
 
-func FormatMgjson(sd SourceData, creator string) mgjson {
+// FormatMgjson receives formatted source data and a creator name and returns formatted mgjson
+func FormatMgjson(sd SourceData, creator string) []byte {
 
 	//Hardcode non configurable values (for now)
 	data := mgjson{
@@ -175,5 +177,7 @@ func FormatMgjson(sd SourceData, creator string) mgjson {
 		})
 	}
 
-	return data
+	doc, err := json.Marshal(data)
+	check(err)
+	return doc
 }

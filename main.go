@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"log"
 	"os"
@@ -20,15 +19,12 @@ func main() {
 	check(err)
 
 	converted := utils.ReadCSV(src, 25.0)
-	mgjson := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
+	doc := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
 
 	f, err := os.Create("./out.json")
 	check(err)
 
 	defer f.Close()
-
-	doc, err := json.Marshal(mgjson)
-	check(err)
 
 	_, err = f.Write(doc)
 	check(err)
