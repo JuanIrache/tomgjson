@@ -121,7 +121,7 @@ func FormatMgjson(sd SourceData, creator string) []byte {
 	largestMgjsonNum := 2147483648.0
 
 	for i, stream := range sd.streams {
-		sName := fmt.Sprintf("%d_%v", i, stream.label)
+		sName := fmt.Sprintf("Stream%d", i)
 		min := math.Inf(1)
 		max := math.Inf(-1)
 		digitsInteger := 0
