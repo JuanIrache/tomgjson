@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	utils "github.com/juanirache/tomgjson/utils"
+	"github.com/juanirache/tomgjson/utils"
 )
 
 func check(e error) {
