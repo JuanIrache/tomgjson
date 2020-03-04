@@ -1,0 +1,2586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="https://github.com/juanirache/gopro-telemetry">
+    <trk>
+        <name>GX010203.MP4</name>
+        <desc>50 fps - GPS (Lat., Long., Alt., 2D speed, 3D speed) - [deg,deg,m,m/s,m/s]</desc>
+        <src>HERO8 Black</src>
+        <trkseg>
+            <trkpt lat="41.389262316666674" lon="2.1469447944444444">
+                <ele>50.266000000000005</ele>
+                <time>2020-02-13T11:45:45.564Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.09711111111111112; 3dSpeed: 0.09666666666666665</cmt>
+            </trkpt>
+            <trkpt lat="41.389259768421056" lon="2.1469465736842106">
+                <ele>50.210000000000015</ele>
+                <time>2020-02-13T11:45:46.758Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.6637368421052632; 3dSpeed: 0.5757894736842105</cmt>
+            </trkpt>
+            <trkpt lat="41.38924284444443" lon="2.146962955555556">
+                <ele>50.13199999999999</ele>
+                <time>2020-02-13T11:45:47.778Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.0547777777777783; 3dSpeed: 2.9299999999999997</cmt>
+            </trkpt>
+            <trkpt lat="41.389213683333324" lon="2.1469937555555556">
+                <ele>49.64888888888889</ele>
+                <time>2020-02-13T11:45:48.768Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.631055555555556; 3dSpeed: 4.580555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.38918407222223" lon="2.1470378388888887">
+                <ele>49.03461111111111</ele>
+                <time>2020-02-13T11:45:49.758Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.351722222222223; 3dSpeed: 5.335555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.389161683333334" lon="2.147095522222222">
+                <ele>48.416333333333334</ele>
+                <time>2020-02-13T11:45:50.696Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.702055555555556; 3dSpeed: 5.706666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.389150933333326" lon="2.1471645555555554">
+                <ele>47.841944444444444</ele>
+                <time>2020-02-13T11:45:51.705Z</time>
+                <fix>3</fix>
+                <hdop>234</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.053055555555555; 3dSpeed: 6.068333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.389155957894744" lon="2.147236852631579">
+                <ele>47.65557894736842</ele>
+                <time>2020-02-13T11:45:52.757Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.599368421052632; 3dSpeed: 5.65421052631579</cmt>
+            </trkpt>
+            <trkpt lat="41.38916987647059" lon="2.1472956823529414">
+                <ele>48.00864705882352</ele>
+                <time>2020-02-13T11:45:53.719Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.69364705882353; 3dSpeed: 4.765882352941177</cmt>
+            </trkpt>
+            <trkpt lat="41.38919105555556" lon="2.147335733333333">
+                <ele>48.26711111111111</ele>
+                <time>2020-02-13T11:45:54.705Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.7461666666666664; 3dSpeed: 3.791666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.38921198888888" lon="2.1473592111111115">
+                <ele>48.159222222222226</ele>
+                <time>2020-02-13T11:45:55.701Z</time>
+                <fix>3</fix>
+                <hdop>235</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.096722222222222; 3dSpeed: 3.1127777777777768</cmt>
+            </trkpt>
+            <trkpt lat="41.38923859444444" lon="2.1473879055555556">
+                <ele>48.67877777777778</ele>
+                <time>2020-02-13T11:45:56.661Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.970388888888889; 3dSpeed: 3.8711111111111114</cmt>
+            </trkpt>
+            <trkpt lat="41.38927838947368" lon="2.147435910526316">
+                <ele>48.969368421052636</ele>
+                <time>2020-02-13T11:45:57.730Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.850368421052632; 3dSpeed: 5.766315789473686</cmt>
+            </trkpt>
+            <trkpt lat="41.38931895" lon="2.1474958555555554">
+                <ele>49.162888888888894</ele>
+                <time>2020-02-13T11:45:58.778Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.548166666666666; 3dSpeed: 6.5694444444444455</cmt>
+            </trkpt>
+            <trkpt lat="41.38935277777778" lon="2.1475528000000006">
+                <ele>49.282722222222226</ele>
+                <time>2020-02-13T11:45:59.741Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.258055555555555; 3dSpeed: 6.229444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.38939398888889" lon="2.1476158333333335">
+                <ele>49.50138888888889</ele>
+                <time>2020-02-13T11:46:00.757Z</time>
+                <fix>3</fix>
+                <hdop>273</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.795722222222223; 3dSpeed: 6.781666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.389435211111106" lon="2.1476756055555555">
+                <ele>49.076166666666666</ele>
+                <time>2020-02-13T11:46:01.750Z</time>
+                <fix>3</fix>
+                <hdop>273</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.625333333333334; 3dSpeed: 6.655555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38947733333334" lon="2.1477285944444446">
+                <ele>48.24294444444444</ele>
+                <time>2020-02-13T11:46:02.711Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.2733888888888885; 3dSpeed: 6.278888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.38952303157895" lon="2.147782447368421">
+                <ele>47.66426315789474</ele>
+                <time>2020-02-13T11:46:03.729Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.884736842105263; 3dSpeed: 5.94</cmt>
+            </trkpt>
+            <trkpt lat="41.38955810555556" lon="2.14782105">
+                <ele>46.373666666666665</ele>
+                <time>2020-02-13T11:46:04.746Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.792111111111111; 3dSpeed: 4.880000000000001</cmt>
+            </trkpt>
+            <trkpt lat="41.389580272222226" lon="2.147844788888889">
+                <ele>45.042444444444456</ele>
+                <time>2020-02-13T11:46:05.736Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.3976111111111114; 3dSpeed: 3.511111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38959647777778" lon="2.147857211111111">
+                <ele>43.988499999999995</ele>
+                <time>2020-02-13T11:46:06.726Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.157722222222223; 3dSpeed: 2.3477777777777775</cmt>
+            </trkpt>
+            <trkpt lat="41.389600733333324" lon="2.1478599833333334">
+                <ele>43.91616666666667</ele>
+                <time>2020-02-13T11:46:07.716Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.7301111111111112; 3dSpeed: 1.0133333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.38960192105263" lon="2.147860357894737">
+                <ele>44.01926315789474</ele>
+                <time>2020-02-13T11:46:08.734Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.27168421052631575; 3dSpeed: 0.5410526315789473</cmt>
+            </trkpt>
+            <trkpt lat="41.389604550000016" lon="2.147863027777778">
+                <ele>44.201</ele>
+                <time>2020-02-13T11:46:09.751Z</time>
+                <fix>3</fix>
+                <hdop>273</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.15111111111111108; 3dSpeed: 0.36333333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.3896070611111" lon="2.1478646611111114">
+                <ele>44.146611111111106</ele>
+                <time>2020-02-13T11:46:10.741Z</time>
+                <fix>3</fix>
+                <hdop>511</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14505555555555552; 3dSpeed: 0.31</cmt>
+            </trkpt>
+            <trkpt lat="41.3896091" lon="2.1478665888888893">
+                <ele>43.92733333333334</ele>
+                <time>2020-02-13T11:46:11.731Z</time>
+                <fix>3</fix>
+                <hdop>511</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.13344444444444442; 3dSpeed: 0.2672222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.389611855555565" lon="2.147867905555556">
+                <ele>43.67372222222222</ele>
+                <time>2020-02-13T11:46:12.721Z</time>
+                <fix>3</fix>
+                <hdop>511</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.1151111111111111; 3dSpeed: 0.2227777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38961532631579" lon="2.1478691999999997">
+                <ele>43.38815789473683</ele>
+                <time>2020-02-13T11:46:13.739Z</time>
+                <fix>3</fix>
+                <hdop>511</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08626315789473685; 3dSpeed: 0.17315789473684207</cmt>
+            </trkpt>
+            <trkpt lat="41.389618372222216" lon="2.147869277777778">
+                <ele>43.066833333333335</ele>
+                <time>2020-02-13T11:46:14.756Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.09311111111111112; 3dSpeed: 0.16555555555555554</cmt>
+            </trkpt>
+            <trkpt lat="41.389620949999994" lon="2.1478685944444442">
+                <ele>42.76027777777779</ele>
+                <time>2020-02-13T11:46:15.771Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07722222222222223; 3dSpeed: 0.14444444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.389623616666675" lon="2.1478680166666666">
+                <ele>42.48227777777778</ele>
+                <time>2020-02-13T11:46:16.765Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06805555555555554; 3dSpeed: 0.12999999999999998</cmt>
+            </trkpt>
+            <trkpt lat="41.389625538888886" lon="2.147867238888889">
+                <ele>42.194944444444445</ele>
+                <time>2020-02-13T11:46:17.751Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07261111111111113; 3dSpeed: 0.12444444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.38962711111112" lon="2.1478660888888887">
+                <ele>41.90066666666666</ele>
+                <time>2020-02-13T11:46:18.771Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06933333333333333; 3dSpeed: 0.11944444444444442</cmt>
+            </trkpt>
+            <trkpt lat="41.3896287" lon="2.1478649052631575">
+                <ele>41.62415789473684</ele>
+                <time>2020-02-13T11:46:19.789Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.060947368421052625; 3dSpeed: 0.10947368421052632</cmt>
+            </trkpt>
+            <trkpt lat="41.38963056666666" lon="2.147863805555556">
+                <ele>41.36222222222222</ele>
+                <time>2020-02-13T11:46:20.778Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06444444444444444; 3dSpeed: 0.11166666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.38963222777777" lon="2.1478627000000006">
+                <ele>41.13655555555555</ele>
+                <time>2020-02-13T11:46:21.741Z</time>
+                <fix>3</fix>
+                <hdop>512</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06416666666666666; 3dSpeed: 0.10611111111111113</cmt>
+            </trkpt>
+            <trkpt lat="41.389633266666685" lon="2.147862661111111">
+                <ele>41.05522222222222</ele>
+                <time>2020-02-13T11:46:22.731Z</time>
+                <fix>3</fix>
+                <hdop>273</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05377777777777778; 3dSpeed: 0.09833333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.389633294444444" lon="2.1478623333333333">
+                <ele>40.97105555555555</ele>
+                <time>2020-02-13T11:46:23.745Z</time>
+                <fix>3</fix>
+                <hdop>273</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04911111111111111; 3dSpeed: 0.08499999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.38963149473684" lon="2.147865742105263">
+                <ele>41.444684210526304</ele>
+                <time>2020-02-13T11:46:24.767Z</time>
+                <fix>3</fix>
+                <hdop>222</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0986842105263158; 3dSpeed: 0.12631578947368424</cmt>
+            </trkpt>
+            <trkpt lat="41.38962837222221" lon="2.147870022222222">
+                <ele>42.04938888888889</ele>
+                <time>2020-02-13T11:46:25.756Z</time>
+                <fix>3</fix>
+                <hdop>222</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.10694444444444445; 3dSpeed: 0.16444444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.389626416666665" lon="2.1478697999999996">
+                <ele>42.25333333333333</ele>
+                <time>2020-02-13T11:46:26.773Z</time>
+                <fix>3</fix>
+                <hdop>464</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06944444444444445; 3dSpeed: 0.11499999999999996</cmt>
+            </trkpt>
+            <trkpt lat="41.389624700000006" lon="2.1478680555555556">
+                <ele>42.34711111111112</ele>
+                <time>2020-02-13T11:46:27.763Z</time>
+                <fix>3</fix>
+                <hdop>464</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06738888888888889; 3dSpeed: 0.10722222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38962306111111" lon="2.1478655000000004">
+                <ele>42.30383333333332</ele>
+                <time>2020-02-13T11:46:28.726Z</time>
+                <fix>3</fix>
+                <hdop>464</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06144444444444445; 3dSpeed: 0.09166666666666665</cmt>
+            </trkpt>
+            <trkpt lat="41.38962116111111" lon="2.147864916666667">
+                <ele>42.51916666666666</ele>
+                <time>2020-02-13T11:46:29.716Z</time>
+                <fix>3</fix>
+                <hdop>464</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04855555555555556; 3dSpeed: 0.08166666666666665</cmt>
+            </trkpt>
+            <trkpt lat="41.38961908333334" lon="2.1478665444444447">
+                <ele>43.02261111111112</ele>
+                <time>2020-02-13T11:46:30.730Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06511111111111112; 3dSpeed: 0.08666666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.38961706842105" lon="2.147868436842105">
+                <ele>43.55384210526314</ele>
+                <time>2020-02-13T11:46:31.752Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.053421052631578946; 3dSpeed: 0.08526315789473685</cmt>
+            </trkpt>
+            <trkpt lat="41.389615527777785" lon="2.1478708333333336">
+                <ele>44.139388888888895</ele>
+                <time>2020-02-13T11:46:32.741Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0655; 3dSpeed: 0.09444444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.3896139388889" lon="2.1478760166666664">
+                <ele>45.10150000000001</ele>
+                <time>2020-02-13T11:46:33.757Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07716666666666668; 3dSpeed: 0.10944444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.389612394444455" lon="2.1478806444444447">
+                <ele>46.00905555555555</ele>
+                <time>2020-02-13T11:46:34.750Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07205555555555555; 3dSpeed: 0.11722222222222221</cmt>
+            </trkpt>
+            <trkpt lat="41.38961131666665" lon="2.1478845277777783">
+                <ele>46.764333333333326</ele>
+                <time>2020-02-13T11:46:35.711Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07238888888888889; 3dSpeed: 0.11611111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.389610752631576" lon="2.14788697368421">
+                <ele>47.25126315789475</ele>
+                <time>2020-02-13T11:46:36.729Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08794736842105264; 3dSpeed: 0.1389473684210526</cmt>
+            </trkpt>
+            <trkpt lat="41.389610372222236" lon="2.147887672222222">
+                <ele>47.50122222222222</ele>
+                <time>2020-02-13T11:46:37.746Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.10755555555555554; 3dSpeed: 0.17388888888888893</cmt>
+            </trkpt>
+            <trkpt lat="41.38961003888889" lon="2.147887661111111">
+                <ele>47.617777777777775</ele>
+                <time>2020-02-13T11:46:38.762Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.13088888888888886; 3dSpeed: 0.21388888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.38960953888888" lon="2.147887488888889">
+                <ele>47.680611111111105</ele>
+                <time>2020-02-13T11:46:39.781Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14405555555555555; 3dSpeed: 0.2483333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.389609038888885" lon="2.147889794444444">
+                <ele>48.056555555555555</ele>
+                <time>2020-02-13T11:46:40.771Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08694444444444444; 3dSpeed: 0.18333333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.389608121052625" lon="2.1478928473684213">
+                <ele>48.55115789473686</ele>
+                <time>2020-02-13T11:46:41.762Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05821052631578947; 3dSpeed: 0.09789473684210526</cmt>
+            </trkpt>
+            <trkpt lat="41.38960809444444" lon="2.1478924277777782">
+                <ele>48.50961111111111</ele>
+                <time>2020-02-13T11:46:42.751Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.068; 3dSpeed: 0.11</cmt>
+            </trkpt>
+            <trkpt lat="41.38960859444446" lon="2.1478908944444446">
+                <ele>48.25522222222222</ele>
+                <time>2020-02-13T11:46:43.741Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07122222222222223; 3dSpeed: 0.11166666666666665</cmt>
+            </trkpt>
+            <trkpt lat="41.389609216666656" lon="2.1478905444444445">
+                <ele>48.11500000000001</ele>
+                <time>2020-02-13T11:46:44.731Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08027777777777778; 3dSpeed: 0.12277777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38960964999999" lon="2.1478906666666666">
+                <ele>48.03994444444444</ele>
+                <time>2020-02-13T11:46:45.721Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08144444444444443; 3dSpeed: 0.13777777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38961006666668" lon="2.1478920222222224">
+                <ele>48.140388888888886</ele>
+                <time>2020-02-13T11:46:46.711Z</time>
+                <fix>3</fix>
+                <hdop>223</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07355555555555558; 3dSpeed: 0.11722222222222224</cmt>
+            </trkpt>
+            <trkpt lat="41.38961168947368" lon="2.147895142105263">
+                <ele>48.35542105263157</ele>
+                <time>2020-02-13T11:46:47.729Z</time>
+                <fix>3</fix>
+                <hdop>223</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.31568421052631584; 3dSpeed: 0.3</cmt>
+            </trkpt>
+            <trkpt lat="41.38961883333333" lon="2.1479014111111105">
+                <ele>47.82216666666667</ele>
+                <time>2020-02-13T11:46:48.746Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.422611111111111; 3dSpeed: 1.3616666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.389634172222216" lon="2.147916588888889">
+                <ele>47.50094444444444</ele>
+                <time>2020-02-13T11:46:49.736Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.499222222222222; 3dSpeed: 2.450555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.389659711111115" lon="2.147946733333333">
+                <ele>47.2525</ele>
+                <time>2020-02-13T11:46:50.726Z</time>
+                <fix>3</fix>
+                <hdop>465</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.377888888888888; 3dSpeed: 4.245</cmt>
+            </trkpt>
+            <trkpt lat="41.38969939999999" lon="2.1480024388888888">
+                <ele>47.63022222222222</ele>
+                <time>2020-02-13T11:46:51.691Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.853666666666666; 3dSpeed: 6.730555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.3897537736842" lon="2.148080373684211">
+                <ele>48.324947368421036</ele>
+                <time>2020-02-13T11:46:52.730Z</time>
+                <fix>3</fix>
+                <hdop>177</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.865473684210526; 3dSpeed: 8.781052631578946</cmt>
+            </trkpt>
+            <trkpt lat="41.389817305555546" lon="2.14816845">
+                <ele>48.55094444444445</ele>
+                <time>2020-02-13T11:46:53.778Z</time>
+                <fix>3</fix>
+                <hdop>177</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.320333333333336; 3dSpeed: 10.246111111111112</cmt>
+            </trkpt>
+            <trkpt lat="41.38988033888889" lon="2.148265455555556">
+                <ele>48.49894444444445</ele>
+                <time>2020-02-13T11:46:54.741Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.783444444444443; 3dSpeed: 10.819444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.38993808888889" lon="2.1483583722222224">
+                <ele>48.34205555555556</ele>
+                <time>2020-02-13T11:46:55.706Z</time>
+                <fix>3</fix>
+                <hdop>190</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.92261111111111; 3dSpeed: 9.957777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.3899924" lon="2.1484453722222225">
+                <ele>48.197500000000005</ele>
+                <time>2020-02-13T11:46:56.715Z</time>
+                <fix>3</fix>
+                <hdop>185</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.4915; 3dSpeed: 9.491666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.39005323333333" lon="2.148533555555556">
+                <ele>47.98055555555556</ele>
+                <time>2020-02-13T11:46:57.740Z</time>
+                <fix>3</fix>
+                <hdop>212</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.522944444444443; 3dSpeed: 10.435555555555554</cmt>
+            </trkpt>
+            <trkpt lat="41.390132336842115" lon="2.148624457894737">
+                <ele>47.58278947368422</ele>
+                <time>2020-02-13T11:46:58.702Z</time>
+                <fix>3</fix>
+                <hdop>213</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.49842105263158; 3dSpeed: 11.49157894736842</cmt>
+            </trkpt>
+            <trkpt lat="41.39021046111111" lon="2.148712577777778">
+                <ele>47.14555555555556</ele>
+                <time>2020-02-13T11:46:59.716Z</time>
+                <fix>3</fix>
+                <hdop>217</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.052999999999999; 3dSpeed: 11.083888888888886</cmt>
+            </trkpt>
+            <trkpt lat="41.3902913388889" lon="2.148791477777778">
+                <ele>46.851055555555554</ele>
+                <time>2020-02-13T11:47:00.736Z</time>
+                <fix>3</fix>
+                <hdop>234</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.308388888888889; 3dSpeed: 11.268333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.39033030890648" lon="2.1488362074935248">
+                <ele>46.83149296539403</ele>
+                <time>2020-02-13T11:47:01.218Z</time>
+                <fix>3</fix>
+                <hdop>267</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.678145839364134; 3dSpeed: 11.640563673437578</cmt>
+            </trkpt>
+            <trkpt lat="41.39039348200599" lon="2.148920133739366">
+                <ele>46.79625177351661</ele>
+                <time>2020-02-13T11:47:02.223Z</time>
+                <fix>3</fix>
+                <hdop>267</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.29819213149761; 3dSpeed: 10.2896513181367</cmt>
+            </trkpt>
+            <trkpt lat="41.39045665510551" lon="2.1490040599852076">
+                <ele>46.76101058163919</ele>
+                <time>2020-02-13T11:47:03.228Z</time>
+                <fix>3</fix>
+                <hdop>267</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.918238423631086; 3dSpeed: 8.938738962835822</cmt>
+            </trkpt>
+            <trkpt lat="41.39053690555556" lon="2.1491249611111116">
+                <ele>46.66061111111111</ele>
+                <time>2020-02-13T11:47:04.751Z</time>
+                <fix>3</fix>
+                <hdop>267</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.834722222222223; 3dSpeed: 6.900555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.390579466666665" lon="2.1491759833333335">
+                <ele>46.57083333333333</ele>
+                <time>2020-02-13T11:47:05.741Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.0598888888888895; 3dSpeed: 6.093888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.39062796666667" lon="2.1492126">
+                <ele>46.686166666666665</ele>
+                <time>2020-02-13T11:47:06.731Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.503444444444446; 3dSpeed: 5.548888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.39066956666666" lon="2.149247011111111">
+                <ele>47.0563888888889</ele>
+                <time>2020-02-13T11:47:07.721Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.854333333333334; 3dSpeed: 4.882222222222223</cmt>
+            </trkpt>
+            <trkpt lat="41.39069913888889" lon="2.1492849777777776">
+                <ele>47.57388888888889</ele>
+                <time>2020-02-13T11:47:08.711Z</time>
+                <fix>3</fix>
+                <hdop>272</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.083499999999999; 3dSpeed: 4.128333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.39072130526316" lon="2.149326168421053">
+                <ele>48.75452631578948</ele>
+                <time>2020-02-13T11:47:09.754Z</time>
+                <fix>3</fix>
+                <hdop>209</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.482263157894737; 3dSpeed: 3.504736842105263</cmt>
+            </trkpt>
+            <trkpt lat="41.390745394444444" lon="2.149364305555556">
+                <ele>50.66505555555556</ele>
+                <time>2020-02-13T11:47:10.773Z</time>
+                <fix>3</fix>
+                <hdop>209</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.122166666666667; 3dSpeed: 3.142777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.390755877777785" lon="2.1494042888888885">
+                <ele>51.31794444444444</ele>
+                <time>2020-02-13T11:47:11.736Z</time>
+                <fix>3</fix>
+                <hdop>209</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.056166666666666; 3dSpeed: 3.0672222222222225</cmt>
+            </trkpt>
+            <trkpt lat="41.39076231111112" lon="2.1494388499999997">
+                <ele>51.37583333333334</ele>
+                <time>2020-02-13T11:47:12.752Z</time>
+                <fix>3</fix>
+                <hdop>221</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.5202222222222224; 3dSpeed: 2.5566666666666675</cmt>
+            </trkpt>
+            <trkpt lat="41.39076179999999" lon="2.1494728722222223">
+                <ele>52.25033333333334</ele>
+                <time>2020-02-13T11:47:13.745Z</time>
+                <fix>3</fix>
+                <hdop>221</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.2948888888888894; 3dSpeed: 2.3066666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.39073886111111" lon="2.1495037333333333">
+                <ele>53.631777777777785</ele>
+                <time>2020-02-13T11:47:14.706Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.172388888888889; 3dSpeed: 2.182777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.390715331578946" lon="2.1495180842105266">
+                <ele>54.10963157894736</ele>
+                <time>2020-02-13T11:47:15.724Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.5746842105263157; 3dSpeed: 1.6136842105263156</cmt>
+            </trkpt>
+            <trkpt lat="41.39069454444446" lon="2.1495203333333333">
+                <ele>53.710888888888896</ele>
+                <time>2020-02-13T11:47:16.741Z</time>
+                <fix>3</fix>
+                <hdop>230</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.1054444444444445; 3dSpeed: 1.1366666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.39067475000001" lon="2.1495296833333333">
+                <ele>53.45322222222221</ele>
+                <time>2020-02-13T11:47:17.731Z</time>
+                <fix>3</fix>
+                <hdop>243</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.6764444444444446; 3dSpeed: 1.6288888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.3906559" lon="2.1495445944444445">
+                <ele>53.35427777777779</ele>
+                <time>2020-02-13T11:47:18.747Z</time>
+                <fix>3</fix>
+                <hdop>243</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.8916111111111114; 3dSpeed: 1.9599999999999997</cmt>
+            </trkpt>
+            <trkpt lat="41.39064043333334" lon="2.14957215">
+                <ele>52.043</ele>
+                <time>2020-02-13T11:47:19.741Z</time>
+                <fix>3</fix>
+                <hdop>276</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.665166666666666; 3dSpeed: 2.6744444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.39061291578948" lon="2.1496195999999994">
+                <ele>50.58510526315789</ele>
+                <time>2020-02-13T11:47:20.754Z</time>
+                <fix>3</fix>
+                <hdop>268.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.713315789473684; 3dSpeed: 4.763684210526315</cmt>
+            </trkpt>
+            <trkpt lat="41.39056809999999" lon="2.1496769277777776">
+                <ele>49.9433888888889</ele>
+                <time>2020-02-13T11:47:21.773Z</time>
+                <fix>3</fix>
+                <hdop>268.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.789944444444445; 3dSpeed: 6.747777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.3905051" lon="2.149736083333334">
+                <ele>49.38422222222223</ele>
+                <time>2020-02-13T11:47:22.762Z</time>
+                <fix>3</fix>
+                <hdop>231</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.886611111111113; 3dSpeed: 8.827222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.39043542777777" lon="2.149817944444444">
+                <ele>47.57238888888888</ele>
+                <time>2020-02-13T11:47:23.755Z</time>
+                <fix>3</fix>
+                <hdop>386</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.643944444444445; 3dSpeed: 10.666666666666664</cmt>
+            </trkpt>
+            <trkpt lat="41.39036472777778" lon="2.1499078555555555">
+                <ele>45.25088888888889</ele>
+                <time>2020-02-13T11:47:24.716Z</time>
+                <fix>3</fix>
+                <hdop>234</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.831555555555555; 3dSpeed: 10.925555555555558</cmt>
+            </trkpt>
+            <trkpt lat="41.39029486666666" lon="2.1499943777777775">
+                <ele>43.41994444444444</ele>
+                <time>2020-02-13T11:47:25.730Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.283833333333332; 3dSpeed: 10.487777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.3902269368421" lon="2.150065384210526">
+                <ele>42.26036842105263</ele>
+                <time>2020-02-13T11:47:26.752Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.245894736842107; 3dSpeed: 8.517368421052632</cmt>
+            </trkpt>
+            <trkpt lat="41.39017330000001" lon="2.150112622222222">
+                <ele>41.84216666666667</ele>
+                <time>2020-02-13T11:47:27.768Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.721666666666667; 3dSpeed: 6.009444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.390140883333345" lon="2.150142438888889">
+                <ele>40.382000000000005</ele>
+                <time>2020-02-13T11:47:28.786Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.6109999999999998; 3dSpeed: 3.893888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.39012123888889" lon="2.150175077777778">
+                <ele>40.156333333333336</ele>
+                <time>2020-02-13T11:47:29.750Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.4235555555555557; 3dSpeed: 2.672222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.39010579444445" lon="2.1502034666666665">
+                <ele>40.567944444444436</ele>
+                <time>2020-02-13T11:47:30.711Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.7214999999999998; 3dSpeed: 1.8727777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.39009459444444" lon="2.1502223722222222">
+                <ele>41.39061111111111</ele>
+                <time>2020-02-13T11:47:31.725Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.7525; 3dSpeed: 0.8694444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.39009013157893" lon="2.1502279894736835">
+                <ele>41.816631578947366</ele>
+                <time>2020-02-13T11:47:32.774Z</time>
+                <fix>3</fix>
+                <hdop>255</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.136; 3dSpeed: 0.25473684210526315</cmt>
+            </trkpt>
+            <trkpt lat="41.390086988888896" lon="2.1502324444444447">
+                <ele>41.90933333333333</ele>
+                <time>2020-02-13T11:47:33.765Z</time>
+                <fix>3</fix>
+                <hdop>255</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.11044444444444443; 3dSpeed: 0.18722222222222226</cmt>
+            </trkpt>
+            <trkpt lat="41.39008108888889" lon="2.1502328055555555">
+                <ele>42.1158888888889</ele>
+                <time>2020-02-13T11:47:34.726Z</time>
+                <fix>3</fix>
+                <hdop>206</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0975; 3dSpeed: 0.15277777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.39007416111111" lon="2.1502341">
+                <ele>42.48627777777779</ele>
+                <time>2020-02-13T11:47:35.691Z</time>
+                <fix>3</fix>
+                <hdop>206</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07494444444444445; 3dSpeed: 0.10833333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.39006846842106" lon="2.1502391473684215">
+                <ele>43.355947368421056</ele>
+                <time>2020-02-13T11:47:36.730Z</time>
+                <fix>3</fix>
+                <hdop>189</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05936842105263156; 3dSpeed: 0.07421052631578948</cmt>
+            </trkpt>
+            <trkpt lat="41.39006223888889" lon="2.150244316666667">
+                <ele>44.30583333333334</ele>
+                <time>2020-02-13T11:47:37.806Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08938888888888889; 3dSpeed: 0.09277777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.39005602222222" lon="2.1502471000000005">
+                <ele>45.026944444444446</ele>
+                <time>2020-02-13T11:47:38.768Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.09072222222222225; 3dSpeed: 0.09333333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.39004988333333" lon="2.1502463888888887">
+                <ele>45.533166666666666</ele>
+                <time>2020-02-13T11:47:39.731Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04805555555555556; 3dSpeed: 0.05111111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.390043472222224" lon="2.150246022222222">
+                <ele>46.241444444444454</ele>
+                <time>2020-02-13T11:47:40.721Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.053388888888888895; 3dSpeed: 0.05499999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.390037577777775" lon="2.1502478000000003">
+                <ele>47.07983333333332</ele>
+                <time>2020-02-13T11:47:41.687Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0841111111111111; 3dSpeed: 0.08444444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.39003205263158" lon="2.150250221052631">
+                <ele>47.802789473684214</ele>
+                <time>2020-02-13T11:47:42.725Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05431578947368422; 3dSpeed: 0.05894736842105263</cmt>
+            </trkpt>
+            <trkpt lat="41.39002911666667" lon="2.1502525666666665">
+                <ele>48.349555555555554</ele>
+                <time>2020-02-13T11:47:43.801Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.11500000000000002; 3dSpeed: 0.1172222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.39002612222222" lon="2.1502549555555555">
+                <ele>48.99916666666667</ele>
+                <time>2020-02-13T11:47:44.763Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07883333333333334; 3dSpeed: 0.07999999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.390023383333336" lon="2.15025658888889">
+                <ele>49.69233333333334</ele>
+                <time>2020-02-13T11:47:45.726Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06344444444444444; 3dSpeed: 0.06999999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.39001886666666" lon="2.1502578166666666">
+                <ele>50.411611111111114</ele>
+                <time>2020-02-13T11:47:46.741Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07994444444444446; 3dSpeed: 0.07999999999999997</cmt>
+            </trkpt>
+            <trkpt lat="41.390015594736845" lon="2.1502594105263153">
+                <ele>51.045157894736846</ele>
+                <time>2020-02-13T11:47:47.736Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05173684210526316; 3dSpeed: 0.05473684210526316</cmt>
+            </trkpt>
+            <trkpt lat="41.39001363333334" lon="2.150261927777778">
+                <ele>51.62833333333334</ele>
+                <time>2020-02-13T11:47:48.751Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.060000000000000005; 3dSpeed: 0.055</cmt>
+            </trkpt>
+            <trkpt lat="41.39001346111111" lon="2.1502649277777786">
+                <ele>52.15194444444444</ele>
+                <time>2020-02-13T11:47:49.796Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.1392222222222222; 3dSpeed: 0.14666666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.3900117111111" lon="2.150267627777778">
+                <ele>52.757055555555546</ele>
+                <time>2020-02-13T11:47:50.760Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05522222222222222; 3dSpeed: 0.06111111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.390014622222225" lon="2.1502719888888895">
+                <ele>53.083277777777774</ele>
+                <time>2020-02-13T11:47:51.721Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.2545; 3dSpeed: 0.2505555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.390015722222216" lon="2.1502731777777777">
+                <ele>52.99072222222222</ele>
+                <time>2020-02-13T11:47:52.686Z</time>
+                <fix>3</fix>
+                <hdop>230</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14333333333333334; 3dSpeed: 0.16333333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.39001346842105" lon="2.150277552631579">
+                <ele>52.65942105263158</ele>
+                <time>2020-02-13T11:47:53.725Z</time>
+                <fix>3</fix>
+                <hdop>266.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.1991052631578947; 3dSpeed: 1.06</cmt>
+            </trkpt>
+            <trkpt lat="41.38999373888889" lon="2.1503082277777774">
+                <ele>52.1563888888889</ele>
+                <time>2020-02-13T11:47:54.773Z</time>
+                <fix>3</fix>
+                <hdop>266.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.525388888888889; 3dSpeed: 4.351666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.389963961111114" lon="2.150365488888889">
+                <ele>50.593166666666676</ele>
+                <time>2020-02-13T11:47:55.736Z</time>
+                <fix>3</fix>
+                <hdop>266.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.022888888888888; 3dSpeed: 6.921111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.389915466666665" lon="2.1504384111111112">
+                <ele>49.41455555555556</ele>
+                <time>2020-02-13T11:47:56.726Z</time>
+                <fix>3</fix>
+                <hdop>266.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.122000000000002; 3dSpeed: 9.03777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38984800555556" lon="2.1505200000000007">
+                <ele>48.29611111111111</ele>
+                <time>2020-02-13T11:47:57.741Z</time>
+                <fix>3</fix>
+                <hdop>174</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.751388888888886; 3dSpeed: 10.70611111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38977590555556" lon="2.150615433333333">
+                <ele>46.76183333333333</ele>
+                <time>2020-02-13T11:47:58.761Z</time>
+                <fix>3</fix>
+                <hdop>180</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.115333333333332; 3dSpeed: 12.085000000000003</cmt>
+            </trkpt>
+            <trkpt lat="41.38969418421052" lon="2.150724647368421">
+                <ele>45.09557894736842</ele>
+                <time>2020-02-13T11:47:59.752Z</time>
+                <fix>3</fix>
+                <hdop>180</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.181526315789474; 3dSpeed: 13.170526315789473</cmt>
+            </trkpt>
+            <trkpt lat="41.38960790555556" lon="2.150839183333333">
+                <ele>42.85072222222222</ele>
+                <time>2020-02-13T11:48:00.741Z</time>
+                <fix>3</fix>
+                <hdop>180</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.78572222222222; 3dSpeed: 13.83666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.38952156111111" lon="2.1509590333333333">
+                <ele>40.08394444444444</ele>
+                <time>2020-02-13T11:48:01.706Z</time>
+                <fix>3</fix>
+                <hdop>180</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.672722222222221; 3dSpeed: 14.708888888888891</cmt>
+            </trkpt>
+            <trkpt lat="41.38943448333333" lon="2.1510806388888883">
+                <ele>36.57377777777778</ele>
+                <time>2020-02-13T11:48:02.690Z</time>
+                <fix>3</fix>
+                <hdop>180</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.540777777777777; 3dSpeed: 14.76888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38935383333333" lon="2.1511898944444443">
+                <ele>33.15155555555555</ele>
+                <time>2020-02-13T11:48:03.711Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.068999999999997; 3dSpeed: 13.38222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38928731666666" lon="2.151295311111111">
+                <ele>30.649611111111106</ele>
+                <time>2020-02-13T11:48:04.725Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.122277777777775; 3dSpeed: 11.501666666666669</cmt>
+            </trkpt>
+            <trkpt lat="41.389234389473685" lon="2.1513882526315786">
+                <ele>29.034368421052633</ele>
+                <time>2020-02-13T11:48:05.747Z</time>
+                <fix>3</fix>
+                <hdop>190</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.52463157894737; 3dSpeed: 8.997368421052633</cmt>
+            </trkpt>
+            <trkpt lat="41.38919735000001" lon="2.151455727777778">
+                <ele>28.43266666666667</ele>
+                <time>2020-02-13T11:48:06.736Z</time>
+                <fix>3</fix>
+                <hdop>314</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.694999999999999; 3dSpeed: 6.184444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.38917877222223" lon="2.1514946277777773">
+                <ele>27.316499999999998</ele>
+                <time>2020-02-13T11:48:07.726Z</time>
+                <fix>3</fix>
+                <hdop>314</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.169666666666667; 3dSpeed: 3.783888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38917087777777" lon="2.1515183444444443">
+                <ele>26.197666666666667</ele>
+                <time>2020-02-13T11:48:08.742Z</time>
+                <fix>3</fix>
+                <hdop>314</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.742055555555556; 3dSpeed: 2.4988888888888887</cmt>
+            </trkpt>
+            <trkpt lat="41.38916389444445" lon="2.1515348055555554">
+                <ele>26.39466666666667</ele>
+                <time>2020-02-13T11:48:09.736Z</time>
+                <fix>3</fix>
+                <hdop>314</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.151111111111111; 3dSpeed: 1.8433333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38916017368422" lon="2.1515410210526316">
+                <ele>26.317263157894743</ele>
+                <time>2020-02-13T11:48:10.749Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.6118947368421052; 3dSpeed: 1.348947368421053</cmt>
+            </trkpt>
+            <trkpt lat="41.3891596111111" lon="2.15153845">
+                <ele>26.282888888888895</ele>
+                <time>2020-02-13T11:48:11.768Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.5452777777777778; 3dSpeed: 1.1794444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.38915865555556" lon="2.151534088888889">
+                <ele>26.236500000000003</ele>
+                <time>2020-02-13T11:48:12.731Z</time>
+                <fix>3</fix>
+                <hdop>257</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.4606666666666666; 3dSpeed: 1.033888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.389150133333324" lon="2.1515268388888886">
+                <ele>27.414444444444438</ele>
+                <time>2020-02-13T11:48:13.721Z</time>
+                <fix>3</fix>
+                <hdop>210</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.33538888888888896; 3dSpeed: 0.771111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38913853333334" lon="2.15152095">
+                <ele>29.226277777777778</ele>
+                <time>2020-02-13T11:48:14.711Z</time>
+                <fix>3</fix>
+                <hdop>202</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.26327777777777783; 3dSpeed: 0.55</cmt>
+            </trkpt>
+            <trkpt lat="41.38912609444445" lon="2.1515197722222226">
+                <ele>31.55038888888889</ele>
+                <time>2020-02-13T11:48:15.701Z</time>
+                <fix>3</fix>
+                <hdop>188</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.13372222222222221; 3dSpeed: 0.2827777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38911195263157" lon="2.1515209105263153">
+                <ele>34.33363157894737</ele>
+                <time>2020-02-13T11:48:16.719Z</time>
+                <fix>3</fix>
+                <hdop>188</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05484210526315789; 3dSpeed: 0.08473684210526318</cmt>
+            </trkpt>
+            <trkpt lat="41.389097477777774" lon="2.1515207277777777">
+                <ele>37.16738888888889</ele>
+                <time>2020-02-13T11:48:17.736Z</time>
+                <fix>3</fix>
+                <hdop>188</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.057888888888888886; 3dSpeed: 0.07277777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38908635555555" lon="2.1515195000000005">
+                <ele>39.13377777777779</ele>
+                <time>2020-02-13T11:48:18.752Z</time>
+                <fix>3</fix>
+                <hdop>188</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07188888888888889; 3dSpeed: 0.0988888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.389078005555554" lon="2.1515179888888887">
+                <ele>40.36922222222222</ele>
+                <time>2020-02-13T11:48:19.745Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.050666666666666665; 3dSpeed: 0.0772222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.389071099999995" lon="2.1515160777777775">
+                <ele>41.27499999999999</ele>
+                <time>2020-02-13T11:48:20.706Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04244444444444444; 3dSpeed: 0.060000000000000005</cmt>
+            </trkpt>
+            <trkpt lat="41.389066926315785" lon="2.151517242105263">
+                <ele>42.10652631578947</ele>
+                <time>2020-02-13T11:48:21.749Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.02805263157894737; 3dSpeed: 0.034210526315789476</cmt>
+            </trkpt>
+            <trkpt lat="41.38906441666666" lon="2.1515198555555552">
+                <ele>42.90505555555555</ele>
+                <time>2020-02-13T11:48:22.768Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04038888888888889; 3dSpeed: 0.042777777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.389062811111096" lon="2.151522038888889">
+                <ele>43.5105</ele>
+                <time>2020-02-13T11:48:23.757Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.03927777777777778; 3dSpeed: 0.04222222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38906141111109" lon="2.151524744444445">
+                <ele>44.16211111111111</ele>
+                <time>2020-02-13T11:48:24.776Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.044388888888888894; 3dSpeed: 0.048888888888888885</cmt>
+            </trkpt>
+            <trkpt lat="41.38906025" lon="2.1515274611111113">
+                <ele>44.78594444444444</ele>
+                <time>2020-02-13T11:48:25.741Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.034166666666666665; 3dSpeed: 0.034444444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.389059105555546" lon="2.1515291333333333">
+                <ele>45.31499999999999</ele>
+                <time>2020-02-13T11:48:26.725Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06683333333333333; 3dSpeed: 0.08277777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38905661052632" lon="2.1515290421052633">
+                <ele>45.83415789473683</ele>
+                <time>2020-02-13T11:48:27.747Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14526315789473684; 3dSpeed: 0.1505263157894737</cmt>
+            </trkpt>
+            <trkpt lat="41.389053688888886" lon="2.1515280277777786">
+                <ele>46.338499999999996</ele>
+                <time>2020-02-13T11:48:28.736Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14883333333333332; 3dSpeed: 0.16277777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38904836666666" lon="2.151538655555556">
+                <ele>46.07883333333333</ele>
+                <time>2020-02-13T11:48:29.752Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.6256666666666664; 3dSpeed: 1.4605555555555554</cmt>
+            </trkpt>
+            <trkpt lat="41.389026327777785" lon="2.151578572222222">
+                <ele>45.74583333333334</ele>
+                <time>2020-02-13T11:48:30.745Z</time>
+                <fix>3</fix>
+                <hdop>175</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.948388888888888; 3dSpeed: 4.79</cmt>
+            </trkpt>
+            <trkpt lat="41.388988194444444" lon="2.151642477777778">
+                <ele>45.03827777777778</ele>
+                <time>2020-02-13T11:48:31.706Z</time>
+                <fix>3</fix>
+                <hdop>175</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.304611111111111; 3dSpeed: 7.2044444444444435</cmt>
+            </trkpt>
+            <trkpt lat="41.38893311578947" lon="2.151725757894737">
+                <ele>44.16131578947368</ele>
+                <time>2020-02-13T11:48:32.724Z</time>
+                <fix>3</fix>
+                <hdop>190</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.767263157894735; 3dSpeed: 9.659473684210525</cmt>
+            </trkpt>
+            <trkpt lat="41.388858677777776" lon="2.1518218">
+                <ele>44.02655555555555</ele>
+                <time>2020-02-13T11:48:33.768Z</time>
+                <fix>3</fix>
+                <hdop>248.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.778833333333331; 3dSpeed: 11.692777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38877397222222" lon="2.151923761111111">
+                <ele>43.8841111111111</ele>
+                <time>2020-02-13T11:48:34.786Z</time>
+                <fix>3</fix>
+                <hdop>248.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.831999999999999; 3dSpeed: 12.850000000000001</cmt>
+            </trkpt>
+            <trkpt lat="41.38869644444445" lon="2.1520239111111112">
+                <ele>42.51750000000001</ele>
+                <time>2020-02-13T11:48:35.750Z</time>
+                <fix>3</fix>
+                <hdop>272</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.089833333333333; 3dSpeed: 12.139999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.388622370588244" lon="2.152123735294117">
+                <ele>42.390470588235296</ele>
+                <time>2020-02-13T11:48:36.709Z</time>
+                <fix>3</fix>
+                <hdop>191</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.10876470588235; 3dSpeed: 11.205294117647057</cmt>
+            </trkpt>
+            <trkpt lat="41.38855859444445" lon="2.1522109277777774">
+                <ele>42.528944444444456</ele>
+                <time>2020-02-13T11:48:37.701Z</time>
+                <fix>3</fix>
+                <hdop>191</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.047777777777778; 3dSpeed: 10.125555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38849721578948" lon="2.152283642105263">
+                <ele>42.040421052631565</ele>
+                <time>2020-02-13T11:48:38.719Z</time>
+                <fix>3</fix>
+                <hdop>207</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.610473684210527; 3dSpeed: 8.738947368421055</cmt>
+            </trkpt>
+            <trkpt lat="41.38846020555556" lon="2.1523355222222227">
+                <ele>40.10294444444444</ele>
+                <time>2020-02-13T11:48:39.763Z</time>
+                <fix>3</fix>
+                <hdop>177.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.086166666666668; 3dSpeed: 6.240555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.388421683333334" lon="2.1523744777777782">
+                <ele>38.39816666666667</ele>
+                <time>2020-02-13T11:48:40.753Z</time>
+                <fix>3</fix>
+                <hdop>177.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.529055555555557; 3dSpeed: 5.627222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38838497222222" lon="2.1524202555555556">
+                <ele>36.590888888888884</ele>
+                <time>2020-02-13T11:48:41.742Z</time>
+                <fix>3</fix>
+                <hdop>177.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.291222222222222; 3dSpeed: 5.551666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.38835515555556" lon="2.1524649055555556">
+                <ele>34.77872222222222</ele>
+                <time>2020-02-13T11:48:42.735Z</time>
+                <fix>3</fix>
+                <hdop>177.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.067944444444444; 3dSpeed: 5.223333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38831796842105" lon="2.152535142105263">
+                <ele>33.72589473684211</ele>
+                <time>2020-02-13T11:48:43.724Z</time>
+                <fix>3</fix>
+                <hdop>177.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.85657894736842; 3dSpeed: 6.93157894736842</cmt>
+            </trkpt>
+            <trkpt lat="41.38826942222221" lon="2.152600888888889">
+                <ele>32.98083333333334</ele>
+                <time>2020-02-13T11:48:44.741Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.50838888888889; 3dSpeed: 6.708333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38823500555554" lon="2.1526569500000003">
+                <ele>32.44777777777777</ele>
+                <time>2020-02-13T11:48:45.758Z</time>
+                <fix>3</fix>
+                <hdop>453</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.3871666666666655; 3dSpeed: 5.566666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.38820169444445" lon="2.1527124111111107">
+                <ele>32.016222222222225</ele>
+                <time>2020-02-13T11:48:46.776Z</time>
+                <fix>3</fix>
+                <hdop>453</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.841111111111111; 3dSpeed: 5.894444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.388156338888884" lon="2.1527734055555556">
+                <ele>31.0545</ele>
+                <time>2020-02-13T11:48:47.766Z</time>
+                <fix>3</fix>
+                <hdop>453</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.073222222222222; 3dSpeed: 7.1661111111111095</cmt>
+            </trkpt>
+            <trkpt lat="41.38810516111111" lon="2.1528250666666664">
+                <ele>29.388944444444437</ele>
+                <time>2020-02-13T11:48:48.756Z</time>
+                <fix>3</fix>
+                <hdop>452</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.892888888888888; 3dSpeed: 7.04</cmt>
+            </trkpt>
+            <trkpt lat="41.38804570000001" lon="2.152887147368421">
+                <ele>26.358105263157896</ele>
+                <time>2020-02-13T11:48:49.747Z</time>
+                <fix>3</fix>
+                <hdop>221</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.524157894736842; 3dSpeed: 8.587368421052632</cmt>
+            </trkpt>
+            <trkpt lat="41.38797772777777" lon="2.1529666444444446">
+                <ele>24.084722222222226</ele>
+                <time>2020-02-13T11:48:50.736Z</time>
+                <fix>3</fix>
+                <hdop>221</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.908611111111108; 3dSpeed: 10.04611111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38790821111112" lon="2.1530557166666675">
+                <ele>22.140499999999996</ele>
+                <time>2020-02-13T11:48:51.752Z</time>
+                <fix>3</fix>
+                <hdop>260</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.069500000000001; 3dSpeed: 11.17611111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38782717777777" lon="2.1531631055555556">
+                <ele>21.01183333333333</ele>
+                <time>2020-02-13T11:48:52.745Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.956666666666665; 3dSpeed: 13.035555555555554</cmt>
+            </trkpt>
+            <trkpt lat="41.387748388888895" lon="2.1532751500000002">
+                <ele>18.937055555555556</ele>
+                <time>2020-02-13T11:48:53.706Z</time>
+                <fix>3</fix>
+                <hdop>188</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.751888888888887; 3dSpeed: 12.982222222222221</cmt>
+            </trkpt>
+            <trkpt lat="41.38767483684211" lon="2.1533819684210527">
+                <ele>16.570263157894736</ele>
+                <time>2020-02-13T11:48:54.749Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.726000000000003; 3dSpeed: 11.942631578947367</cmt>
+            </trkpt>
+            <trkpt lat="41.38759868333333" lon="2.1534916611111115">
+                <ele>15.4925</ele>
+                <time>2020-02-13T11:48:55.768Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.128555555555554; 3dSpeed: 12.236666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.387506699999996" lon="2.1536020722222227">
+                <ele>15.97016666666667</ele>
+                <time>2020-02-13T11:48:56.731Z</time>
+                <fix>3</fix>
+                <hdop>191</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.306722222222223; 3dSpeed: 13.345</cmt>
+            </trkpt>
+            <trkpt lat="41.38740687222223" lon="2.1537172944444443">
+                <ele>15.828777777777775</ele>
+                <time>2020-02-13T11:48:57.721Z</time>
+                <fix>3</fix>
+                <hdop>272</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.360944444444446; 3dSpeed: 14.395000000000001</cmt>
+            </trkpt>
+            <trkpt lat="41.38730926666667" lon="2.1538370833333333">
+                <ele>15.387055555555555</ele>
+                <time>2020-02-13T11:48:58.686Z</time>
+                <fix>3</fix>
+                <hdop>272</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.18438888888889; 3dSpeed: 14.288333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.387230305555555" lon="2.153950377777778">
+                <ele>12.64683333333333</ele>
+                <time>2020-02-13T11:48:59.695Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.028722222222221; 3dSpeed: 13.188333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38715547368422" lon="2.154060052631579">
+                <ele>10.030105263157893</ele>
+                <time>2020-02-13T11:49:00.747Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.221894736842106; 3dSpeed: 12.431052631578948</cmt>
+            </trkpt>
+            <trkpt lat="41.38708161111111" lon="2.1541601666666668">
+                <ele>8.232222222222223</ele>
+                <time>2020-02-13T11:49:01.763Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.457; 3dSpeed: 11.637777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.387015844444434" lon="2.1542533388888887">
+                <ele>7.4095555555555555</ele>
+                <time>2020-02-13T11:49:02.753Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.300888888888888; 3dSpeed: 10.547777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38695849444444" lon="2.1543357277777777">
+                <ele>6.734277777777777</ele>
+                <time>2020-02-13T11:49:03.716Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.868944444444445; 3dSpeed: 9.112222222222224</cmt>
+            </trkpt>
+            <trkpt lat="41.386913811111114" lon="2.154409788888889">
+                <ele>5.084833333333334</ele>
+                <time>2020-02-13T11:49:04.706Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.689888888888891; 3dSpeed: 7.955555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38687052105263" lon="2.154476989473684">
+                <ele>4.999210526315789</ele>
+                <time>2020-02-13T11:49:05.749Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.408842105263158; 3dSpeed: 6.691052631578947</cmt>
+            </trkpt>
+            <trkpt lat="41.38682719444444" lon="2.1545337555555557">
+                <ele>6.805555555555556</ele>
+                <time>2020-02-13T11:49:06.768Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.277888888888888; 3dSpeed: 5.519444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.38679721111111" lon="2.154574916666667">
+                <ele>8.147722222222225</ele>
+                <time>2020-02-13T11:49:07.731Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.6929999999999996; 3dSpeed: 3.904444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.386776372222215" lon="2.1546015388888886">
+                <ele>9.854555555555555</ele>
+                <time>2020-02-13T11:49:08.721Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.8583333333333334; 3dSpeed: 2.1177777777777775</cmt>
+            </trkpt>
+            <trkpt lat="41.386764272222216" lon="2.154616644444445">
+                <ele>11.388777777777776</ele>
+                <time>2020-02-13T11:49:09.735Z</time>
+                <fix>3</fix>
+                <hdop>191</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.6076111111111111; 3dSpeed: 0.965</cmt>
+            </trkpt>
+            <trkpt lat="41.386754405263154" lon="2.1546312631578948">
+                <ele>14.598157894736843</ele>
+                <time>2020-02-13T11:49:10.757Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.32852631578947367; 3dSpeed: 0.5773684210526316</cmt>
+            </trkpt>
+            <trkpt lat="41.38674452777777" lon="2.1546447888888887">
+                <ele>17.71194444444445</ele>
+                <time>2020-02-13T11:49:11.773Z</time>
+                <fix>3</fix>
+                <hdop>200</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.1615; 3dSpeed: 0.33166666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.38673166111111" lon="2.1546622444444448">
+                <ele>21.450499999999998</ele>
+                <time>2020-02-13T11:49:12.763Z</time>
+                <fix>3</fix>
+                <hdop>200</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.035277777777777776; 3dSpeed: 0.09833333333333331</cmt>
+            </trkpt>
+            <trkpt lat="41.386724622222225" lon="2.154680022222222">
+                <ele>23.83577777777778</ele>
+                <time>2020-02-13T11:49:13.752Z</time>
+                <fix>3</fix>
+                <hdop>226</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.12616666666666668; 3dSpeed: 0.12999999999999998</cmt>
+            </trkpt>
+            <trkpt lat="41.38671335555556" lon="2.154692388888889">
+                <ele>26.52905555555556</ele>
+                <time>2020-02-13T11:49:14.745Z</time>
+                <fix>3</fix>
+                <hdop>191</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.041111111111111105; 3dSpeed: 0.05888888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.386702605555556" lon="2.154705955555556">
+                <ele>29.100277777777773</ele>
+                <time>2020-02-13T11:49:15.706Z</time>
+                <fix>3</fix>
+                <hdop>175</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04416666666666666; 3dSpeed: 0.08277777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38669602777778" lon="2.154716738888889">
+                <ele>30.561888888888888</ele>
+                <time>2020-02-13T11:49:16.720Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.03316666666666667; 3dSpeed: 0.05722222222222221</cmt>
+            </trkpt>
+            <trkpt lat="41.386688705263154" lon="2.154722352631579">
+                <ele>32.18652631578947</ele>
+                <time>2020-02-13T11:49:17.742Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04931578947368421; 3dSpeed: 0.0668421052631579</cmt>
+            </trkpt>
+            <trkpt lat="41.38668228333333" lon="2.1547275666666668">
+                <ele>33.436</ele>
+                <time>2020-02-13T11:49:18.731Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.042444444444444444; 3dSpeed: 0.06277777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38667828888889" lon="2.1547320444444447">
+                <ele>34.11772222222222</ele>
+                <time>2020-02-13T11:49:19.721Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.03716666666666667; 3dSpeed: 0.05055555555555554</cmt>
+            </trkpt>
+            <trkpt lat="41.38667482222222" lon="2.154737022222222">
+                <ele>34.839999999999996</ele>
+                <time>2020-02-13T11:49:20.737Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.040999999999999995; 3dSpeed: 0.04833333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.38667162777779" lon="2.154742483333333">
+                <ele>35.45088888888889</ele>
+                <time>2020-02-13T11:49:21.756Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.065; 3dSpeed: 0.054444444444444434</cmt>
+            </trkpt>
+            <trkpt lat="41.386667450000004" lon="2.1547470944444447">
+                <ele>36.1635</ele>
+                <time>2020-02-13T11:49:22.721Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06066666666666667; 3dSpeed: 0.07499999999999998</cmt>
+            </trkpt>
+            <trkpt lat="41.386663655555544" lon="2.154750344444445">
+                <ele>36.83522222222222</ele>
+                <time>2020-02-13T11:49:23.733Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05061111111111112; 3dSpeed: 0.05333333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38666264444444" lon="2.1547542">
+                <ele>37.11038888888889</ele>
+                <time>2020-02-13T11:49:24.753Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.028055555555555552; 3dSpeed: 0.028333333333333335</cmt>
+            </trkpt>
+            <trkpt lat="41.38666029444445" lon="2.1547574444444444">
+                <ele>37.608888888888885</ele>
+                <time>2020-02-13T11:49:25.716Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.042333333333333334; 3dSpeed: 0.03944444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.38665793888888" lon="2.154760361111111">
+                <ele>38.05188888888889</ele>
+                <time>2020-02-13T11:49:26.682Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05755555555555555; 3dSpeed: 0.0661111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.386654247368426" lon="2.154762031578947">
+                <ele>38.55605263157894</ele>
+                <time>2020-02-13T11:49:27.720Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.09231578947368421; 3dSpeed: 0.09526315789473684</cmt>
+            </trkpt>
+            <trkpt lat="41.386651244444444" lon="2.154762433333333">
+                <ele>38.88527777777777</ele>
+                <time>2020-02-13T11:49:28.796Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05972222222222222; 3dSpeed: 0.057222222222222216</cmt>
+            </trkpt>
+            <trkpt lat="41.38664838333334" lon="2.154762594444444">
+                <ele>39.19983333333334</ele>
+                <time>2020-02-13T11:49:29.758Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.051777777777777784; 3dSpeed: 0.06055555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.38664596666667" lon="2.154762494444444">
+                <ele>39.45205555555555</ele>
+                <time>2020-02-13T11:49:30.747Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.05605555555555555; 3dSpeed: 0.065</cmt>
+            </trkpt>
+            <trkpt lat="41.38664415555555" lon="2.1547622166666662">
+                <ele>39.6</ele>
+                <time>2020-02-13T11:49:31.740Z</time>
+                <fix>3</fix>
+                <hdop>272</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.042333333333333334; 3dSpeed: 0.055</cmt>
+            </trkpt>
+            <trkpt lat="41.3866423" lon="2.154763127777778">
+                <ele>39.88116666666667</ele>
+                <time>2020-02-13T11:49:32.701Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04111111111111112; 3dSpeed: 0.044999999999999984</cmt>
+            </trkpt>
+            <trkpt lat="41.386641544444444" lon="2.1547642555555555">
+                <ele>40.069500000000005</ele>
+                <time>2020-02-13T11:49:33.715Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06744444444444445; 3dSpeed: 0.06944444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.38664038888888" lon="2.1547646944444443">
+                <ele>40.2085</ele>
+                <time>2020-02-13T11:49:34.736Z</time>
+                <fix>3</fix>
+                <hdop>222</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.053277777777777785; 3dSpeed: 0.06444444444444442</cmt>
+            </trkpt>
+            <trkpt lat="41.38663882777777" lon="2.154764688888889">
+                <ele>40.3293888888889</ele>
+                <time>2020-02-13T11:49:35.726Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.055888888888888884; 3dSpeed: 0.07555555555555553</cmt>
+            </trkpt>
+            <trkpt lat="41.38663682777778" lon="2.154764483333333">
+                <ele>40.54372222222222</ele>
+                <time>2020-02-13T11:49:36.716Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04333333333333333; 3dSpeed: 0.06722222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38663428333334" lon="2.1547647722222223">
+                <ele>40.898</ele>
+                <time>2020-02-13T11:49:37.707Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.048611111111111105; 3dSpeed: 0.05388888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.38663264444444" lon="2.1547657333333334">
+                <ele>41.278166666666664</ele>
+                <time>2020-02-13T11:49:38.697Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.04577777777777777; 3dSpeed: 0.05333333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38663030000001" lon="2.1547653789473675">
+                <ele>41.609210526315785</ele>
+                <time>2020-02-13T11:49:39.715Z</time>
+                <fix>3</fix>
+                <hdop>181</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.06352631578947368; 3dSpeed: 0.07105263157894735</cmt>
+            </trkpt>
+            <trkpt lat="41.386628472222235" lon="2.154765116666667">
+                <ele>41.842222222222226</ele>
+                <time>2020-02-13T11:49:40.732Z</time>
+                <fix>3</fix>
+                <hdop>175</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08055555555555556; 3dSpeed: 0.09999999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.386628172222224" lon="2.1547679166666667">
+                <ele>42.234722222222224</ele>
+                <time>2020-02-13T11:49:41.722Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.1085; 3dSpeed: 0.1383333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38662744999999" lon="2.154769938888889">
+                <ele>42.60066666666667</ele>
+                <time>2020-02-13T11:49:42.738Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07499999999999998; 3dSpeed: 0.10722222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38662831111112" lon="2.1547731222222226">
+                <ele>42.73027777777777</ele>
+                <time>2020-02-13T11:49:43.732Z</time>
+                <fix>3</fix>
+                <hdop>187</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.20327777777777778; 3dSpeed: 0.2383333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38662892222222" lon="2.1547759777777777">
+                <ele>42.93855555555555</ele>
+                <time>2020-02-13T11:49:44.716Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.22733333333333333; 3dSpeed: 0.2611111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.386628983333324" lon="2.1547787888888887">
+                <ele>43.25266666666667</ele>
+                <time>2020-02-13T11:49:45.764Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.19372222222222224; 3dSpeed: 0.25000000000000006</cmt>
+            </trkpt>
+            <trkpt lat="41.386629572222226" lon="2.1547825777777776">
+                <ele>43.45855555555555</ele>
+                <time>2020-02-13T11:49:46.754Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.2190555555555556; 3dSpeed: 0.28611111111111115</cmt>
+            </trkpt>
+            <trkpt lat="41.38662900555556" lon="2.1547857555555563">
+                <ele>43.845666666666666</ele>
+                <time>2020-02-13T11:49:47.717Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.13305555555555554; 3dSpeed: 0.22444444444444442</cmt>
+            </trkpt>
+            <trkpt lat="41.386628816666665" lon="2.1547890555555558">
+                <ele>44.245722222222234</ele>
+                <time>2020-02-13T11:49:48.682Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.27188888888888885; 3dSpeed: 0.3211111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38662980555555" lon="2.154792755555556">
+                <ele>44.37605555555556</ele>
+                <time>2020-02-13T11:49:49.691Z</time>
+                <fix>3</fix>
+                <hdop>187</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.359; 3dSpeed: 0.4022222222222223</cmt>
+            </trkpt>
+            <trkpt lat="41.38663096842105" lon="2.1547967157894736">
+                <ele>44.51868421052631</ele>
+                <time>2020-02-13T11:49:50.743Z</time>
+                <fix>3</fix>
+                <hdop>182</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.3562631578947369; 3dSpeed: 0.441578947368421</cmt>
+            </trkpt>
+            <trkpt lat="41.386629866666674" lon="2.154800183333333">
+                <ele>44.699944444444455</ele>
+                <time>2020-02-13T11:49:51.732Z</time>
+                <fix>3</fix>
+                <hdop>198</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.40372222222222226; 3dSpeed: 0.4477777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38661979444444" lon="2.1548153944444444">
+                <ele>44.11183333333333</ele>
+                <time>2020-02-13T11:49:52.748Z</time>
+                <fix>3</fix>
+                <hdop>198</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.551888888888889; 3dSpeed: 2.4133333333333336</cmt>
+            </trkpt>
+            <trkpt lat="41.38658686111111" lon="2.154854372222222">
+                <ele>43.327444444444446</ele>
+                <time>2020-02-13T11:49:53.767Z</time>
+                <fix>3</fix>
+                <hdop>198</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.734944444444444; 3dSpeed: 5.609444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.38654243888889" lon="2.154921927777777">
+                <ele>42.52388888888889</ele>
+                <time>2020-02-13T11:49:54.731Z</time>
+                <fix>3</fix>
+                <hdop>238</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.098055555555556; 3dSpeed: 7.999444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.3864792105263" lon="2.1550078789473686">
+                <ele>42.39531578947368</ele>
+                <time>2020-02-13T11:49:55.720Z</time>
+                <fix>3</fix>
+                <hdop>214</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.171; 3dSpeed: 10.085263157894737</cmt>
+            </trkpt>
+            <trkpt lat="41.38640025000001" lon="2.1551044777777784">
+                <ele>42.80894444444444</ele>
+                <time>2020-02-13T11:49:56.737Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.853166666666667; 3dSpeed: 11.794444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.38632081666667" lon="2.1552022888888884">
+                <ele>42.37400000000002</ele>
+                <time>2020-02-13T11:49:57.727Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.136444444444445; 3dSpeed: 12.192222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.386227988888876" lon="2.155256988888889">
+                <ele>40.29061111111112</ele>
+                <time>2020-02-13T11:49:58.692Z</time>
+                <fix>3</fix>
+                <hdop>202</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.788277777777775; 3dSpeed: 11.76222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38612354999999" lon="2.1553275944444445">
+                <ele>38.713166666666666</ele>
+                <time>2020-02-13T11:49:59.701Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.2315; 3dSpeed: 13.211666666666668</cmt>
+            </trkpt>
+            <trkpt lat="41.386035" lon="2.1554383111111113">
+                <ele>37.71500000000001</ele>
+                <time>2020-02-13T11:50:00.726Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.347055555555555; 3dSpeed: 13.37111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38595305263158" lon="2.155571294736842">
+                <ele>36.551368421052636</ele>
+                <time>2020-02-13T11:50:01.715Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.875947368421052; 3dSpeed: 13.872105263157897</cmt>
+            </trkpt>
+            <trkpt lat="41.385872383333336" lon="2.155704383333333">
+                <ele>34.56888888888889</ele>
+                <time>2020-02-13T11:50:02.732Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.833833333333331; 3dSpeed: 13.928888888888892</cmt>
+            </trkpt>
+            <trkpt lat="41.385793927777776" lon="2.1558140944444446">
+                <ele>33.35322222222222</ele>
+                <time>2020-02-13T11:50:03.748Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.277944444444444; 3dSpeed: 12.41888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.385724535294116" lon="2.155900982352941">
+                <ele>32.983117647058826</ele>
+                <time>2020-02-13T11:50:04.767Z</time>
+                <fix>3</fix>
+                <hdop>231.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.751470588235295; 3dSpeed: 9.935294117647059</cmt>
+            </trkpt>
+            <trkpt lat="41.38567951666667" lon="2.1559610166666667">
+                <ele>30.971166666666665</ele>
+                <time>2020-02-13T11:50:05.704Z</time>
+                <fix>3</fix>
+                <hdop>231.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.406833333333331; 3dSpeed: 7.6000000000000005</cmt>
+            </trkpt>
+            <trkpt lat="41.38564545789473" lon="2.1559962842105267">
+                <ele>28.58121052631579</ele>
+                <time>2020-02-13T11:50:06.716Z</time>
+                <fix>3</fix>
+                <hdop>286</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.867631578947369; 3dSpeed: 5.0952631578947365</cmt>
+            </trkpt>
+            <trkpt lat="41.38561054444444" lon="2.1559887">
+                <ele>26.348</ele>
+                <time>2020-02-13T11:50:07.764Z</time>
+                <fix>3</fix>
+                <hdop>286</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.074833333333333; 3dSpeed: 4.225555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.385581900000005" lon="2.155959811111111">
+                <ele>25.193277777777773</ele>
+                <time>2020-02-13T11:50:08.727Z</time>
+                <fix>3</fix>
+                <hdop>286</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.203; 3dSpeed: 4.383333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.38556407222222" lon="2.1559359055555554">
+                <ele>23.26783333333333</ele>
+                <time>2020-02-13T11:50:09.692Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.6645555555555553; 3dSpeed: 3.895555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.38553737777777" lon="2.1559057666666663">
+                <ele>21.641444444444446</ele>
+                <time>2020-02-13T11:50:10.701Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.735555555555556; 3dSpeed: 4.813888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38548701666667" lon="2.155855561111111">
+                <ele>21.66116666666667</ele>
+                <time>2020-02-13T11:50:11.702Z</time>
+                <fix>3</fix>
+                <hdop>248</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.986166666666667; 3dSpeed: 6.900555555555555</cmt>
+            </trkpt>
+            <trkpt lat="41.38540132105263" lon="2.155790578947368">
+                <ele>22.20994736842105</ele>
+                <time>2020-02-13T11:50:12.711Z</time>
+                <fix>3</fix>
+                <hdop>231.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.152842105263158; 3dSpeed: 10.08736842105263</cmt>
+            </trkpt>
+            <trkpt lat="41.385323372222224" lon="2.1557217166666667">
+                <ele>22.40855555555555</ele>
+                <time>2020-02-13T11:50:13.759Z</time>
+                <fix>3</fix>
+                <hdop>231.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.847166666666665; 3dSpeed: 10.882777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38525570555556" lon="2.155655522222222">
+                <ele>22.85872222222222</ele>
+                <time>2020-02-13T11:50:14.722Z</time>
+                <fix>3</fix>
+                <hdop>231.5</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.151833333333336; 3dSpeed: 10.226111111111113</cmt>
+            </trkpt>
+            <trkpt lat="41.38521010555556" lon="2.1555836">
+                <ele>23.74444444444444</ele>
+                <time>2020-02-13T11:50:15.687Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.750722222222223; 3dSpeed: 8.858333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.385174061111115" lon="2.1555215555555556">
+                <ele>24.608888888888888</ele>
+                <time>2020-02-13T11:50:16.696Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.896; 3dSpeed: 7.025000000000001</cmt>
+            </trkpt>
+            <trkpt lat="41.38514327777778" lon="2.155485061111111">
+                <ele>24.97361111111111</ele>
+                <time>2020-02-13T11:50:17.747Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.868222222222223; 3dSpeed: 4.9494444444444445</cmt>
+            </trkpt>
+            <trkpt lat="41.38512158421052" lon="2.1554527315789476">
+                <ele>25.53952631578947</ele>
+                <time>2020-02-13T11:50:18.738Z</time>
+                <fix>3</fix>
+                <hdop>248</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.117263157894738; 3dSpeed: 4.201578947368421</cmt>
+            </trkpt>
+            <trkpt lat="41.38512380555555" lon="2.155440677777778">
+                <ele>27.839999999999996</ele>
+                <time>2020-02-13T11:50:19.727Z</time>
+                <fix>3</fix>
+                <hdop>248</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.7132222222222222; 3dSpeed: 1.8444444444444443</cmt>
+            </trkpt>
+            <trkpt lat="41.385127983333334" lon="2.155449244444445">
+                <ele>30.833555555555552</ele>
+                <time>2020-02-13T11:50:20.742Z</time>
+                <fix>3</fix>
+                <hdop>520</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.5032222222222222; 3dSpeed: 0.5283333333333332</cmt>
+            </trkpt>
+            <trkpt lat="41.38512188333334" lon="2.1554603500000002">
+                <ele>34.17327777777778</ele>
+                <time>2020-02-13T11:50:21.762Z</time>
+                <fix>3</fix>
+                <hdop>248</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.5793888888888888; 3dSpeed: 0.6372222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38512087777779" lon="2.1554700111111114">
+                <ele>37.09883333333333</ele>
+                <time>2020-02-13T11:50:22.727Z</time>
+                <fix>3</fix>
+                <hdop>264</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.24783333333333332; 3dSpeed: 0.43000000000000005</cmt>
+            </trkpt>
+            <trkpt lat="41.38512396842106" lon="2.1554772842105265">
+                <ele>39.28873684210526</ele>
+                <time>2020-02-13T11:50:23.740Z</time>
+                <fix>3</fix>
+                <hdop>302</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.049315789473684216; 3dSpeed: 0.26789473684210524</cmt>
+            </trkpt>
+            <trkpt lat="41.385124516666664" lon="2.1554836222222225">
+                <ele>41.637277777777776</ele>
+                <time>2020-02-13T11:50:24.759Z</time>
+                <fix>3</fix>
+                <hdop>302</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.12005555555555555; 3dSpeed: 0.27166666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.385123683333326" lon="2.155489277777778">
+                <ele>43.94911111111111</ele>
+                <time>2020-02-13T11:50:25.748Z</time>
+                <fix>3</fix>
+                <hdop>302</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.21555555555555556; 3dSpeed: 0.3305555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38512412222224" lon="2.1554909166666665">
+                <ele>45.84283333333333</ele>
+                <time>2020-02-13T11:50:26.741Z</time>
+                <fix>3</fix>
+                <hdop>302</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.2077222222222222; 3dSpeed: 0.32611111111111113</cmt>
+            </trkpt>
+            <trkpt lat="41.38512471111111" lon="2.155493527777778">
+                <ele>48.27044444444444</ele>
+                <time>2020-02-13T11:50:27.677Z</time>
+                <fix>3</fix>
+                <hdop>302</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.18555555555555556; 3dSpeed: 0.3211111111111112</cmt>
+            </trkpt>
+            <trkpt lat="41.38512584736842" lon="2.1554962684210524">
+                <ele>50.21326315789475</ele>
+                <time>2020-02-13T11:50:28.716Z</time>
+                <fix>3</fix>
+                <hdop>255</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.2900526315789474; 3dSpeed: 0.3594736842105263</cmt>
+            </trkpt>
+            <trkpt lat="41.38512025555556" lon="2.155493788888889">
+                <ele>52.31216666666668</ele>
+                <time>2020-02-13T11:50:29.764Z</time>
+                <fix>3</fix>
+                <hdop>255</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.2219444444444445; 3dSpeed: 1.192222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38511238888889" lon="2.155474233333333">
+                <ele>53.02111111111111</ele>
+                <time>2020-02-13T11:50:30.727Z</time>
+                <fix>3</fix>
+                <hdop>255</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.8715555555555554; 3dSpeed: 1.8677777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.385103238888895" lon="2.1554553277777777">
+                <ele>53.71016666666666</ele>
+                <time>2020-02-13T11:50:31.717Z</time>
+                <fix>3</fix>
+                <hdop>237</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.8446666666666667; 3dSpeed: 1.8294444444444444</cmt>
+            </trkpt>
+            <trkpt lat="41.385086566666665" lon="2.1554316555555557">
+                <ele>54.595722222222214</ele>
+                <time>2020-02-13T11:50:32.707Z</time>
+                <fix>3</fix>
+                <hdop>201</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.2320555555555557; 3dSpeed: 2.201111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38506528888889" lon="2.1553948833333334">
+                <ele>54.806</ele>
+                <time>2020-02-13T11:50:33.697Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.1927222222222227; 3dSpeed: 3.1144444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.385051057894735" lon="2.155332810526316">
+                <ele>51.349736842105266</ele>
+                <time>2020-02-13T11:50:34.715Z</time>
+                <fix>3</fix>
+                <hdop>193</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.050684210526316; 3dSpeed: 4.037894736842106</cmt>
+            </trkpt>
+            <trkpt lat="41.385020327777774" lon="2.155265">
+                <ele>48.8676111111111</ele>
+                <time>2020-02-13T11:50:35.732Z</time>
+                <fix>3</fix>
+                <hdop>193</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.940222222222221; 3dSpeed: 4.90111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38498709999999" lon="2.155207627777777">
+                <ele>46.30427777777778</ele>
+                <time>2020-02-13T11:50:36.748Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.279333333333333; 3dSpeed: 5.312222222222223</cmt>
+            </trkpt>
+            <trkpt lat="41.38495345" lon="2.155153761111111">
+                <ele>44.25877777777778</ele>
+                <time>2020-02-13T11:50:37.741Z</time>
+                <fix>3</fix>
+                <hdop>227</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.332111111111112; 3dSpeed: 5.35</cmt>
+            </trkpt>
+            <trkpt lat="41.38490895555555" lon="2.1551066444444444">
+                <ele>42.59849999999999</ele>
+                <time>2020-02-13T11:50:38.702Z</time>
+                <fix>3</fix>
+                <hdop>203</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.960222222222223; 3dSpeed: 5.932777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38485826666666" lon="2.1550547444444446">
+                <ele>41.429722222222225</ele>
+                <time>2020-02-13T11:50:39.716Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.471388888888889; 3dSpeed: 6.527222222222223</cmt>
+            </trkpt>
+            <trkpt lat="41.384817394736835" lon="2.155001194736842">
+                <ele>41.01810526315789</ele>
+                <time>2020-02-13T11:50:40.738Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.487263157894737; 3dSpeed: 5.596842105263159</cmt>
+            </trkpt>
+            <trkpt lat="41.38479961666667" lon="2.1549656888888893">
+                <ele>40.3155</ele>
+                <time>2020-02-13T11:50:41.754Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.2067777777777784; 3dSpeed: 3.386111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38478745555556" lon="2.1549419055555554">
+                <ele>39.84505555555556</ele>
+                <time>2020-02-13T11:50:42.772Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.231777777777778; 3dSpeed: 2.34</cmt>
+            </trkpt>
+            <trkpt lat="41.38478672777777" lon="2.1549107833333334">
+                <ele>40.1666111111111</ele>
+                <time>2020-02-13T11:50:43.736Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.559222222222222; 3dSpeed: 2.6127777777777776</cmt>
+            </trkpt>
+            <trkpt lat="41.38477643333333" lon="2.1548860722222223">
+                <ele>40.07127777777779</ele>
+                <time>2020-02-13T11:50:44.697Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.4684999999999997; 3dSpeed: 2.4588888888888887</cmt>
+            </trkpt>
+            <trkpt lat="41.38473583157895" lon="2.154838710526316">
+                <ele>38.78410526315789</ele>
+                <time>2020-02-13T11:50:45.715Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.06321052631579; 3dSpeed: 4.963157894736843</cmt>
+            </trkpt>
+            <trkpt lat="41.38468739444444" lon="2.154778411111111">
+                <ele>37.161055555555556</ele>
+                <time>2020-02-13T11:50:46.732Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.758444444444445; 3dSpeed: 5.8133333333333335</cmt>
+            </trkpt>
+            <trkpt lat="41.38463543333334" lon="2.1547213444444444">
+                <ele>35.36622222222223</ele>
+                <time>2020-02-13T11:50:47.697Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.270944444444445; 3dSpeed: 6.325555555555557</cmt>
+            </trkpt>
+            <trkpt lat="41.38457552777778" lon="2.154654072222222">
+                <ele>34.50544444444444</ele>
+                <time>2020-02-13T11:50:48.706Z</time>
+                <fix>3</fix>
+                <hdop>518</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.939222222222223; 3dSpeed: 7.907222222222223</cmt>
+            </trkpt>
+            <trkpt lat="41.384515155555555" lon="2.1545819666666666">
+                <ele>33.81144444444444</ele>
+                <time>2020-02-13T11:50:49.757Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.273888888888889; 3dSpeed: 8.345555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38445304210527" lon="2.1545112631578944">
+                <ele>33.41078947368421</ele>
+                <time>2020-02-13T11:50:50.775Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.620526315789474; 3dSpeed: 8.640526315789474</cmt>
+            </trkpt>
+            <trkpt lat="41.38439223333333" lon="2.1544350666666667">
+                <ele>33.33511111111111</ele>
+                <time>2020-02-13T11:50:51.792Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.838111111111111; 3dSpeed: 8.893333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.384338727777774" lon="2.154360633333333">
+                <ele>33.094888888888896</ele>
+                <time>2020-02-13T11:50:52.754Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.612611111111113; 3dSpeed: 8.658888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38426763333333" lon="2.15430965">
+                <ele>32.13916666666667</ele>
+                <time>2020-02-13T11:50:53.692Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.34388888888889; 3dSpeed: 8.373333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38420071111112" lon="2.154231011111111">
+                <ele>29.09466666666667</ele>
+                <time>2020-02-13T11:50:54.676Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.161833333333332; 3dSpeed: 9.197222222222221</cmt>
+            </trkpt>
+            <trkpt lat="41.38414342222222" lon="2.1541393222222225">
+                <ele>26.99388888888889</ele>
+                <time>2020-02-13T11:50:55.723Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.312; 3dSpeed: 9.423333333333336</cmt>
+            </trkpt>
+            <trkpt lat="41.38408649473684" lon="2.154053147368421">
+                <ele>27.445368421052635</ele>
+                <time>2020-02-13T11:50:56.770Z</time>
+                <fix>3</fix>
+                <hdop>398</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.562157894736842; 3dSpeed: 9.52421052631579</cmt>
+            </trkpt>
+            <trkpt lat="41.384017727777774" lon="2.153956183333334">
+                <ele>28.969777777777786</ele>
+                <time>2020-02-13T11:50:57.759Z</time>
+                <fix>3</fix>
+                <hdop>398</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.705555555555557; 3dSpeed: 10.727777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38397756111112" lon="2.1538629777777776">
+                <ele>26.9775</ele>
+                <time>2020-02-13T11:50:58.747Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.421055555555558; 3dSpeed: 8.581666666666667</cmt>
+            </trkpt>
+            <trkpt lat="41.383944044444455" lon="2.1537658666666664">
+                <ele>25.509666666666668</ele>
+                <time>2020-02-13T11:50:59.741Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.055166666666667; 3dSpeed: 9.044444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.38388069444445" lon="2.1536653777777772">
+                <ele>24.931111111111115</ele>
+                <time>2020-02-13T11:51:00.702Z</time>
+                <fix>3</fix>
+                <hdop>270</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.352888888888888; 3dSpeed: 10.261111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.383784894444446" lon="2.153545372222222">
+                <ele>24.94672222222222</ele>
+                <time>2020-02-13T11:51:01.716Z</time>
+                <fix>3</fix>
+                <hdop>232</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 13.311111111111114; 3dSpeed: 13.223333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38368177894736" lon="2.1534215000000003">
+                <ele>25.384</ele>
+                <time>2020-02-13T11:51:02.738Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.379578947368419; 3dSpeed: 14.358947368421054</cmt>
+            </trkpt>
+            <trkpt lat="41.38357697222223" lon="2.1532888777777774">
+                <ele>26.165833333333335</ele>
+                <time>2020-02-13T11:51:03.753Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 15.281000000000004; 3dSpeed: 15.257777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38347522777777" lon="2.1531553444444445">
+                <ele>26.465333333333337</ele>
+                <time>2020-02-13T11:51:04.797Z</time>
+                <fix>3</fix>
+                <hdop>237</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 15.574111111111112; 3dSpeed: 15.582777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.38337223333334" lon="2.153019905555556">
+                <ele>27.130777777777777</ele>
+                <time>2020-02-13T11:51:05.682Z</time>
+                <fix>3</fix>
+                <hdop>237</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 15.82411111111111; 3dSpeed: 15.796666666666665</cmt>
+            </trkpt>
+            <trkpt lat="41.38326784444444" lon="2.152886455555555">
+                <ele>28.053111111111107</ele>
+                <time>2020-02-13T11:51:06.691Z</time>
+                <fix>3</fix>
+                <hdop>251</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 15.666444444444444; 3dSpeed: 15.725</cmt>
+            </trkpt>
+            <trkpt lat="41.38317928421053" lon="2.152761947368421">
+                <ele>29.379842105263158</ele>
+                <time>2020-02-13T11:51:07.743Z</time>
+                <fix>3</fix>
+                <hdop>215</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 14.087578947368417; 3dSpeed: 14.22263157894737</cmt>
+            </trkpt>
+            <trkpt lat="41.38310143333333" lon="2.1526497888888887">
+                <ele>29.169777777777785</ele>
+                <time>2020-02-13T11:51:08.732Z</time>
+                <fix>3</fix>
+                <hdop>209</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 12.60611111111111; 3dSpeed: 12.611111111111112</cmt>
+            </trkpt>
+            <trkpt lat="41.38302756666668" lon="2.152546561111111">
+                <ele>28.875944444444446</ele>
+                <time>2020-02-13T11:51:09.722Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.873611111111112; 3dSpeed: 11.919444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.38295885555555" lon="2.152453316666667">
+                <ele>30.08533333333333</ele>
+                <time>2020-02-13T11:51:10.712Z</time>
+                <fix>3</fix>
+                <hdop>228</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.215555555555554; 3dSpeed: 11.261666666666668</cmt>
+            </trkpt>
+            <trkpt lat="41.382889455555556" lon="2.1523612277777775">
+                <ele>31.664055555555557</ele>
+                <time>2020-02-13T11:51:11.727Z</time>
+                <fix>3</fix>
+                <hdop>234</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.196388888888889; 3dSpeed: 11.166666666666668</cmt>
+            </trkpt>
+            <trkpt lat="41.382809166666675" lon="2.15226615">
+                <ele>32.81494444444444</ele>
+                <time>2020-02-13T11:51:12.722Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.532055555555553; 3dSpeed: 11.525555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.382730947368415" lon="2.1521701263157897">
+                <ele>34.22278947368421</ele>
+                <time>2020-02-13T11:51:13.735Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.276789473684211; 3dSpeed: 11.31578947368421</cmt>
+            </trkpt>
+            <trkpt lat="41.38266717222222" lon="2.152078122222222">
+                <ele>35.06355555555556</ele>
+                <time>2020-02-13T11:51:14.754Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.764; 3dSpeed: 9.84888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.382598594444445" lon="2.1519980277777777">
+                <ele>35.56972222222222</ele>
+                <time>2020-02-13T11:51:15.717Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.042; 3dSpeed: 9.082777777777778</cmt>
+            </trkpt>
+            <trkpt lat="41.382549577777766" lon="2.151914661111111">
+                <ele>35.26505555555556</ele>
+                <time>2020-02-13T11:51:16.707Z</time>
+                <fix>3</fix>
+                <hdop>271</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.809888888888888; 3dSpeed: 7.871111111111111</cmt>
+            </trkpt>
+            <trkpt lat="41.38253284444445" lon="2.1518332055555556">
+                <ele>34.8075</ele>
+                <time>2020-02-13T11:51:17.672Z</time>
+                <fix>3</fix>
+                <hdop>249</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.6720555555555565; 3dSpeed: 6.733333333333334</cmt>
+            </trkpt>
+            <trkpt lat="41.382539984210524" lon="2.151754994736842">
+                <ele>32.27105263157895</ele>
+                <time>2020-02-13T11:51:18.711Z</time>
+                <fix>3</fix>
+                <hdop>214</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.834894736842105; 3dSpeed: 5.90842105263158</cmt>
+            </trkpt>
+            <trkpt lat="41.38255657222222" lon="2.15170375">
+                <ele>31.5305</ele>
+                <time>2020-02-13T11:51:19.759Z</time>
+                <fix>3</fix>
+                <hdop>214</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 3.6223333333333327; 3dSpeed: 3.7694444444444453</cmt>
+            </trkpt>
+            <trkpt lat="41.38256338333333" lon="2.151676672222222">
+                <ele>31.428888888888892</ele>
+                <time>2020-02-13T11:51:20.722Z</time>
+                <fix>3</fix>
+                <hdop>231</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.9805555555555554; 3dSpeed: 2.0183333333333335</cmt>
+            </trkpt>
+            <trkpt lat="41.38256746666666" lon="2.1516559444444447">
+                <ele>31.691000000000003</ele>
+                <time>2020-02-13T11:51:21.738Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 1.6717222222222223; 3dSpeed: 1.67</cmt>
+            </trkpt>
+            <trkpt lat="41.38257211111111" lon="2.15162985">
+                <ele>31.736777777777775</ele>
+                <time>2020-02-13T11:51:22.757Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.8364444444444445; 3dSpeed: 2.727222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38259063333334" lon="2.1515840444444443">
+                <ele>30.83061111111111</ele>
+                <time>2020-02-13T11:51:23.722Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 5.2731111111111115; 3dSpeed: 5.1627777777777775</cmt>
+            </trkpt>
+            <trkpt lat="41.382632136842105" lon="2.151523121052631">
+                <ele>30.461684210526315</ele>
+                <time>2020-02-13T11:51:24.735Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 7.577631578947368; 3dSpeed: 7.474210526315789</cmt>
+            </trkpt>
+            <trkpt lat="41.38269449444445" lon="2.1514533444444446">
+                <ele>30.491833333333336</ele>
+                <time>2020-02-13T11:51:25.754Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 9.550666666666665; 3dSpeed: 9.465555555555557</cmt>
+            </trkpt>
+            <trkpt lat="41.38276548333333" lon="2.1513743611111114">
+                <ele>29.862388888888887</ele>
+                <time>2020-02-13T11:51:26.743Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.824333333333334; 3dSpeed: 10.784444444444446</cmt>
+            </trkpt>
+            <trkpt lat="41.3828369388889" lon="2.151281594444445">
+                <ele>29.421611111111112</ele>
+                <time>2020-02-13T11:51:27.736Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.516611111111109; 3dSpeed: 11.497222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38291077777778" lon="2.1511851333333336">
+                <ele>29.318388888888887</ele>
+                <time>2020-02-13T11:51:28.697Z</time>
+                <fix>3</fix>
+                <hdop>247</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 11.52427777777778; 3dSpeed: 11.552777777777777</cmt>
+            </trkpt>
+            <trkpt lat="41.38298082105263" lon="2.1510920631578947">
+                <ele>29.292789473684213</ele>
+                <time>2020-02-13T11:51:29.740Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 10.368473684210525; 3dSpeed: 10.455263157894736</cmt>
+            </trkpt>
+            <trkpt lat="41.38303723888889" lon="2.151010616666667">
+                <ele>29.290111111111106</ele>
+                <time>2020-02-13T11:51:30.787Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 8.80161111111111; 3dSpeed: 8.889999999999999</cmt>
+            </trkpt>
+            <trkpt lat="41.38307915" lon="2.150947738888889">
+                <ele>29.029944444444446</ele>
+                <time>2020-02-13T11:51:31.749Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 6.729333333333333; 3dSpeed: 6.872222222222222</cmt>
+            </trkpt>
+            <trkpt lat="41.38310662222222" lon="2.1509055666666663">
+                <ele>29.065444444444445</ele>
+                <time>2020-02-13T11:51:32.687Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 4.274111111111111; 3dSpeed: 4.397777777777779</cmt>
+            </trkpt>
+            <trkpt lat="41.38311805555555" lon="2.150877094444444">
+                <ele>28.730111111111114</ele>
+                <time>2020-02-13T11:51:33.696Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 2.2092777777777775; 3dSpeed: 2.3172222222222225</cmt>
+            </trkpt>
+            <trkpt lat="41.383115" lon="2.1508612157894738">
+                <ele>27.940421052631585</ele>
+                <time>2020-02-13T11:51:34.722Z</time>
+                <fix>3</fix>
+                <hdop>216</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.5011578947368421; 3dSpeed: 0.5673684210526315</cmt>
+            </trkpt>
+            <trkpt lat="41.38310583333333" lon="2.1508530555555554">
+                <ele>27.290166666666664</ele>
+                <time>2020-02-13T11:51:35.737Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07827777777777778; 3dSpeed: 0.10166666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.383098700000005" lon="2.1508453944444446">
+                <ele>26.8</ele>
+                <time>2020-02-13T11:51:36.754Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08244444444444445; 3dSpeed: 0.10166666666666666</cmt>
+            </trkpt>
+            <trkpt lat="41.38309209444444" lon="2.1508389">
+                <ele>26.774166666666662</ele>
+                <time>2020-02-13T11:51:37.717Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.07811111111111112; 3dSpeed: 0.08833333333333333</cmt>
+            </trkpt>
+            <trkpt lat="41.38308898333333" lon="2.1508329222222224">
+                <ele>27.241611111111112</ele>
+                <time>2020-02-13T11:51:38.707Z</time>
+                <fix>3</fix>
+                <hdop>230</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.10022222222222221; 3dSpeed: 0.11944444444444442</cmt>
+            </trkpt>
+            <trkpt lat="41.383083633333335" lon="2.150826044444444">
+                <ele>27.801500000000004</ele>
+                <time>2020-02-13T11:51:39.721Z</time>
+                <fix>3</fix>
+                <hdop>197</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.27322222222222226; 3dSpeed: 0.30666666666666664</cmt>
+            </trkpt>
+            <trkpt lat="41.38308327894737" lon="2.150822142105264">
+                <ele>28.329789473684215</ele>
+                <time>2020-02-13T11:51:40.743Z</time>
+                <fix>3</fix>
+                <hdop>230</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14684210526315786; 3dSpeed: 0.2531578947368421</cmt>
+            </trkpt>
+            <trkpt lat="41.38308403888889" lon="2.1508211833333335">
+                <ele>28.808055555555555</ele>
+                <time>2020-02-13T11:51:41.732Z</time>
+                <fix>3</fix>
+                <hdop>239</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.15755555555555553; 3dSpeed: 0.2788888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38308549444445" lon="2.150820027777778">
+                <ele>29.209277777777782</ele>
+                <time>2020-02-13T11:51:42.697Z</time>
+                <fix>3</fix>
+                <hdop>239</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.28533333333333327; 3dSpeed: 0.37055555555555564</cmt>
+            </trkpt>
+            <trkpt lat="41.383084716666666" lon="2.15081655">
+                <ele>29.438055555555554</ele>
+                <time>2020-02-13T11:51:43.681Z</time>
+                <fix>3</fix>
+                <hdop>239</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.20127777777777778; 3dSpeed: 0.32611111111111113</cmt>
+            </trkpt>
+            <trkpt lat="41.38308229999999" lon="2.150813072222222">
+                <ele>29.486333333333334</ele>
+                <time>2020-02-13T11:51:44.677Z</time>
+                <fix>3</fix>
+                <hdop>239</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.15555555555555553; 3dSpeed: 0.2505555555555556</cmt>
+            </trkpt>
+            <trkpt lat="41.38308081666667" lon="2.1508091277777774">
+                <ele>29.823888888888888</ele>
+                <time>2020-02-13T11:51:45.686Z</time>
+                <fix>3</fix>
+                <hdop>207</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.23688888888888893; 3dSpeed: 0.28277777777777774</cmt>
+            </trkpt>
+            <trkpt lat="41.38307595789474" lon="2.1508009105263155">
+                <ele>30.28278947368421</ele>
+                <time>2020-02-13T11:51:46.738Z</time>
+                <fix>3</fix>
+                <hdop>207</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.12578947368421053; 3dSpeed: 0.20157894736842108</cmt>
+            </trkpt>
+            <trkpt lat="41.38306915555555" lon="2.150792372222222">
+                <ele>30.47672222222222</ele>
+                <time>2020-02-13T11:51:47.754Z</time>
+                <fix>3</fix>
+                <hdop>275</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.12861111111111112; 3dSpeed: 0.1738888888888889</cmt>
+            </trkpt>
+            <trkpt lat="41.38306289999999" lon="2.1507833555555553">
+                <ele>30.673333333333332</ele>
+                <time>2020-02-13T11:51:48.744Z</time>
+                <fix>3</fix>
+                <hdop>275</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.14111111111111113; 3dSpeed: 0.16611111111111113</cmt>
+            </trkpt>
+            <trkpt lat="41.38305906666667" lon="2.1507755">
+                <ele>30.87927777777778</ele>
+                <time>2020-02-13T11:51:49.682Z</time>
+                <fix>3</fix>
+                <hdop>275</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.11727777777777781; 3dSpeed: 0.14333333333333337</cmt>
+            </trkpt>
+            <trkpt lat="41.38305477222223" lon="2.150767627777778">
+                <ele>30.95411111111111</ele>
+                <time>2020-02-13T11:51:50.691Z</time>
+                <fix>3</fix>
+                <hdop>269</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0841111111111111; 3dSpeed: 0.08888888888888888</cmt>
+            </trkpt>
+            <trkpt lat="41.383051" lon="2.1507611076923077">
+                <ele>31.145923076923076</ele>
+                <time>2020-02-13T11:51:51.643Z</time>
+                <fix>3</fix>
+                <hdop>269</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.0673076923076923; 3dSpeed: 0.07</cmt>
+            </trkpt>
+            <trkpt lat="41.38304775" lon="2.15075675">
+                <ele>31.299999999999997</ele>
+                <time>2020-02-13T11:51:52.227Z</time>
+                <fix>3</fix>
+                <hdop>269</hdop>
+                <cmt>altitude system: MSLV; 2dSpeed: 0.08816666666666667; 3dSpeed: 0.09999999999999999</cmt>
+            </trkpt>
+        </trkseg>
+  </trk>
+</gpx>
