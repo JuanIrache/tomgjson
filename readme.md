@@ -24,7 +24,6 @@ These apps can output mgJSON files:
 ## To-Do
 
 - Read from GPX
-  - Read standard track
   - Interpret additional data (speeds, acceleration, course direction...)
 - Add func to read formatted DataSource directly
 - Structure module properly
@@ -34,4 +33,4 @@ These apps can output mgJSON files:
 
 ## Might-Do
 
-- Enable creating static fields? Non interpolable fields? Text fields?
+- Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
