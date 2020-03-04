@@ -23,8 +23,6 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Read from CSV
-  - Test with other csv standards or enconding (\r\n?)
 - Read from GPX
   - Read standard track
   - Interpret additional data (speeds, acceleration, course direction...)
