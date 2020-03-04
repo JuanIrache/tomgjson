@@ -34,3 +34,4 @@ These apps can output mgJSON files:
 ## Might-Do
 
 - Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
+- Import from other formats, such as json
