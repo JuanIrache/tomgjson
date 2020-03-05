@@ -83,14 +83,14 @@ func idx(item string) int {
 }
 
 func appendToStream(data FormattedData, v *float64, n string) Stream {
-	st := data.streams[idx(n)]
+	st := data.Streams[idx(n)]
 	if v != nil {
-		st.values = append(st.values, *v)
+		st.Values = append(st.Values, *v)
 		// Name confirmed streams
-		st.label = n
+		st.Label = n
 	} else {
 		// Appending zeros for now, could potentially add interpolated values based on previous, next and time
-		st.values = append(st.values, 0)
+		st.Values = append(st.Values, 0)
 	}
 	return st
 }
@@ -152,11 +152,11 @@ func FromGPX(src []byte, extra bool) FormattedData {
 	}
 
 	// One Stream for each of the supported trkpt and custom fields
-	data.streams = make([]Stream, len(ids))
-	data.timing = make([]time.Time, len(gpx.Trk[0].Trkseg[0].Trkpt))
+	data.Streams = make([]Stream, len(ids))
+	data.Timing = make([]time.Time, len(gpx.Trk[0].Trkseg[0].Trkpt))
 
-	for _, st := range data.streams {
-		st.values = make([]float64, len(gpx.Trk[0].Trkseg[0].Trkpt))
+	for _, st := range data.Streams {
+		st.Values = make([]float64, len(gpx.Trk[0].Trkseg[0].Trkpt))
 	}
 
 	for i, trkpt := range gpx.Trk[0].Trkseg[0].Trkpt {
@@ -166,19 +166,19 @@ func FromGPX(src []byte, extra bool) FormattedData {
 		t, err := time.Parse(time.RFC3339, *trkpt.Time)
 		check(err)
 
-		data.timing[i] = t
-		data.streams[idx("lat")] = appendToStream(data, trkpt.Lat, "lat")
-		data.streams[idx("lon")] = appendToStream(data, trkpt.Lon, "lon")
-		data.streams[idx("ele")] = appendToStream(data, trkpt.Ele, "ele")
-		data.streams[idx("magvar")] = appendToStream(data, trkpt.Magvar, "magvar")
-		data.streams[idx("geoidheight")] = appendToStream(data, trkpt.Geoidheight, "geoidheight")
-		data.streams[idx("fix")] = appendToStream(data, trkpt.Fix, "fix")
-		data.streams[idx("sat")] = appendToStream(data, trkpt.Sat, "sat")
-		data.streams[idx("hdop")] = appendToStream(data, trkpt.Hdop, "hdop")
-		data.streams[idx("vdop")] = appendToStream(data, trkpt.Vdop, "vdop")
-		data.streams[idx("pdop")] = appendToStream(data, trkpt.Pdop, "pdop")
-		data.streams[idx("ageofdgpsdata")] = appendToStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata")
-		data.streams[idx("dgpsid")] = appendToStream(data, trkpt.Dgpsid, "dgpsid")
+		data.Timing[i] = t
+		data.Streams[idx("lat")] = appendToStream(data, trkpt.Lat, "lat")
+		data.Streams[idx("lon")] = appendToStream(data, trkpt.Lon, "lon")
+		data.Streams[idx("ele")] = appendToStream(data, trkpt.Ele, "ele")
+		data.Streams[idx("magvar")] = appendToStream(data, trkpt.Magvar, "magvar")
+		data.Streams[idx("geoidheight")] = appendToStream(data, trkpt.Geoidheight, "geoidheight")
+		data.Streams[idx("fix")] = appendToStream(data, trkpt.Fix, "fix")
+		data.Streams[idx("sat")] = appendToStream(data, trkpt.Sat, "sat")
+		data.Streams[idx("hdop")] = appendToStream(data, trkpt.Hdop, "hdop")
+		data.Streams[idx("vdop")] = appendToStream(data, trkpt.Vdop, "vdop")
+		data.Streams[idx("pdop")] = appendToStream(data, trkpt.Pdop, "pdop")
+		data.Streams[idx("ageofdgpsdata")] = appendToStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata")
+		data.Streams[idx("dgpsid")] = appendToStream(data, trkpt.Dgpsid, "dgpsid")
 
 		// Computed streams
 		if extra && trkpt.Lat != nil && trkpt.Lon != nil {
@@ -193,15 +193,15 @@ func FromGPX(src []byte, extra bool) FormattedData {
 			var verticalSpeed float64
 			var verticalAcceleration float64
 			if i > 0 {
-				prevLat := data.streams[idx("lat")].values[i-1]
-				prevLon := data.streams[idx("lon")].values[i-1]
+				prevLat := data.Streams[idx("lat")].Values[i-1]
+				prevLon := data.Streams[idx("lon")].Values[i-1]
 				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
-				duration := data.timing[i].Sub(data.timing[i-1]).Seconds()
+				duration := data.Timing[i].Sub(data.Timing[i-1]).Seconds()
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				if trkpt.Ele != nil {
-					prevEle := data.streams[idx("ele")].values[i-1]
+					prevEle := data.Streams[idx("ele")].Values[i-1]
 					verticalDist := *trkpt.Ele - prevEle
 					slope = math.Atan2(verticalDist, distance2d)
 					slope = radiansToDegrees(slope)
@@ -212,45 +212,45 @@ func FromGPX(src []byte, extra bool) FormattedData {
 					verticalAcceleration = verticalSpeed
 				}
 				if i > 1 {
-					prevDistance := data.streams[idx("distance2d")].values[i-1]
+					prevDistance := data.Streams[idx("distance2d")].Values[i-1]
 					distance2d += prevDistance
-					prevSpeed2d := data.streams[idx("speed2d")].values[i-1]
+					prevSpeed2d := data.Streams[idx("speed2d")].Values[i-1]
 					speed2dChange := speed2d - prevSpeed2d
 					acceleration2d = speed2dChange / duration
 					if trkpt.Ele != nil {
-						prevDistance3d := data.streams[idx("distance3d")].values[i-1]
+						prevDistance3d := data.Streams[idx("distance3d")].Values[i-1]
 						distance3d += prevDistance3d
-						prevSpeed3d := data.streams[idx("speed3d")].values[i-1]
+						prevSpeed3d := data.Streams[idx("speed3d")].Values[i-1]
 						speed3dChange := speed3d - prevSpeed3d
 						acceleration3d = speed3dChange / duration
-						prevVerticalSpeed := data.streams[idx("verticalSpeed")].values[i-1]
+						prevVerticalSpeed := data.Streams[idx("verticalSpeed")].Values[i-1]
 						verticalSpeedChange := verticalSpeed - prevVerticalSpeed
 						verticalAcceleration = verticalSpeedChange / duration
 					}
 				}
 			}
 
-			data.streams[idx("distance2d")] = appendToStream(data, &distance2d, "distance2d")
-			data.streams[idx("speed2d")] = appendToStream(data, &speed2d, "speed2d")
-			data.streams[idx("acceleration2d")] = appendToStream(data, &acceleration2d, "acceleration2d")
-			data.streams[idx("course")] = appendToStream(data, &course, "course")
+			data.Streams[idx("distance2d")] = appendToStream(data, &distance2d, "distance2d")
+			data.Streams[idx("speed2d")] = appendToStream(data, &speed2d, "speed2d")
+			data.Streams[idx("acceleration2d")] = appendToStream(data, &acceleration2d, "acceleration2d")
+			data.Streams[idx("course")] = appendToStream(data, &course, "course")
 			if trkpt.Ele != nil {
-				data.streams[idx("slope")] = appendToStream(data, &slope, "slope")
-				data.streams[idx("distance3d")] = appendToStream(data, &distance3d, "distance3d")
-				data.streams[idx("speed3d")] = appendToStream(data, &speed3d, "speed3d")
-				data.streams[idx("acceleration3d")] = appendToStream(data, &acceleration3d, "acceleration3d")
-				data.streams[idx("verticalSpeed")] = appendToStream(data, &verticalSpeed, "verticalSpeed")
-				data.streams[idx("verticalAcceleration")] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
+				data.Streams[idx("slope")] = appendToStream(data, &slope, "slope")
+				data.Streams[idx("distance3d")] = appendToStream(data, &distance3d, "distance3d")
+				data.Streams[idx("speed3d")] = appendToStream(data, &speed3d, "speed3d")
+				data.Streams[idx("acceleration3d")] = appendToStream(data, &acceleration3d, "acceleration3d")
+				data.Streams[idx("verticalSpeed")] = appendToStream(data, &verticalSpeed, "verticalSpeed")
+				data.Streams[idx("verticalAcceleration")] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
 			}
 		}
 	}
 
 	// Clean up unconfirmed streams
-	for i := len(data.streams) - 1; i >= 0; i-- {
-		if len(data.streams[i].label) < 1 {
-			copy(data.streams[i:], data.streams[i+1:])
-			data.streams[len(data.streams)-1] = Stream{}
-			data.streams = data.streams[:len(data.streams)-1]
+	for i := len(data.Streams) - 1; i >= 0; i-- {
+		if len(data.Streams[i].Label) < 1 {
+			copy(data.Streams[i:], data.Streams[i+1:])
+			data.Streams[len(data.Streams)-1] = Stream{}
+			data.Streams = data.Streams[:len(data.Streams)-1]
 		}
 	}
 

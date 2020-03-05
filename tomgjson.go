@@ -13,15 +13,15 @@ import (
 // Stream contains a slice of values and their label
 // The slices of floats must be of the same length as the timing slice in their parent's FormattedData
 type Stream struct {
-	label  string
-	values []float64
+	Label  string
+	Values []float64
 }
 
 // FormattedData is the struct accepted by ToMgjson.
 // It consists of a slice of timestamps and a slice with all the streams of labelled values (floats for now)
 type FormattedData struct {
-	timing  []time.Time
-	streams []Stream
+	Timing  []time.Time
+	Streams []Stream
 }
 
 // mgJSON structure. For now, only the fields we are using are specified
@@ -124,13 +124,13 @@ func ToMgjson(sd FormattedData, creator string) []byte {
 
 	largestMgjsonNum := 2147483648.0
 
-	for i, stream := range sd.streams {
+	for i, stream := range sd.Streams {
 		sName := fmt.Sprintf("Stream%d", i)
 		min := math.Inf(1)
 		max := math.Inf(-1)
 		digitsInteger := 0
 		digitsDecimal := 0
-		for _, v := range stream.values {
+		for _, v := range stream.Values {
 			min = math.Min(min, v)
 			max = math.Max(min, v)
 			integer, decimal := sides(v)
@@ -139,7 +139,7 @@ func ToMgjson(sd FormattedData, creator string) []byte {
 		}
 		data.DataOutline = append(data.DataOutline, singleDataOutline{
 			ObjectType:  "dataDynamic",
-			DisplayName: stream.label,
+			DisplayName: stream.Label,
 			SampleSetID: sName,
 			DataType: dataType{
 				Type: "numberString",
@@ -157,14 +157,14 @@ func ToMgjson(sd FormattedData, creator string) []byte {
 			},
 			Interpolation:         "linear",
 			HasExpectedFrequencyB: false,
-			SampleCount:           len(stream.values),
+			SampleCount:           len(stream.Values),
 			MatchName:             sName,
 		})
 
 		streamSamples := []sample{}
-		for i, v := range stream.values {
+		for i, v := range stream.Values {
 			paddedValue := fmt.Sprintf("%+0*.*f", digitsInteger+digitsDecimal+2, digitsDecimal, v)
-			timeStr := sd.timing[i].Format("2006-01-02T15:04:05.000Z")
+			timeStr := sd.Timing[i].Format("2006-01-02T15:04:05.000Z")
 			streamSamples = append(streamSamples, sample{
 				Time:  timeStr,
 				Value: paddedValue,

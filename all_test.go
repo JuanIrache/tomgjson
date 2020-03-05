@@ -9,13 +9,13 @@ import (
 func ExampleToMgjson() {
 
 	stream1 := Stream{
-		label:  "Prime numbers",
-		values: []float64{2, 3, 5, 7},
+		Label:  "Prime numbers",
+		Values: []float64{2, 3, 5, 7},
 	}
 
 	stream2 := Stream{
-		label:  "Non primes",
-		values: []float64{4, 6, 8, 9},
+		Label:  "Non primes",
+		Values: []float64{4, 6, 8, 9},
 	}
 
 	now := time.Unix(0, 0)
@@ -30,8 +30,8 @@ func ExampleToMgjson() {
 	}
 
 	data := FormattedData{
-		timing:  timing,
-		streams: []Stream{stream1, stream2},
+		Timing:  timing,
+		Streams: []Stream{stream1, stream2},
 	}
 
 	doc := ToMgjson(data, "Juan Irache")
@@ -47,9 +47,9 @@ func ExampleFromCSV() {
 	converted := FromCSV(src, 25.0)
 	fmt.Printf(
 		`The second stream is labelled as %q and its fifth sample at %f seconds is %v`,
-		converted.streams[1].label,
-		converted.timing[5].Sub(time.Unix(0, 0)).Seconds(),
-		converted.streams[1].values[5],
+		converted.Streams[1].Label,
+		converted.Timing[5].Sub(time.Unix(0, 0)).Seconds(),
+		converted.Streams[1].Values[5],
 	)
 	//Output:
 	//The second stream is labelled as "Signed 1k Perlin" and its fifth sample at 0.500000 seconds is 74.1837892462852
@@ -61,13 +61,13 @@ func ExampleFromGPX() {
 	sample := 10
 	fmt.Printf(
 		`At %v the position was %v: %f, %v: %f and the %v was %f `,
-		converted.timing[sample].Format("15:04:05"),
-		converted.streams[0].label,
-		converted.streams[0].values[sample],
-		converted.streams[1].label,
-		converted.streams[1].values[sample],
-		converted.streams[8].label,
-		converted.streams[8].values[sample],
+		converted.Timing[sample].Format("15:04:05"),
+		converted.Streams[0].Label,
+		converted.Streams[0].Values[sample],
+		converted.Streams[1].Label,
+		converted.Streams[1].Values[sample],
+		converted.Streams[8].Label,
+		converted.Streams[8].Values[sample],
 	)
 	//Output:
 	//At 11:45:55 the position was lat: 41.389212, lon: 2.147359 and the speed2d was 3.057694

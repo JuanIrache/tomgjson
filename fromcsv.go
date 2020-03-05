@@ -55,30 +55,30 @@ func FromCSV(src []byte, fr float64) FormattedData {
 		lines = lines[1:]
 		floatsTable := stringsTableToFloats(lines)
 		if headers[0] == "milliseconds" && len(headers[1]) > 1 {
-			data.timing = floatsToTimes(floatsTable[0])
+			data.Timing = floatsToTimes(floatsTable[0])
 			floatsTable = floatsTable[1:]
 			headers = headers[1:]
 		}
 		for i, vv := range floatsTable {
-			data.streams = append(data.streams, Stream{
-				label:  headers[i],
-				values: vv,
+			data.Streams = append(data.Streams, Stream{
+				Label:  headers[i],
+				Values: vv,
 			})
 		}
 	} else {
-		data.streams = []Stream{{
-			label:  "Data",
-			values: stringsTableToFloats(lines)[0],
+		data.Streams = []Stream{{
+			Label:  "Data",
+			Values: stringsTableToFloats(lines)[0],
 		}}
 	}
 
-	if len(data.streams[0].values) < 1 {
+	if len(data.Streams[0].Values) < 1 {
 		log.Panic("No valid data found")
 	}
 
-	if len(data.timing) < 1 {
-		for i := 0; i < len(data.streams[0].values); i++ {
-			data.timing = append(data.timing, millisecondsToTime(float64(i)*1000.0/fr))
+	if len(data.Timing) < 1 {
+		for i := 0; i < len(data.Streams[0].Values); i++ {
+			data.Timing = append(data.Timing, millisecondsToTime(float64(i)*1000.0/fr))
 		}
 	}
 
