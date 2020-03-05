@@ -24,7 +24,7 @@ These apps can output mgJSON files:
 ## To-Do
 
 - Read from GPX
-  - Interpret additional data (speeds, acceleration, course direction...)
+  - Interpret additional data: course direction, 3d distance, 3d speed, slope
 - Add func to read formatted DataSource directly
 - Structure module properly
 - Create documentation (tests/examples)
