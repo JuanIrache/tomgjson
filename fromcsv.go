@@ -24,7 +24,7 @@ func stringsTableToFloats(xxs [][]string) [][]float64 {
 	return xxf
 }
 
-func floatToTime(f float64) time.Time {
+func millisecondsToTime(f float64) time.Time {
 	seconds := f / 1000
 	fullSeconds := math.Floor(seconds)
 	nanoseconds := (seconds - fullSeconds) * 1e+9
@@ -34,7 +34,7 @@ func floatToTime(f float64) time.Time {
 func floatsToTimes(xf []float64) []time.Time {
 	xt := []time.Time{}
 	for _, f := range xf {
-		mTime := floatToTime(f)
+		mTime := millisecondsToTime(f)
 		xt = append(xt, mTime)
 	}
 	return xt
@@ -78,7 +78,7 @@ func FromCSV(src []byte, fr float64) FormattedData {
 
 	if len(data.timing) < 1 {
 		for i := 0; i < len(data.streams[0].values); i++ {
-			data.timing = append(data.timing, floatToTime(fr*float64(i)))
+			data.timing = append(data.timing, millisecondsToTime(float64(i)*1000.0/fr))
 		}
 	}
 
