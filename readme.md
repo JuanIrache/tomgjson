@@ -25,6 +25,7 @@ These apps can output mgJSON files:
 
 ## To-Do
 
+- Fix framerate in csv
 - Create documentation (tests/examples)
 - Validate GPX results
 - Create tutorial
