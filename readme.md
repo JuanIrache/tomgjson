@@ -4,9 +4,9 @@ Experimenting with converting other time based data sources to [Adobe's mgJSON f
 
 The first iteration will be very limited in terms of customization.
 
-## Sample projects
+## Sample project templates
 
-You can find sample projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com#ae). Look for the Lite templates.
+You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the Lite templates.
 
 ## Videos made with mgJSON
 
