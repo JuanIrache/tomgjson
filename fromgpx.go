@@ -1,4 +1,4 @@
-package utils
+package tomgjson
 
 import (
 	"encoding/xml"
@@ -95,8 +95,8 @@ func appendToStream(data FormattedData, v *float64, n string) Stream {
 	return st
 }
 
-// ReadGPX formats a compatible GPX file as a struct ready for mgJSON. If extra, will compute additional streams
-func ReadGPX(src []byte, extra bool) FormattedData {
+// FromGPX formats a compatible GPX file as a struct ready for mgJSON. If extra, will compute additional streams
+func FromGPX(src []byte, extra bool) FormattedData {
 	var data FormattedData
 
 	type Trkpt struct {

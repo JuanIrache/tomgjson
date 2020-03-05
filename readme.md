@@ -23,7 +23,6 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Structure module properly
 - Validate GPX results
 - Import from json array
 - Create documentation (tests/examples)
