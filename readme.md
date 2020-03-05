@@ -23,8 +23,7 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Read from GPX
-  - Interpret additional data: 3d distance, 3d speed
+- Improve indices stuff in gpx
 - Send proper time.Time around and not milliseconds?
 - Export func to read formatted DataSource directly
 - Structure module properly
