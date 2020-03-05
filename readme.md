@@ -35,3 +35,4 @@ These apps can output mgJSON files:
 
 - Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
 - Import from other formats, such as json
+- Send proper time.Time around and not milliseconds?
