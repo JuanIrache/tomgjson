@@ -64,11 +64,16 @@ var ids = map[string]int{
 	"ageofdgpsdata": 10,
 	"dgpsid":        11,
 	// Calculated streams
-	"distance":     12,
-	"speed":        13,
-	"acceleration": 14,
-	"course":       15,
-	"slope":        16,
+	"distance2d":           12,
+	"speed2d":              13,
+	"acceleration2d":       14,
+	"course":               15,
+	"slope":                16,
+	"distance3d":           17,
+	"speed3d":              18,
+	"acceleration3d":       19,
+	"verticalSpeed":        20,
+	"verticalAcceleration": 21,
 }
 
 func appendToStream(data SourceData, v *float64, n string) stream {
@@ -170,37 +175,60 @@ func ReadGPX(src []byte, extra bool) SourceData {
 
 		// Computed streams
 		if extra {
-			distance := 0.0
-			speed := 0.0
-			acceleration := 0.0
-			course := 0.0
-			slope := 0.0
+			var distance2d float64
+			var speed2d float64
+			var acceleration2d float64
+			var course float64
+			var slope float64
+			var distance3d float64
+			var speed3d float64
+			var acceleration3d float64
+			var verticalSpeed float64
+			var verticalAcceleration float64
 			if i > 0 {
 				prevLat := data.streams[ids["lat"]].values[i-1]
 				prevLon := data.streams[ids["lon"]].values[i-1]
-				distance = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
+				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				duration := (data.timing[i] - data.timing[i-1]) / 1000
-				speed = distance / duration
-				acceleration = speed
+				speed2d = distance2d / duration
+				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				prevEle := data.streams[ids["ele"]].values[i-1]
-				eleDiff := *trkpt.Ele - prevEle
-				slope = math.Atan2(eleDiff, distance)
+				verticalDist := *trkpt.Ele - prevEle
+				slope = math.Atan2(verticalDist, distance2d)
 				slope = radiansToDegrees(slope)
+				distance3d = math.Sqrt(math.Pow(verticalDist, 2) * math.Pow(distance2d, 2))
+				speed3d = distance3d / duration
+				acceleration3d = speed3d
+				verticalSpeed = verticalDist / duration
+				verticalAcceleration = verticalSpeed
 				if i > 1 {
-					prevDistance := data.streams[ids["distance"]].values[i-1]
-					distance += prevDistance
-					prevSpeed := data.streams[ids["speed"]].values[i-1]
-					speedChange := speed - prevSpeed
-					acceleration = speedChange / duration
+					prevDistance := data.streams[ids["distance2d"]].values[i-1]
+					distance2d += prevDistance
+					prevSpeed2d := data.streams[ids["speed2d"]].values[i-1]
+					speed2dChange := speed2d - prevSpeed2d
+					acceleration2d = speed2dChange / duration
+					prevDistance3d := data.streams[ids["distance3d"]].values[i-1]
+					distance3d += prevDistance3d
+					prevSpeed3d := data.streams[ids["speed3d"]].values[i-1]
+					speed3dChange := speed3d - prevSpeed3d
+					acceleration3d = speed3dChange / duration
+					prevVerticalSpeed := data.streams[ids["verticalSpeed"]].values[i-1]
+					verticalSpeedChange := verticalSpeed - prevVerticalSpeed
+					verticalAcceleration = verticalSpeedChange / duration
 				}
 			}
 
-			data.streams[ids["distance"]] = appendToStream(data, &distance, "distance")
-			data.streams[ids["speed"]] = appendToStream(data, &speed, "speed")
-			data.streams[ids["acceleration"]] = appendToStream(data, &acceleration, "acceleration")
+			data.streams[ids["distance2d"]] = appendToStream(data, &distance2d, "distance2d")
+			data.streams[ids["speed2d"]] = appendToStream(data, &speed2d, "speed2d")
+			data.streams[ids["acceleration2d"]] = appendToStream(data, &acceleration2d, "acceleration2d")
 			data.streams[ids["course"]] = appendToStream(data, &course, "course")
 			data.streams[ids["slope"]] = appendToStream(data, &slope, "slope")
+			data.streams[ids["distance3d"]] = appendToStream(data, &distance3d, "distance3d")
+			data.streams[ids["speed3d"]] = appendToStream(data, &speed3d, "speed3d")
+			data.streams[ids["acceleration3d"]] = appendToStream(data, &acceleration3d, "acceleration3d")
+			data.streams[ids["verticalSpeed"]] = appendToStream(data, &verticalSpeed, "verticalSpeed")
+			data.streams[ids["verticalAcceleration"]] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
 		}
 	}
 
