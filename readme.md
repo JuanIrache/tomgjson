@@ -25,9 +25,11 @@ These apps can output mgJSON files:
 
 - Read from GPX
   - Interpret additional data: 3d distance, 3d speed
-- Add func to read formatted DataSource directly
+- Send proper time.Time around and not milliseconds?
+- Export func to read formatted DataSource directly
 - Structure module properly
-- Validate results
+- Validate GPX results
+- Import from json array
 - Create documentation (tests/examples)
 - Create tutorial
 - Use in production tool
@@ -35,5 +37,4 @@ These apps can output mgJSON files:
 ## Might-Do
 
 - Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
-- Import from other formats, such as json
-- Send proper time.Time around and not milliseconds?
+- Import from other formats
