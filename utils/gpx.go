@@ -180,7 +180,7 @@ func ReadGPX(src []byte, extra bool) SourceData {
 		data.streams[idx("dgpsid")] = appendToStream(data, trkpt.Dgpsid, "dgpsid")
 
 		// Computed streams
-		if extra {
+		if extra && trkpt.Lat != nil && trkpt.Lon != nil {
 			var distance2d float64
 			var speed2d float64
 			var acceleration2d float64
@@ -199,29 +199,33 @@ func ReadGPX(src []byte, extra bool) SourceData {
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
-				prevEle := data.streams[idx("ele")].values[i-1]
-				verticalDist := *trkpt.Ele - prevEle
-				slope = math.Atan2(verticalDist, distance2d)
-				slope = radiansToDegrees(slope)
-				distance3d = math.Sqrt(math.Pow(verticalDist, 2) * math.Pow(distance2d, 2))
-				speed3d = distance3d / duration
-				acceleration3d = speed3d
-				verticalSpeed = verticalDist / duration
-				verticalAcceleration = verticalSpeed
+				if trkpt.Ele != nil {
+					prevEle := data.streams[idx("ele")].values[i-1]
+					verticalDist := *trkpt.Ele - prevEle
+					slope = math.Atan2(verticalDist, distance2d)
+					slope = radiansToDegrees(slope)
+					distance3d = math.Sqrt(math.Pow(verticalDist, 2) * math.Pow(distance2d, 2))
+					speed3d = distance3d / duration
+					acceleration3d = speed3d
+					verticalSpeed = verticalDist / duration
+					verticalAcceleration = verticalSpeed
+				}
 				if i > 1 {
 					prevDistance := data.streams[idx("distance2d")].values[i-1]
 					distance2d += prevDistance
 					prevSpeed2d := data.streams[idx("speed2d")].values[i-1]
 					speed2dChange := speed2d - prevSpeed2d
 					acceleration2d = speed2dChange / duration
-					prevDistance3d := data.streams[idx("distance3d")].values[i-1]
-					distance3d += prevDistance3d
-					prevSpeed3d := data.streams[idx("speed3d")].values[i-1]
-					speed3dChange := speed3d - prevSpeed3d
-					acceleration3d = speed3dChange / duration
-					prevVerticalSpeed := data.streams[idx("verticalSpeed")].values[i-1]
-					verticalSpeedChange := verticalSpeed - prevVerticalSpeed
-					verticalAcceleration = verticalSpeedChange / duration
+					if trkpt.Ele != nil {
+						prevDistance3d := data.streams[idx("distance3d")].values[i-1]
+						distance3d += prevDistance3d
+						prevSpeed3d := data.streams[idx("speed3d")].values[i-1]
+						speed3dChange := speed3d - prevSpeed3d
+						acceleration3d = speed3dChange / duration
+						prevVerticalSpeed := data.streams[idx("verticalSpeed")].values[i-1]
+						verticalSpeedChange := verticalSpeed - prevVerticalSpeed
+						verticalAcceleration = verticalSpeedChange / duration
+					}
 				}
 			}
 
@@ -229,12 +233,14 @@ func ReadGPX(src []byte, extra bool) SourceData {
 			data.streams[idx("speed2d")] = appendToStream(data, &speed2d, "speed2d")
 			data.streams[idx("acceleration2d")] = appendToStream(data, &acceleration2d, "acceleration2d")
 			data.streams[idx("course")] = appendToStream(data, &course, "course")
-			data.streams[idx("slope")] = appendToStream(data, &slope, "slope")
-			data.streams[idx("distance3d")] = appendToStream(data, &distance3d, "distance3d")
-			data.streams[idx("speed3d")] = appendToStream(data, &speed3d, "speed3d")
-			data.streams[idx("acceleration3d")] = appendToStream(data, &acceleration3d, "acceleration3d")
-			data.streams[idx("verticalSpeed")] = appendToStream(data, &verticalSpeed, "verticalSpeed")
-			data.streams[idx("verticalAcceleration")] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
+			if trkpt.Ele != nil {
+				data.streams[idx("slope")] = appendToStream(data, &slope, "slope")
+				data.streams[idx("distance3d")] = appendToStream(data, &distance3d, "distance3d")
+				data.streams[idx("speed3d")] = appendToStream(data, &speed3d, "speed3d")
+				data.streams[idx("acceleration3d")] = appendToStream(data, &acceleration3d, "acceleration3d")
+				data.streams[idx("verticalSpeed")] = appendToStream(data, &verticalSpeed, "verticalSpeed")
+				data.streams[idx("verticalAcceleration")] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
+			}
 		}
 	}
 
