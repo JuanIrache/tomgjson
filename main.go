@@ -19,7 +19,7 @@ func main() {
 	// src, err := ioutil.ReadFile("./samples/multiple-data.csv")
 	check(err)
 
-	converted := utils.ReadGPX(src)
+	converted := utils.ReadGPX(src, true)
 	// converted := utils.ReadCSV(src, 25.0)
 	doc := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
 
