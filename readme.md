@@ -24,12 +24,11 @@ These apps can output mgJSON files:
 ## To-Do
 
 - Validate GPX results
-- Import from json array
 - Create documentation (tests/examples)
 - Create tutorial
 - Use in production tool
 
 ## Might-Do
 
+- Import from json and other formats
 - Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
-- Import from other formats
