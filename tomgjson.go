@@ -1,7 +1,3 @@
-/*
-Test documentation
-*/
-
 package tomgjson
 
 import (
