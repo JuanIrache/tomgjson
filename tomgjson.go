@@ -11,18 +11,20 @@ import (
 )
 
 // Stream contains a slice of values and their label
+// The slices of floats must be of the same length as the timing slice in their parent's FormattedData
 type Stream struct {
 	label  string
 	values []float64
 }
 
-// FormattedData structures data relevant for mgJSON files
+// FormattedData is the struct accepted by ToMgjson.
+// It consists of a slice of timestamps and a slice with all the streams of labelled values (floats for now)
 type FormattedData struct {
 	timing  []time.Time
 	streams []Stream
 }
 
-// Destructured mgJSON fields. For now, only the fields we are using are specified
+// mgJSON structure. For now, only the fields we are using are specified
 type utcInfo struct {
 	PrecisionLength int  `json:"precisionLength"`
 	IsGMT           bool `json:"isGMT"`
@@ -100,7 +102,8 @@ func sides(n float64) (string, string) {
 	return sides[0], sides[1]
 }
 
-// ToMgjson receives formatted source data and a creator name and returns formatted mgjson
+// ToMgjson receives a formatted source data (FormattedData) and a creator or author name
+// and returns formatted mgjson ready to write to a file
 func ToMgjson(sd FormattedData, creator string) []byte {
 
 	//Hardcode non configurable values (for now)

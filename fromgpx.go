@@ -95,7 +95,8 @@ func appendToStream(data FormattedData, v *float64, n string) Stream {
 	return st
 }
 
-// FromGPX formats a compatible GPX file as a struct ready for mgJSON. If extra, will compute additional streams
+// FromGPX formats a compatible GPX file as a struct ready for mgJSON.
+// The optional extra bool will compute additional streams based on the existing data
 func FromGPX(src []byte, extra bool) FormattedData {
 	var data FormattedData
 

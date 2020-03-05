@@ -40,7 +40,8 @@ func floatsToTimes(xf []float64) []time.Time {
 	return xt
 }
 
-// FromCSV formats a compatible CSV as a struct ready for mgJSON. The optional frame rate (fr) is only used if timing data is not present
+// FromCSV formats a compatible CSV as a FormattedData struct ready for mgJSON.
+// The optional frame rate (fr) is used if timing data is not present
 func FromCSV(src []byte, fr float64) FormattedData {
 	var data FormattedData
 
