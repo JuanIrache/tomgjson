@@ -27,6 +27,7 @@ These apps can output mgJSON files:
   - Interpret additional data: 3d distance, 3d speed
 - Add func to read formatted DataSource directly
 - Structure module properly
+- Validate results
 - Create documentation (tests/examples)
 - Create tutorial
 - Use in production tool
