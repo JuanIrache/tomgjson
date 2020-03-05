@@ -2,11 +2,13 @@
 
 Experimenting with converting other time based data sources to [Adobe's mgJSON format](https://github.com/JuanIrache/mgjson)
 
-The first iteration will be very limited in terms of customization.
+The first iteration will be very limited in terms of customization and supported formats, but the provided parser funcs can potentially be adapted to any source that associates time with values.
+
+For instructions on how to use mgJSON files in After Effects, see [Work with Data-driven animation](https://helpx.adobe.com/after-effects/using/data-driven-animations.html)
 
 ## Sample project templates
 
-You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the Lite templates.
+You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the **Lite templates**.
 
 ## Videos made with mgJSON
 
@@ -23,8 +25,8 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Validate GPX results
 - Create documentation (tests/examples)
+- Validate GPX results
 - Create tutorial
 - Use in production tool
 
