@@ -3,8 +3,10 @@ package utils
 import (
 	"encoding/csv"
 	"log"
+	"math"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func stringsTableToFloats(xxs [][]string) [][]float64 {
@@ -22,6 +24,22 @@ func stringsTableToFloats(xxs [][]string) [][]float64 {
 	return xxf
 }
 
+func floatToTime(f float64) time.Time {
+	seconds := f / 1000
+	fullSeconds := math.Floor(seconds)
+	nanoseconds := (seconds - fullSeconds) * 1e+9
+	return time.Unix(int64(fullSeconds), int64(nanoseconds))
+}
+
+func floatsToTimes(xf []float64) []time.Time {
+	xt := []time.Time{}
+	for _, f := range xf {
+		mTime := floatToTime(f)
+		xt = append(xt, mTime)
+	}
+	return xt
+}
+
 // ReadCSV formats a compatible CSV as a struct ready for mgJSON. The optional frame rate (fr) is only used if timing data is not present
 func ReadCSV(src []byte, fr float64) SourceData {
 	var data SourceData
@@ -36,7 +54,7 @@ func ReadCSV(src []byte, fr float64) SourceData {
 		lines = lines[1:]
 		floatsTable := stringsTableToFloats(lines)
 		if headers[0] == "milliseconds" && len(headers[1]) > 1 {
-			data.timing = floatsTable[0]
+			data.timing = floatsToTimes(floatsTable[0])
 			floatsTable = floatsTable[1:]
 			headers = headers[1:]
 		}
@@ -59,7 +77,7 @@ func ReadCSV(src []byte, fr float64) SourceData {
 
 	if len(data.timing) < 1 {
 		for i := 0; i < len(data.streams[0].values); i++ {
-			data.timing = append(data.timing, float64(i)*fr)
+			data.timing = append(data.timing, floatToTime(fr*float64(i)))
 		}
 	}
 

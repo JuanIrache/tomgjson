@@ -17,7 +17,7 @@ type stream struct {
 
 // SourceData structures data relevant for mgJSON files
 type SourceData struct {
-	timing  []float64
+	timing  []time.Time
 	streams []stream
 }
 
@@ -160,11 +160,7 @@ func FormatMgjson(sd SourceData, creator string) []byte {
 		streamSamples := []sample{}
 		for i, v := range stream.values {
 			paddedValue := fmt.Sprintf("%+0*.*f", digitsInteger+digitsDecimal+2, digitsDecimal, v)
-			seconds := sd.timing[i] / 1000
-			fullSeconds := math.Floor(seconds)
-			nanoseconds := (seconds - fullSeconds) * 1e+9
-			mTime := time.Unix(int64(fullSeconds), int64(nanoseconds))
-			timeStr := mTime.Format("2006-01-02T15:04:05.000Z")
+			timeStr := sd.timing[i].Format("2006-01-02T15:04:05.000Z")
 			streamSamples = append(streamSamples, sample{
 				Time:  timeStr,
 				Value: paddedValue,

@@ -7,10 +7,6 @@ import (
 	"time"
 )
 
-func millis(t time.Time) float64 {
-	return float64(t.UnixNano()) / float64(time.Millisecond)
-}
-
 func degreesToRadians(degrees float64) float64 {
 	return degrees * math.Pi / 180
 }
@@ -156,7 +152,7 @@ func ReadGPX(src []byte, extra bool) SourceData {
 
 	// One stream for each of the supported trkpt and custom fields
 	data.streams = make([]stream, len(ids))
-	data.timing = make([]float64, len(gpx.Trk[0].Trkseg[0].Trkpt))
+	data.timing = make([]time.Time, len(gpx.Trk[0].Trkseg[0].Trkpt))
 
 	for _, st := range data.streams {
 		st.values = make([]float64, len(gpx.Trk[0].Trkseg[0].Trkpt))
@@ -169,7 +165,7 @@ func ReadGPX(src []byte, extra bool) SourceData {
 		t, err := time.Parse(time.RFC3339, *trkpt.Time)
 		check(err)
 
-		data.timing[i] = millis(t)
+		data.timing[i] = t
 		data.streams[idx("lat")] = appendToStream(data, trkpt.Lat, "lat")
 		data.streams[idx("lon")] = appendToStream(data, trkpt.Lon, "lon")
 		data.streams[idx("ele")] = appendToStream(data, trkpt.Ele, "ele")
@@ -199,7 +195,7 @@ func ReadGPX(src []byte, extra bool) SourceData {
 				prevLat := data.streams[idx("lat")].values[i-1]
 				prevLon := data.streams[idx("lon")].values[i-1]
 				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
-				duration := (data.timing[i] - data.timing[i-1]) / 1000
+				duration := data.timing[i].Sub(data.timing[i-1]).Seconds()
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
