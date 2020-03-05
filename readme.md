@@ -23,7 +23,6 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Export func to read formatted DataSource directly
 - Structure module properly
 - Validate GPX results
 - Import from json array

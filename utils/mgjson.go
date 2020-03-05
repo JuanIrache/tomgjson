@@ -10,15 +10,16 @@ import (
 	"time"
 )
 
-type stream struct {
+// Stream contains a slice of values and their label
+type Stream struct {
 	label  string
 	values []float64
 }
 
-// SourceData structures data relevant for mgJSON files
-type SourceData struct {
+// FormattedData structures data relevant for mgJSON files
+type FormattedData struct {
 	timing  []time.Time
-	streams []stream
+	streams []Stream
 }
 
 // Destructured mgJSON fields. For now, only the fields we are using are specified
@@ -99,8 +100,8 @@ func sides(n float64) (string, string) {
 	return sides[0], sides[1]
 }
 
-// FormatMgjson receives formatted source data and a creator name and returns formatted mgjson
-func FormatMgjson(sd SourceData, creator string) []byte {
+// ToMgjson receives formatted source data and a creator name and returns formatted mgjson
+func ToMgjson(sd FormattedData, creator string) []byte {
 
 	//Hardcode non configurable values (for now)
 	data := mgjson{

@@ -82,7 +82,7 @@ func idx(item string) int {
 	return -1
 }
 
-func appendToStream(data SourceData, v *float64, n string) stream {
+func appendToStream(data FormattedData, v *float64, n string) Stream {
 	st := data.streams[idx(n)]
 	if v != nil {
 		st.values = append(st.values, *v)
@@ -96,8 +96,8 @@ func appendToStream(data SourceData, v *float64, n string) stream {
 }
 
 // ReadGPX formats a compatible GPX file as a struct ready for mgJSON. If extra, will compute additional streams
-func ReadGPX(src []byte, extra bool) SourceData {
-	var data SourceData
+func ReadGPX(src []byte, extra bool) FormattedData {
+	var data FormattedData
 
 	type Trkpt struct {
 		XMLName       xml.Name `xml:"trkpt"`
@@ -150,8 +150,8 @@ func ReadGPX(src []byte, extra bool) SourceData {
 		log.Panic("Error: No GPX trkpt")
 	}
 
-	// One stream for each of the supported trkpt and custom fields
-	data.streams = make([]stream, len(ids))
+	// One Stream for each of the supported trkpt and custom fields
+	data.streams = make([]Stream, len(ids))
 	data.timing = make([]time.Time, len(gpx.Trk[0].Trkseg[0].Trkpt))
 
 	for _, st := range data.streams {
@@ -248,7 +248,7 @@ func ReadGPX(src []byte, extra bool) SourceData {
 	for i := len(data.streams) - 1; i >= 0; i-- {
 		if len(data.streams[i].label) < 1 {
 			copy(data.streams[i:], data.streams[i+1:])
-			data.streams[len(data.streams)-1] = stream{}
+			data.streams[len(data.streams)-1] = Stream{}
 			data.streams = data.streams[:len(data.streams)-1]
 		}
 	}

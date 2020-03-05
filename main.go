@@ -21,7 +21,7 @@ func main() {
 
 	converted := utils.ReadGPX(src, true)
 	// converted := utils.ReadCSV(src, 25.0)
-	doc := utils.FormatMgjson(converted, "github.com/juanirache/tomgjson")
+	doc := utils.ToMgjson(converted, "github.com/juanirache/tomgjson")
 
 	f, err := os.Create("./out.json")
 	check(err)

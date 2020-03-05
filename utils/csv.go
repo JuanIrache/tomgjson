@@ -41,8 +41,8 @@ func floatsToTimes(xf []float64) []time.Time {
 }
 
 // ReadCSV formats a compatible CSV as a struct ready for mgJSON. The optional frame rate (fr) is only used if timing data is not present
-func ReadCSV(src []byte, fr float64) SourceData {
-	var data SourceData
+func ReadCSV(src []byte, fr float64) FormattedData {
+	var data FormattedData
 
 	r := csv.NewReader(strings.NewReader(string(src)))
 	lines, err := r.ReadAll()
@@ -59,13 +59,13 @@ func ReadCSV(src []byte, fr float64) SourceData {
 			headers = headers[1:]
 		}
 		for i, vv := range floatsTable {
-			data.streams = append(data.streams, stream{
+			data.streams = append(data.streams, Stream{
 				label:  headers[i],
 				values: vv,
 			})
 		}
 	} else {
-		data.streams = []stream{{
+		data.streams = []Stream{{
 			label:  "Data",
 			values: stringsTableToFloats(lines)[0],
 		}}
