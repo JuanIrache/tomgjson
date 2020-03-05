@@ -23,7 +23,6 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Improve indices stuff in gpx
 - Send proper time.Time around and not milliseconds?
 - Export func to read formatted DataSource directly
 - Structure module properly

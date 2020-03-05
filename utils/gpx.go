@@ -49,35 +49,45 @@ func angleFromCoordinate(lat1, lon1, lat2, lon2 float64) float64 {
 	return brng
 }
 
-var ids = map[string]int{
+var ids = []string{
 	// Supported GPX streams
-	"lat":           0,
-	"lon":           1,
-	"ele":           2,
-	"magvar":        3,
-	"geoidheight":   4,
-	"fix":           5,
-	"sat":           6,
-	"hdop":          7,
-	"vdop":          8,
-	"pdop":          9,
-	"ageofdgpsdata": 10,
-	"dgpsid":        11,
+	"lat",
+	"lon",
+	"ele",
+	"magvar",
+	"geoidheight",
+	"fix",
+	"sat",
+	"hdop",
+	"vdop",
+	"pdop",
+	"ageofdgpsdata",
+	"dgpsid",
 	// Calculated streams
-	"distance2d":           12,
-	"speed2d":              13,
-	"acceleration2d":       14,
-	"course":               15,
-	"slope":                16,
-	"distance3d":           17,
-	"speed3d":              18,
-	"acceleration3d":       19,
-	"verticalSpeed":        20,
-	"verticalAcceleration": 21,
+	"distance2d",
+	"distance3d",
+	"verticalSpeed",
+	"speed2d",
+	"speed3d",
+	"acceleration2d",
+	"acceleration3d",
+	"verticalAcceleration",
+	"course",
+	"slope",
+}
+
+// Return index of stream
+func idx(item string) int {
+	for i, v := range ids {
+		if v == item {
+			return i
+		}
+	}
+	return -1
 }
 
 func appendToStream(data SourceData, v *float64, n string) stream {
-	st := data.streams[ids[n]]
+	st := data.streams[idx(n)]
 	if v != nil {
 		st.values = append(st.values, *v)
 		// Name confirmed streams
@@ -160,18 +170,18 @@ func ReadGPX(src []byte, extra bool) SourceData {
 		check(err)
 
 		data.timing[i] = millis(t)
-		data.streams[ids["lat"]] = appendToStream(data, trkpt.Lat, "lat")
-		data.streams[ids["lon"]] = appendToStream(data, trkpt.Lon, "lon")
-		data.streams[ids["ele"]] = appendToStream(data, trkpt.Ele, "ele")
-		data.streams[ids["magvar"]] = appendToStream(data, trkpt.Magvar, "magvar")
-		data.streams[ids["geoidheight"]] = appendToStream(data, trkpt.Geoidheight, "geoidheight")
-		data.streams[ids["fix"]] = appendToStream(data, trkpt.Fix, "fix")
-		data.streams[ids["sat"]] = appendToStream(data, trkpt.Sat, "sat")
-		data.streams[ids["hdop"]] = appendToStream(data, trkpt.Hdop, "hdop")
-		data.streams[ids["vdop"]] = appendToStream(data, trkpt.Vdop, "vdop")
-		data.streams[ids["pdop"]] = appendToStream(data, trkpt.Pdop, "pdop")
-		data.streams[ids["ageofdgpsdata"]] = appendToStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata")
-		data.streams[ids["dgpsid"]] = appendToStream(data, trkpt.Dgpsid, "dgpsid")
+		data.streams[idx("lat")] = appendToStream(data, trkpt.Lat, "lat")
+		data.streams[idx("lon")] = appendToStream(data, trkpt.Lon, "lon")
+		data.streams[idx("ele")] = appendToStream(data, trkpt.Ele, "ele")
+		data.streams[idx("magvar")] = appendToStream(data, trkpt.Magvar, "magvar")
+		data.streams[idx("geoidheight")] = appendToStream(data, trkpt.Geoidheight, "geoidheight")
+		data.streams[idx("fix")] = appendToStream(data, trkpt.Fix, "fix")
+		data.streams[idx("sat")] = appendToStream(data, trkpt.Sat, "sat")
+		data.streams[idx("hdop")] = appendToStream(data, trkpt.Hdop, "hdop")
+		data.streams[idx("vdop")] = appendToStream(data, trkpt.Vdop, "vdop")
+		data.streams[idx("pdop")] = appendToStream(data, trkpt.Pdop, "pdop")
+		data.streams[idx("ageofdgpsdata")] = appendToStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata")
+		data.streams[idx("dgpsid")] = appendToStream(data, trkpt.Dgpsid, "dgpsid")
 
 		// Computed streams
 		if extra {
@@ -186,14 +196,14 @@ func ReadGPX(src []byte, extra bool) SourceData {
 			var verticalSpeed float64
 			var verticalAcceleration float64
 			if i > 0 {
-				prevLat := data.streams[ids["lat"]].values[i-1]
-				prevLon := data.streams[ids["lon"]].values[i-1]
+				prevLat := data.streams[idx("lat")].values[i-1]
+				prevLon := data.streams[idx("lon")].values[i-1]
 				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				duration := (data.timing[i] - data.timing[i-1]) / 1000
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
-				prevEle := data.streams[ids["ele"]].values[i-1]
+				prevEle := data.streams[idx("ele")].values[i-1]
 				verticalDist := *trkpt.Ele - prevEle
 				slope = math.Atan2(verticalDist, distance2d)
 				slope = radiansToDegrees(slope)
@@ -203,32 +213,32 @@ func ReadGPX(src []byte, extra bool) SourceData {
 				verticalSpeed = verticalDist / duration
 				verticalAcceleration = verticalSpeed
 				if i > 1 {
-					prevDistance := data.streams[ids["distance2d"]].values[i-1]
+					prevDistance := data.streams[idx("distance2d")].values[i-1]
 					distance2d += prevDistance
-					prevSpeed2d := data.streams[ids["speed2d"]].values[i-1]
+					prevSpeed2d := data.streams[idx("speed2d")].values[i-1]
 					speed2dChange := speed2d - prevSpeed2d
 					acceleration2d = speed2dChange / duration
-					prevDistance3d := data.streams[ids["distance3d"]].values[i-1]
+					prevDistance3d := data.streams[idx("distance3d")].values[i-1]
 					distance3d += prevDistance3d
-					prevSpeed3d := data.streams[ids["speed3d"]].values[i-1]
+					prevSpeed3d := data.streams[idx("speed3d")].values[i-1]
 					speed3dChange := speed3d - prevSpeed3d
 					acceleration3d = speed3dChange / duration
-					prevVerticalSpeed := data.streams[ids["verticalSpeed"]].values[i-1]
+					prevVerticalSpeed := data.streams[idx("verticalSpeed")].values[i-1]
 					verticalSpeedChange := verticalSpeed - prevVerticalSpeed
 					verticalAcceleration = verticalSpeedChange / duration
 				}
 			}
 
-			data.streams[ids["distance2d"]] = appendToStream(data, &distance2d, "distance2d")
-			data.streams[ids["speed2d"]] = appendToStream(data, &speed2d, "speed2d")
-			data.streams[ids["acceleration2d"]] = appendToStream(data, &acceleration2d, "acceleration2d")
-			data.streams[ids["course"]] = appendToStream(data, &course, "course")
-			data.streams[ids["slope"]] = appendToStream(data, &slope, "slope")
-			data.streams[ids["distance3d"]] = appendToStream(data, &distance3d, "distance3d")
-			data.streams[ids["speed3d"]] = appendToStream(data, &speed3d, "speed3d")
-			data.streams[ids["acceleration3d"]] = appendToStream(data, &acceleration3d, "acceleration3d")
-			data.streams[ids["verticalSpeed"]] = appendToStream(data, &verticalSpeed, "verticalSpeed")
-			data.streams[ids["verticalAcceleration"]] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
+			data.streams[idx("distance2d")] = appendToStream(data, &distance2d, "distance2d")
+			data.streams[idx("speed2d")] = appendToStream(data, &speed2d, "speed2d")
+			data.streams[idx("acceleration2d")] = appendToStream(data, &acceleration2d, "acceleration2d")
+			data.streams[idx("course")] = appendToStream(data, &course, "course")
+			data.streams[idx("slope")] = appendToStream(data, &slope, "slope")
+			data.streams[idx("distance3d")] = appendToStream(data, &distance3d, "distance3d")
+			data.streams[idx("speed3d")] = appendToStream(data, &speed3d, "speed3d")
+			data.streams[idx("acceleration3d")] = appendToStream(data, &acceleration3d, "acceleration3d")
+			data.streams[idx("verticalSpeed")] = appendToStream(data, &verticalSpeed, "verticalSpeed")
+			data.streams[idx("verticalAcceleration")] = appendToStream(data, &verticalAcceleration, "verticalAcceleration")
 		}
 	}
 
