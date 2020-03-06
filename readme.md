@@ -6,6 +6,31 @@ The first iteration will be very limited in terms of customization and supported
 
 For instructions on how to use mgJSON files in After Effects, see [Work with Data-driven animation](https://helpx.adobe.com/after-effects/using/data-driven-animations.html)
 
+## Supported input formats
+
+See the **sample_sources** directory for compatible samples.
+
+## Usage
+
+```go
+src, _ := ioutil.ReadFile("./sample_sources/multiple-data.csv")
+converted := FromCSV(src, 25.0)
+doc := tomgjson.ToMgjson(converted, "Author Name")
+f, _ := os.Create("./out.mgjson")
+f.Write(doc)
+f.Close()
+```
+
+See **all_test.go** for implementation examples.
+
+### CSV
+
+The simplest CSV file supported is a column with numbers. When a frame rate is specified, every value will be assigned a time based on the frame rate. Optionally, a header can be included in order to label the data. If the desired times do not correspond to the frame rate, a left-aligned "milliseconds" column can be used to specify the times relative to the beginning of the video. Additional columns with different labels can be appended to the right-hand side of the document to create new streams.
+
+### GPX
+
+GPS tracks with time fields can be parsed. For now, only the first track and its first track segment will be read. Based on the parsed data, additional data streams can be computed (speed, acceleration...).
+
 ## Sample project templates
 
 You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the **Lite templates**.
@@ -25,9 +50,10 @@ These apps can output mgJSON files:
 
 ## To-Do
 
+- Handle errors
 - Validate GPX results
-- Create tutorial
 - Use in production tool
+- Create tutorial
 
 ## Might-Do
 
