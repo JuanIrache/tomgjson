@@ -50,10 +50,7 @@ These apps can output mgJSON files:
 
 ## To-Do
 
-- Handle errors
 - Validate GPX results
-- Use in production tool
-- Create tutorial
 
 ## Might-Do
 

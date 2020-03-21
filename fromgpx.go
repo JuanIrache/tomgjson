@@ -2,7 +2,7 @@ package tomgjson
 
 import (
 	"encoding/xml"
-	"log"
+	"fmt"
 	"math"
 	"time"
 )
@@ -95,9 +95,9 @@ func appendToStream(data FormattedData, v *float64, n string) Stream {
 	return st
 }
 
-// FromGPX formats a compatible GPX file as a struct ready for mgJSON.
+// FromGPX formats a compatible GPX file as a struct ready for mgJSON and returns it. Or returns an error
 // The optional extra bool will compute additional streams based on the existing data
-func FromGPX(src []byte, extra bool) FormattedData {
+func FromGPX(src []byte, extra bool) (FormattedData, error) {
 	var data FormattedData
 
 	type Trkpt struct {
@@ -135,20 +135,22 @@ func FromGPX(src []byte, extra bool) FormattedData {
 	gpx := Gpx{}
 
 	err := xml.Unmarshal(src, &gpx)
-	check(err)
+	if err != nil {
+		return data, fmt.Errorf("Error unmarshalling JSON: %v", err.Error())
+	}
 
 	if len(gpx.Trk) < 1 {
-		log.Panic("Error: No GPX tracks")
+		return data, fmt.Errorf("Error: No GPX tracks")
 	}
 
 	// Just reading one track for now
 	if len(gpx.Trk[0].Trkseg) < 1 {
-		log.Panic("Error: No GPX Trkseg")
+		return data, fmt.Errorf("Error: No GPX trkseg")
 	}
 
 	// Just reading one trkseg for now
 	if len(gpx.Trk[0].Trkseg[0].Trkpt) < 1 {
-		log.Panic("Error: No GPX trkpt")
+		return data, fmt.Errorf("Error: No GPX trkpt")
 	}
 
 	// One Stream for each of the supported trkpt and custom fields
@@ -161,7 +163,7 @@ func FromGPX(src []byte, extra bool) FormattedData {
 
 	for i, trkpt := range gpx.Trk[0].Trkseg[0].Trkpt {
 		if trkpt.Time == nil {
-			log.Panic("Error: Missing timiing data in GPX")
+			return data, fmt.Errorf("Error: Missing timiing data in GPX")
 		}
 		t, err := time.Parse(time.RFC3339, *trkpt.Time)
 		check(err)
@@ -254,5 +256,5 @@ func FromGPX(src []byte, extra bool) FormattedData {
 		}
 	}
 
-	return data
+	return data, nil
 }

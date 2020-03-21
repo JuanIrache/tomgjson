@@ -103,8 +103,16 @@ func sides(n float64) (string, string) {
 }
 
 // ToMgjson receives a formatted source data (FormattedData) and a creator or author name
-// and returns formatted mgjson ready to write to a file
-func ToMgjson(sd FormattedData, creator string) []byte {
+// and returns formatted mgjson ready to write to a file or an error
+func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
+
+	if len(sd.Streams) < 1 {
+		return nil, fmt.Errorf("No streams found")
+	}
+
+	if len(sd.Timing) < 1 {
+		return nil, fmt.Errorf("No timing data")
+	}
 
 	//Hardcode non configurable values (for now)
 	data := mgjson{
@@ -130,6 +138,11 @@ func ToMgjson(sd FormattedData, creator string) []byte {
 		max := math.Inf(-1)
 		digitsInteger := 0
 		digitsDecimal := 0
+
+		if len(sd.Timing) != len(stream.Values) {
+			return nil, fmt.Errorf("Timing data does not match slice of values")
+		}
+
 		for _, v := range stream.Values {
 			min = math.Min(min, v)
 			max = math.Max(min, v)
@@ -178,6 +191,9 @@ func ToMgjson(sd FormattedData, creator string) []byte {
 	}
 
 	doc, err := json.Marshal(data)
-	check(err)
-	return doc
+	if err != nil {
+		return nil, fmt.Errorf("Error marshalling JSON: %v", err.Error())
+	}
+
+	return doc, nil
 }

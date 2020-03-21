@@ -2,7 +2,7 @@ package tomgjson
 
 import (
 	"encoding/csv"
-	"log"
+	"fmt"
 	"math"
 	"strconv"
 	"strings"
@@ -40,14 +40,16 @@ func floatsToTimes(xf []float64) []time.Time {
 	return xt
 }
 
-// FromCSV formats a compatible CSV as a FormattedData struct ready for mgJSON.
+// FromCSV formats a compatible CSV as a FormattedData struct ready for mgJSON and returns it. Or returns an error
 // The optional frame rate (fr) is used if timing data is not present
-func FromCSV(src []byte, fr float64) FormattedData {
+func FromCSV(src []byte, fr float64) (FormattedData, error) {
 	var data FormattedData
 
 	r := csv.NewReader(strings.NewReader(string(src)))
 	lines, err := r.ReadAll()
-	check(err)
+	if err != nil {
+		return data, fmt.Errorf("Error reading CSV: %v", err.Error())
+	}
 
 	//check if first line is headers
 	if _, err := strconv.ParseFloat(lines[0][0], 64); err != nil {
@@ -73,7 +75,7 @@ func FromCSV(src []byte, fr float64) FormattedData {
 	}
 
 	if len(data.Streams[0].Values) < 1 {
-		log.Panic("No valid data found")
+		return data, fmt.Errorf("No valid data found")
 	}
 
 	if len(data.Timing) < 1 {
@@ -82,5 +84,5 @@ func FromCSV(src []byte, fr float64) FormattedData {
 		}
 	}
 
-	return data
+	return data, nil
 }

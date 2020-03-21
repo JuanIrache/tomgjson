@@ -34,7 +34,7 @@ func ExampleToMgjson() {
 		Streams: []Stream{stream1, stream2},
 	}
 
-	doc := ToMgjson(data, "Juan Irache")
+	doc, _ := ToMgjson(data, "Juan Irache")
 
 	fmt.Println(string(doc))
 
@@ -44,7 +44,7 @@ func ExampleToMgjson() {
 
 func ExampleFromCSV() {
 	src, _ := ioutil.ReadFile("./sample_sources/multiple-data.csv")
-	converted := FromCSV(src, 25.0)
+	converted, _ := FromCSV(src, 25.0)
 	fmt.Printf(
 		`The second stream is labelled as %q and its fifth sample at %f seconds is %v`,
 		converted.Streams[1].Label,
@@ -57,7 +57,7 @@ func ExampleFromCSV() {
 
 func ExampleFromGPX() {
 	src, _ := ioutil.ReadFile("./sample_sources/gps-path.gpx")
-	converted := FromGPX(src, true)
+	converted, _ := FromGPX(src, true)
 	sample := 10
 	fmt.Printf(
 		`At %v the position was %v: %f, %v: %f and the %v was %f `,
