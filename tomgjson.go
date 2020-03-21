@@ -103,7 +103,8 @@ func sides(n float64) (string, string) {
 }
 
 // ToMgjson receives a formatted source data (FormattedData) and a creator or author name
-// and returns formatted mgjson ready to write to a file or an error
+// and returns formatted mgjson ready to write to a file
+// compatible with Adobe After Effects data-driven animations (or an error)
 func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 	if len(sd.Streams) < 1 {
