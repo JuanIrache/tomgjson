@@ -193,7 +193,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 	doc, err := json.Marshal(data)
 	if err != nil {
-		return nil, fmt.Errorf("Error marshalling JSON: %v", err.Error())
+		return nil, err
 	}
 
 	return doc, nil

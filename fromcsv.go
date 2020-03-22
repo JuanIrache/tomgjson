@@ -9,19 +9,21 @@ import (
 	"time"
 )
 
-func stringsTableToFloats(xxs [][]string) [][]float64 {
+func stringsTableToFloats(xxs [][]string) ([][]float64, error) {
 	xxf := [][]float64{}
 	for _, xs := range xxs {
 		for i, s := range xs {
 			val, err := strconv.ParseFloat(s, 64)
-			check(err)
+			if err != nil {
+				return xxf, err
+			}
 			if len(xxf) < i+1 {
 				xxf = append(xxf, []float64{})
 			}
 			xxf[i] = append(xxf[i], val)
 		}
 	}
-	return xxf
+	return xxf, nil
 }
 
 func millisecondsToTime(f float64) time.Time {
@@ -48,14 +50,17 @@ func FromCSV(src []byte, fr float64) (FormattedData, error) {
 	r := csv.NewReader(strings.NewReader(string(src)))
 	lines, err := r.ReadAll()
 	if err != nil {
-		return data, fmt.Errorf("Error reading CSV: %v", err.Error())
+		return data, err
 	}
 
 	//check if first line is headers
 	if _, err := strconv.ParseFloat(lines[0][0], 64); err != nil {
 		headers := lines[0]
 		lines = lines[1:]
-		floatsTable := stringsTableToFloats(lines)
+		floatsTable, err := stringsTableToFloats(lines)
+		if err != nil {
+			return data, err
+		}
 		if headers[0] == "milliseconds" && len(headers[1]) > 1 {
 			data.Timing = floatsToTimes(floatsTable[0])
 			floatsTable = floatsTable[1:]
@@ -68,9 +73,13 @@ func FromCSV(src []byte, fr float64) (FormattedData, error) {
 			})
 		}
 	} else {
+		values, err := stringsTableToFloats(lines)
+		if err != nil {
+			return data, err
+		}
 		data.Streams = []Stream{{
 			Label:  "Data",
-			Values: stringsTableToFloats(lines)[0],
+			Values: values[0],
 		}}
 	}
 

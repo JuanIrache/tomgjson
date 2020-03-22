@@ -136,7 +136,7 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 
 	err := xml.Unmarshal(src, &gpx)
 	if err != nil {
-		return data, fmt.Errorf("Error unmarshalling JSON: %v", err.Error())
+		return data, err
 	}
 
 	if len(gpx.Trk) < 1 {
@@ -166,7 +166,9 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 			return data, fmt.Errorf("Error: Missing timiing data in GPX")
 		}
 		t, err := time.Parse(time.RFC3339, *trkpt.Time)
-		check(err)
+		if err != nil {
+			return data, err
+		}
 
 		data.Timing[i] = t
 		data.Streams[idx("lat")] = appendToStream(data, trkpt.Lat, "lat")
