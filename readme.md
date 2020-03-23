@@ -1,6 +1,6 @@
 # tomgjson
 
-Experimenting with converting other time based data sources to [Adobe's mgJSON format](https://github.com/JuanIrache/mgjson)
+Experimenting with converting other time based data sources to [Adobe's mgJSON format](https://github.com/JuanIrache/mgjson) (Motion Graphics JSON).
 
 A live version of this app can be found here: [To mgJSON](https://goprotelemetryextractor.com/csv-gpx-to-mgjson/)
 
