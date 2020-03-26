@@ -10,11 +10,13 @@ import (
 	"time"
 )
 
-// Stream contains a slice of values and their label
-// The slices of floats must be of the same length as the timing slice in their parent's FormattedData
+// Stream contains a slice of values or strings and their label
+// The slices must be of the same length as the timing slice in their parent's FormattedData
+// Only one of the slices must be present, not both
 type Stream struct {
-	Label  string
-	Values []float64
+	Label   string
+	Values  []float64
+	Strings []string
 }
 
 // FormattedData is the struct accepted by ToMgjson.
@@ -56,9 +58,16 @@ type numberStringProperties struct {
 	Range   mRange  `json:"range"`
 }
 
+type paddedStringProperties struct {
+	MaxLen               int  `json:"maxLen"`
+	MaxDigitsInStrLength int  `json:"maxDigitsInStrLength"`
+	EventMarkerB         bool `json:"eventMarkerB"`
+}
+
 type dataType struct {
 	Type                   string                 `json:"type"`
 	NumberStringProperties numberStringProperties `json:"numberStringProperties"`
+	PaddedStringProperties paddedStringProperties `json:"paddedStringProperties"`
 }
 
 type singleDataOutline struct {
@@ -72,9 +81,14 @@ type singleDataOutline struct {
 	MatchName             string   `json:"matchName"`
 }
 
+type paddedStringValue struct {
+	Length string `json:"length"`
+	Str    string `json:"str"`
+}
+
 type sample struct {
-	Time  string `json:"time"`
-	Value string `json:"value"`
+	Time  string      `json:"time"`
+	Value interface{} `json:"value"`
 }
 
 type dataDynamicSample struct {
@@ -139,10 +153,8 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 		max := math.Inf(-1)
 		digitsInteger := 0
 		digitsDecimal := 0
-
-		if len(sd.Timing) != len(stream.Values) {
-			return nil, fmt.Errorf("Timing data does not match slice of values")
-		}
+		maxLen := 0
+		maxDigitsInStrLength := 0
 
 		for _, v := range stream.Values {
 			min = math.Min(min, v)
@@ -151,11 +163,19 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 			digitsInteger = mMax(digitsInteger, len(integer))
 			digitsDecimal = mMax(digitsDecimal, len(decimal))
 		}
-		data.DataOutline = append(data.DataOutline, singleDataOutline{
-			ObjectType:  "dataDynamic",
-			DisplayName: stream.Label,
-			SampleSetID: sName,
-			DataType: dataType{
+
+		for _, v := range stream.Strings {
+			maxLen = maxInt(maxLen, len(v))
+			maxDigitsInStrLength = len(string(maxLen))
+		}
+
+		var thisDataType dataType
+		var thisInterpolation string
+		var thisSampleCount int
+
+		if len(stream.Values) > 0 {
+
+			thisDataType = dataType{
 				Type: "numberString",
 				NumberStringProperties: numberStringProperties{
 					Pattern: pattern{
@@ -168,20 +188,60 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 						Legal:    minmax{-largestMgjsonNum, largestMgjsonNum},
 					},
 				},
-			},
-			Interpolation:         "linear",
+			}
+			thisInterpolation = "linear"
+			thisSampleCount = len(stream.Values)
+
+		} else if len(stream.Strings) > 0 {
+
+			thisDataType = dataType{
+				Type: "paddedString",
+				PaddedStringProperties: paddedStringProperties{
+					MaxLen:               maxLen,
+					MaxDigitsInStrLength: maxDigitsInStrLength,
+					EventMarkerB:         false,
+				},
+			}
+			thisInterpolation = "hold"
+			thisSampleCount = len(stream.Strings)
+
+		}
+
+		if len(sd.Timing) != thisSampleCount {
+			return nil, fmt.Errorf("Timing data does not match slice length")
+		}
+
+		data.DataOutline = append(data.DataOutline, singleDataOutline{
+			ObjectType:            "dataDynamic",
+			DisplayName:           stream.Label,
+			SampleSetID:           sName,
+			DataType:              thisDataType,
+			Interpolation:         thisInterpolation,
 			HasExpectedFrequencyB: false,
-			SampleCount:           len(stream.Values),
+			SampleCount:           thisSampleCount,
 			MatchName:             sName,
 		})
 
 		streamSamples := []sample{}
+
 		for i, v := range stream.Values {
 			paddedValue := fmt.Sprintf("%+0*.*f", digitsInteger+digitsDecimal+2, digitsDecimal, v)
 			timeStr := sd.Timing[i].Format("2006-01-02T15:04:05.000Z")
 			streamSamples = append(streamSamples, sample{
 				Time:  timeStr,
 				Value: paddedValue,
+			})
+		}
+
+		for i, v := range stream.Strings {
+			stringValue := paddedStringValue{
+				Length: fmt.Sprintf("%0*v", maxDigitsInStrLength, len(v)),
+				Str:    fmt.Sprintf("%0*v", maxLen, v),
+			}
+			timeStr := sd.Timing[i].Format("2006-01-02T15:04:05.000Z")
+			streamSamples = append(streamSamples, sample{
+				Time:  timeStr,
+				Value: stringValue,
 			})
 		}
 
