@@ -26,3 +26,14 @@ func sides(n float64) (string, string) {
 	}
 	return sides[0], sides[1]
 }
+
+// Make sure float values are within mgJSON's valid values
+
+const largestMgjsonNum = 2147483648.0
+
+func validValue(v float64) float64 {
+	if math.IsNaN(v) {
+		return 0
+	}
+	return math.Max(math.Min(v, largestMgjsonNum), -largestMgjsonNum)
+}

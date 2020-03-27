@@ -132,8 +132,6 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 		DataDynamicSamples: []dataDynamicSample{},
 	}
 
-	largestMgjsonNum := 2147483648.0
-
 	for i, stream := range sd.Streams {
 		sName := fmt.Sprintf("Stream%d", i)
 		min := largestMgjsonNum
@@ -144,6 +142,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 		maxDigitsInStrLength := 0
 
 		for _, v := range stream.Values {
+			v = validValue(v)
 			min = math.Min(min, v)
 			max = math.Max(max, v)
 			integer, decimal := sides(v)
@@ -212,6 +211,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 		streamSamples := []sample{}
 
 		for i, v := range stream.Values {
+			v = validValue(v)
 			paddedValue := fmt.Sprintf("%+0*.*f", digitsInteger+digitsDecimal+2, digitsDecimal, v)
 			timeStr := sd.Timing[i].Format("2006-01-02T15:04:05.000Z")
 			streamSamples = append(streamSamples, sample{
