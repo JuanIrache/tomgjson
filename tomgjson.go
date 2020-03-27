@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"math"
+	"strconv"
 	"time"
 )
 
@@ -152,7 +153,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 		for _, v := range stream.Strings {
 			maxLen = maxInt(maxLen, len(v))
-			maxDigitsInStrLength = len(string(maxLen))
+			maxDigitsInStrLength = len(strconv.Itoa(maxLen))
 		}
 
 		var thisDataType dataType
