@@ -52,6 +52,7 @@ These apps can output mgJSON files:
 
 ## To-Do
 
+- Test and debug with different gpx files
 - Support parsing column of strings in csv
 
 ## Might-Do
