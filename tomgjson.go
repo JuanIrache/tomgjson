@@ -145,7 +145,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 		for _, v := range stream.Values {
 			min = math.Min(min, v)
-			max = math.Max(min, v)
+			max = math.Max(max, v)
 			integer, decimal := sides(v)
 			digitsInteger = maxInt(digitsInteger, len(integer))
 			digitsDecimal = maxInt(digitsDecimal, len(decimal))
