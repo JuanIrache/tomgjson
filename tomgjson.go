@@ -3,10 +3,7 @@ package tomgjson
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"math"
-	"strconv"
-	"strings"
 	"time"
 )
 
@@ -103,17 +100,6 @@ type mgjson struct {
 	DynamicDataInfo        dynamicDataInfo     `json:"dynamicDataInfo"`
 	DataOutline            []singleDataOutline `json:"dataOutline"`
 	DataDynamicSamples     []dataDynamicSample `json:"dataDynamicSamples"`
-}
-
-func sides(n float64) (string, string) {
-	sides := strings.Split(strconv.FormatFloat(math.Abs(n), 'f', -1, 64), ".")
-	if len(sides) == 1 {
-		sides = append(sides, "0")
-	}
-	if len(sides) != 2 {
-		log.Panicf("Badly formatted float: %v %v", n, sides)
-	}
-	return sides[0], sides[1]
 }
 
 // ToMgjson receives a formatted source data (FormattedData) and a creator or author name
