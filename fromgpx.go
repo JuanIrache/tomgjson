@@ -223,7 +223,7 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 					verticalDist := *trkpt.Ele - prevEle
 					slope = math.Atan2(verticalDist, distance2d)
 					slope = radiansToDegrees(slope)
-					distance3d = math.Sqrt(math.Pow(verticalDist, 2) * math.Pow(distance2d, 2))
+					distance3d = math.Sqrt(math.Pow(verticalDist, 2) + math.Pow(distance2d, 2))
 					speed3d = distance3d / duration
 					acceleration3d = speed3d
 					verticalSpeed = verticalDist / duration
