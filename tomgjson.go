@@ -136,8 +136,8 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 	for i, stream := range sd.Streams {
 		sName := fmt.Sprintf("Stream%d", i)
-		min := math.Inf(1)
-		max := math.Inf(-1)
+		min := largestMgjsonNum
+		max := -largestMgjsonNum
 		digitsInteger := 0
 		digitsDecimal := 0
 		maxLen := 0
