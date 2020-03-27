@@ -221,8 +221,8 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 
 		for i, v := range stream.Strings {
 			stringValue := paddedStringValue{
-				Length: fmt.Sprintf("%0*v", maxDigitsInStrLength, len(v)),
-				Str:    fmt.Sprintf("%0*v", maxLen, v),
+				Length: fmt.Sprintf("%0*d", maxDigitsInStrLength, len(v)),
+				Str:    fmt.Sprintf("%-*v", maxLen, v),
 			}
 			timeStr := sd.Timing[i].Format("2006-01-02T15:04:05.000Z")
 			streamSamples = append(streamSamples, sample{
