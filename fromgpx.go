@@ -212,9 +212,9 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 				prevLat := data.Streams[idx("lat")].Values[i-1]
 				prevLon := data.Streams[idx("lon")].Values[i-1]
 				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
-				durationMicroseconds := float64(data.Timing[i].Sub(data.Timing[i-1]).Microseconds())
+				duration := data.Timing[i].Sub(data.Timing[i-1]).Seconds()
 				//Make sure duration is not zero
-				duration := math.Max(durationMicroseconds, 1) * 0.000001
+				duration = math.Max(duration, 1e-9)
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
