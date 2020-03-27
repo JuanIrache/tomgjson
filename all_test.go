@@ -18,6 +18,16 @@ func ExampleToMgjson() {
 		Values: []float64{4, 6, 8, 9},
 	}
 
+	stream3 := Stream{
+		Label: "Colors",
+		Strings: []string{
+			"Green",
+			"Yellow",
+			"Red",
+			"Blue",
+		},
+	}
+
 	now := time.Unix(0, 0)
 	plus10, _ := time.ParseDuration("10s")
 	plus20, _ := time.ParseDuration("20s")
@@ -31,7 +41,7 @@ func ExampleToMgjson() {
 
 	data := FormattedData{
 		Timing:  timing,
-		Streams: []Stream{stream1, stream2},
+		Streams: []Stream{stream1, stream2, stream3},
 	}
 
 	doc, _ := ToMgjson(data, "Juan Irache")
@@ -39,7 +49,7 @@ func ExampleToMgjson() {
 	fmt.Println(string(doc))
 
 	// Output:
-	// {"version":"MGJSON2.0.0","creator":"Juan Irache","dynamicSamplesPresentB":true,"dynamicDataInfo":{"useTimecodeB":false,"utcInfo":{"precisionLength":3,"isGMT":true}},"dataOutline":[{"objectType":"dataDynamic","displayName":"Prime numbers","sampleSetID":"Stream0","dataType":{"type":"numberString","numberStringProperties":{"pattern":{"digitsInteger":1,"digitsDecimal":1,"isSigned":true},"range":{"occuring":{"min":2,"max":7},"legal":{"min":-2147483648,"max":2147483648}}},"paddedStringProperties":{"maxLen":0,"maxDigitsInStrLength":0,"eventMarkerB":false}},"interpolation":"linear","hasExpectedFrequecyB":false,"sampleCount":4,"matchName":"Stream0"},{"objectType":"dataDynamic","displayName":"Non primes","sampleSetID":"Stream1","dataType":{"type":"numberString","numberStringProperties":{"pattern":{"digitsInteger":1,"digitsDecimal":1,"isSigned":true},"range":{"occuring":{"min":4,"max":9},"legal":{"min":-2147483648,"max":2147483648}}},"paddedStringProperties":{"maxLen":0,"maxDigitsInStrLength":0,"eventMarkerB":false}},"interpolation":"linear","hasExpectedFrequecyB":false,"sampleCount":4,"matchName":"Stream1"}],"dataDynamicSamples":[{"sampleSetID":"Stream0","samples":[{"time":"1970-01-01T01:00:00.000Z","value":"+2.0"},{"time":"1970-01-01T01:00:10.000Z","value":"+3.0"},{"time":"1970-01-01T01:00:20.000Z","value":"+5.0"},{"time":"1970-01-01T01:00:30.000Z","value":"+7.0"}]},{"sampleSetID":"Stream1","samples":[{"time":"1970-01-01T01:00:00.000Z","value":"+4.0"},{"time":"1970-01-01T01:00:10.000Z","value":"+6.0"},{"time":"1970-01-01T01:00:20.000Z","value":"+8.0"},{"time":"1970-01-01T01:00:30.000Z","value":"+9.0"}]}]}
+	// {"version":"MGJSON2.0.0","creator":"Juan Irache","dynamicSamplesPresentB":true,"dynamicDataInfo":{"useTimecodeB":false,"utcInfo":{"precisionLength":3,"isGMT":true}},"dataOutline":[{"objectType":"dataDynamic","displayName":"Prime numbers","sampleSetID":"Stream0","dataType":{"type":"numberString","numberStringProperties":{"pattern":{"digitsInteger":1,"digitsDecimal":1,"isSigned":true},"range":{"occuring":{"min":2,"max":7},"legal":{"min":-2147483648,"max":2147483648}}},"paddedStringProperties":{"maxLen":0,"maxDigitsInStrLength":0,"eventMarkerB":false}},"interpolation":"linear","hasExpectedFrequecyB":false,"sampleCount":4,"matchName":"Stream0"},{"objectType":"dataDynamic","displayName":"Non primes","sampleSetID":"Stream1","dataType":{"type":"numberString","numberStringProperties":{"pattern":{"digitsInteger":1,"digitsDecimal":1,"isSigned":true},"range":{"occuring":{"min":4,"max":9},"legal":{"min":-2147483648,"max":2147483648}}},"paddedStringProperties":{"maxLen":0,"maxDigitsInStrLength":0,"eventMarkerB":false}},"interpolation":"linear","hasExpectedFrequecyB":false,"sampleCount":4,"matchName":"Stream1"},{"objectType":"dataDynamic","displayName":"Colors","sampleSetID":"Stream2","dataType":{"type":"paddedString","numberStringProperties":{"pattern":{"digitsInteger":0,"digitsDecimal":0,"isSigned":false},"range":{"occuring":{"min":0,"max":0},"legal":{"min":0,"max":0}}},"paddedStringProperties":{"maxLen":6,"maxDigitsInStrLength":1,"eventMarkerB":false}},"interpolation":"hold","hasExpectedFrequecyB":false,"sampleCount":4,"matchName":"Stream2"}],"dataDynamicSamples":[{"sampleSetID":"Stream0","samples":[{"time":"1970-01-01T01:00:00.000Z","value":"+2.0"},{"time":"1970-01-01T01:00:10.000Z","value":"+3.0"},{"time":"1970-01-01T01:00:20.000Z","value":"+5.0"},{"time":"1970-01-01T01:00:30.000Z","value":"+7.0"}]},{"sampleSetID":"Stream1","samples":[{"time":"1970-01-01T01:00:00.000Z","value":"+4.0"},{"time":"1970-01-01T01:00:10.000Z","value":"+6.0"},{"time":"1970-01-01T01:00:20.000Z","value":"+8.0"},{"time":"1970-01-01T01:00:30.000Z","value":"+9.0"}]},{"sampleSetID":"Stream2","samples":[{"time":"1970-01-01T01:00:00.000Z","value":{"length":"5","str":"Green "}},{"time":"1970-01-01T01:00:10.000Z","value":{"length":"6","str":"Yellow"}},{"time":"1970-01-01T01:00:20.000Z","value":{"length":"3","str":"Red   "}},{"time":"1970-01-01T01:00:30.000Z","value":{"length":"4","str":"Blue  "}}]}]}
 }
 
 func ExampleFromCSV() {
