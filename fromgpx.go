@@ -108,7 +108,13 @@ func appendToStringStream(data FormattedData, s *string, n string) Stream {
 // FromGPX formats a compatible GPX file as a struct ready for mgJSON and returns it. Or returns an error
 // The optional extra bool will compute additional streams based on the existing data
 func FromGPX(src []byte, extra bool) (FormattedData, error) {
+
 	var data FormattedData
+
+	utc, err := time.LoadLocation("UTC")
+	if err != nil {
+		return data, err
+	}
 
 	type Trkpt struct {
 		XMLName       xml.Name `xml:"trkpt"`
@@ -144,7 +150,7 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 
 	gpx := Gpx{}
 
-	err := xml.Unmarshal(src, &gpx)
+	err = xml.Unmarshal(src, &gpx)
 	if err != nil {
 		return data, err
 	}
@@ -179,6 +185,8 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		if err != nil {
 			return data, err
 		}
+
+		t = t.In(utc)
 
 		data.Timing[i] = t
 		data.Streams[idx("lat")] = appendToFloatStream(data, trkpt.Lat, "lat")

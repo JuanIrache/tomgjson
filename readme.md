@@ -52,6 +52,7 @@ These apps can output mgJSON files:
 
 ## To-Do
 
+- Support text columns in csv
 - Test and debug with different gpx files
 - Set up testing?
 - Support parsing column of strings in csv
@@ -59,4 +60,4 @@ These apps can output mgJSON files:
 ## Might-Do
 
 - Import from json and other formats
-- Enable creating static fields? Non interpolable fields? Text fields? Multidimensional fields?
+- Enable creating static fields? Non interpolable fields? Multidimensional fields?
