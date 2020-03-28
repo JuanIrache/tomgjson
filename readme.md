@@ -56,9 +56,5 @@ Please make your changes to the **dev** branch, so that automated tests can be r
 
 ## To-Do
 
-- Support parsing column of strings in csv
-
-## Might-Do
-
 - Import from json and other formats
 - Enable creating static fields? Non interpolable fields? Multidimensional fields?
