@@ -26,11 +26,14 @@ func stringsTableToFloats(xxs [][]string) ([][]float64, error) {
 	return xxf, nil
 }
 
+var utc *time.Location
+
 func millisecondsToTime(f float64) time.Time {
 	seconds := f / 1000
 	fullSeconds := math.Floor(seconds)
 	nanoseconds := (seconds - fullSeconds) * 1e+9
-	return time.Unix(int64(fullSeconds), int64(nanoseconds))
+	t := time.Unix(int64(fullSeconds), int64(nanoseconds))
+	return t.In(utc)
 }
 
 func floatsToTimes(xf []float64) []time.Time {
@@ -49,6 +52,11 @@ func FromCSV(src []byte, fr float64) (FormattedData, error) {
 
 	r := csv.NewReader(strings.NewReader(string(src)))
 	lines, err := r.ReadAll()
+	if err != nil {
+		return data, err
+	}
+
+	utc, err = time.LoadLocation("UTC")
 	if err != nil {
 		return data, err
 	}
