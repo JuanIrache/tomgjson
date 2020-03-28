@@ -57,8 +57,6 @@ Please make your changes to the **dev** branch, so that automated tests can be r
 ## To-Do
 
 - Support text columns in csv
-- Test and debug with different gpx files
-- Set up testing?
 - Support parsing column of strings in csv
 
 ## Might-Do
