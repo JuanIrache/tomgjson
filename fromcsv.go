@@ -9,21 +9,31 @@ import (
 	"time"
 )
 
-func stringsTableToFloats(xxs [][]string) ([][]float64, error) {
-	xxf := [][]float64{}
-	for _, xs := range xxs {
+// Returns valid streams with values or strings
+func structureData(headers []string, table [][]string) ([]Stream, error) {
+
+	streams := []Stream{}
+
+	for _, xs := range table {
 		for i, s := range xs {
+			if len(streams) < i+1 {
+				streams = append(streams, Stream{
+					Label: headers[i],
+				})
+			}
 			val, err := strconv.ParseFloat(s, 64)
-			if err != nil {
-				return xxf, err
+			if err == nil {
+				streams[i].Values = append(streams[i].Values, val)
+			} else {
+				if len(streams[i].Values) > 0 {
+					return streams, fmt.Errorf("Seems like strings were found in values column")
+				}
+				streams[i].Strings = append(streams[i].Strings, s)
 			}
-			if len(xxf) < i+1 {
-				xxf = append(xxf, []float64{})
-			}
-			xxf[i] = append(xxf[i], val)
 		}
 	}
-	return xxf, nil
+
+	return streams, nil
 }
 
 var utc *time.Location
@@ -65,33 +75,25 @@ func FromCSV(src []byte, fr float64) (FormattedData, error) {
 	if _, err := strconv.ParseFloat(lines[0][0], 64); err != nil {
 		headers := lines[0]
 		lines = lines[1:]
-		floatsTable, err := stringsTableToFloats(lines)
+		streams, err := structureData(headers, lines)
 		if err != nil {
 			return data, err
 		}
 		if headers[0] == "milliseconds" && len(headers[1]) > 1 {
-			data.Timing = floatsToTimes(floatsTable[0])
-			floatsTable = floatsTable[1:]
+			data.Timing = floatsToTimes(streams[0].Values)
+			streams = streams[1:]
 			headers = headers[1:]
 		}
-		for i, vv := range floatsTable {
-			data.Streams = append(data.Streams, Stream{
-				Label:  headers[i],
-				Values: vv,
-			})
-		}
+		data.Streams = streams
 	} else {
-		values, err := stringsTableToFloats(lines)
+		streams, err := structureData([]string{"Data"}, lines)
 		if err != nil {
 			return data, err
 		}
-		data.Streams = []Stream{{
-			Label:  "Data",
-			Values: values[0],
-		}}
+		data.Streams = streams
 	}
 
-	if len(data.Streams[0].Values) < 1 {
+	if len(data.Streams) < 1 {
 		return data, fmt.Errorf("No valid data found")
 	}
 
