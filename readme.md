@@ -12,6 +12,14 @@ For instructions on how to use mgJSON files in After Effects, see [Work with Dat
 
 See the **sample_sources** directory for compatible samples.
 
+### CSV
+
+The simplest CSV file supported is a column with numbers. When a frame rate is specified, every value will be assigned a time based on the frame rate. Optionally, a header can be included in order to label the data. If the desired times do not correspond to the frame rate, a left-aligned "milliseconds" column can be used to specify the times relative to the beginning of the video. Additional columns with different labels can be appended to the right-hand side of the document to create new streams.
+
+### GPX
+
+GPS tracks with time fields can be parsed. For now, only the first track and its first track segment will be read. Based on the parsed data, additional data streams can be computed (speed, acceleration, course direction, distance...).
+
 ## Usage
 
 ```go
@@ -24,14 +32,6 @@ f.Close()
 ```
 
 See **all_test.go** for implementation examples.
-
-### CSV
-
-The simplest CSV file supported is a column with numbers. When a frame rate is specified, every value will be assigned a time based on the frame rate. Optionally, a header can be included in order to label the data. If the desired times do not correspond to the frame rate, a left-aligned "milliseconds" column can be used to specify the times relative to the beginning of the video. Additional columns with different labels can be appended to the right-hand side of the document to create new streams.
-
-### GPX
-
-GPS tracks with time fields can be parsed. For now, only the first track and its first track segment will be read. Based on the parsed data, additional data streams can be computed (speed, acceleration, course direction, distance...).
 
 ## Sample project templates
 
@@ -47,6 +47,7 @@ If you create something with mgJSON, let me know and I'll add it to the list.
 
 These apps can output mgJSON files:
 
+- [To mgJSON](https://goprotelemetryextractor.com/csv-gpx-to-mgjson/)
 - [GoPro Telemetry Extractor](https://goprotelemetryextractor.com)
 - [DJI Telemetry Overlay](https://djitelemetryoverlay.com)
 
