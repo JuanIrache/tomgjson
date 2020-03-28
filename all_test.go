@@ -55,15 +55,17 @@ func ExampleToMgjson() {
 
 func ExampleFromCSV() {
 	src, _ := ioutil.ReadFile("./sample_sources/multiple-data.csv")
-	converted, _ := FromCSV(src, 25.0)
+	converted, _ := FromCSV(src, 0)
+	sample := 5
 	fmt.Printf(
-		`The second stream is labelled as %q and its fifth sample at %f seconds is %v`,
+		`The second stream is labelled as %q and its %q at %f seconds is %v`,
 		converted.Streams[1].Label,
-		converted.Timing[5].Sub(time.Unix(0, 0)).Seconds(),
-		converted.Streams[1].Values[5],
+		converted.Streams[2].Strings[sample],
+		converted.Timing[sample].Sub(time.Unix(0, 0)).Seconds(),
+		converted.Streams[1].Values[sample],
 	)
 	//Output:
-	//The second stream is labelled as "Signed 1k Perlin" and its fifth sample at 0.500000 seconds is 74.1837892462852
+	//The second stream is labelled as "Signed 1k Perlin" and its "sample 6" at 0.500000 seconds is 74.1837892462852
 }
 
 func ExampleFromGPX() {
