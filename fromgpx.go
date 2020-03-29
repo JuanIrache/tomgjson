@@ -47,29 +47,29 @@ func angleFromCoordinate(lat1, lon1, lat2, lon2 float64) float64 {
 
 var ids = []string{
 	// Supported GPX streams
-	"lat",
-	"lon",
-	"ele",
-	"magvar",
-	"geoidheight",
+	"lat (°)",
+	"lon (°)",
+	"ele (m)",
+	"magvar (°)",
+	"geoidheight (m)",
 	"fix",
 	"sat",
 	"hdop",
 	"vdop",
 	"pdop",
-	"ageofdgpsdata",
+	"ageofdgpsdata (s)",
 	"dgpsid",
 	// Calculated streams
-	"distance2d",
-	"distance3d",
-	"verticalSpeed",
-	"speed2d",
-	"speed3d",
-	"acceleration2d",
-	"acceleration3d",
-	"verticalAcceleration",
-	"course",
-	"slope",
+	"distance2d (m)",
+	"distance3d (m)",
+	"verticalSpeed (m/s)",
+	"speed2d (m/s)",
+	"speed3d (m/s)",
+	"acceleration2d (m/s²)",
+	"acceleration3d (m/s²)",
+	"verticalAcceleration (m/s²)",
+	"course (°)",
+	"slope (°)",
 	// Additional explicit date string
 	"time",
 }
@@ -189,17 +189,17 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		t = t.In(utc)
 
 		data.Timing[i] = t
-		data.Streams[idx("lat")] = appendToFloatStream(data, trkpt.Lat, "lat")
-		data.Streams[idx("lon")] = appendToFloatStream(data, trkpt.Lon, "lon")
-		data.Streams[idx("ele")] = appendToFloatStream(data, trkpt.Ele, "ele")
-		data.Streams[idx("magvar")] = appendToFloatStream(data, trkpt.Magvar, "magvar")
-		data.Streams[idx("geoidheight")] = appendToFloatStream(data, trkpt.Geoidheight, "geoidheight")
+		data.Streams[idx("lat (°)")] = appendToFloatStream(data, trkpt.Lat, "lat (°)")
+		data.Streams[idx("lon (°)")] = appendToFloatStream(data, trkpt.Lon, "lon (°)")
+		data.Streams[idx("ele (m)")] = appendToFloatStream(data, trkpt.Ele, "ele (m)")
+		data.Streams[idx("magvar (°)")] = appendToFloatStream(data, trkpt.Magvar, "magvar (°)")
+		data.Streams[idx("geoidheight (m)")] = appendToFloatStream(data, trkpt.Geoidheight, "geoidheight (m)")
 		data.Streams[idx("fix")] = appendToFloatStream(data, trkpt.Fix, "fix")
 		data.Streams[idx("sat")] = appendToFloatStream(data, trkpt.Sat, "sat")
 		data.Streams[idx("hdop")] = appendToFloatStream(data, trkpt.Hdop, "hdop")
 		data.Streams[idx("vdop")] = appendToFloatStream(data, trkpt.Vdop, "vdop")
 		data.Streams[idx("pdop")] = appendToFloatStream(data, trkpt.Pdop, "pdop")
-		data.Streams[idx("ageofdgpsdata")] = appendToFloatStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata")
+		data.Streams[idx("ageofdgpsdata (s)")] = appendToFloatStream(data, trkpt.Ageofdgpsdata, "ageofdgpsdata (s)")
 		data.Streams[idx("dgpsid")] = appendToFloatStream(data, trkpt.Dgpsid, "dgpsid")
 
 		data.Streams[idx("time")] = appendToStringStream(data, trkpt.Time, "time")
@@ -217,8 +217,8 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 			var verticalSpeed float64
 			var verticalAcceleration float64
 			if i > 0 {
-				prevLat := data.Streams[idx("lat")].Values[i-1]
-				prevLon := data.Streams[idx("lon")].Values[i-1]
+				prevLat := data.Streams[idx("lat (°)")].Values[i-1]
+				prevLon := data.Streams[idx("lon (°)")].Values[i-1]
 				distance2d = distanceInMBetweenEarthCoordinates(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				duration := data.Timing[i].Sub(data.Timing[i-1]).Seconds()
 				//Make sure duration is not zero
@@ -227,7 +227,7 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 				acceleration2d = speed2d
 				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
 				if trkpt.Ele != nil {
-					prevEle := data.Streams[idx("ele")].Values[i-1]
+					prevEle := data.Streams[idx("ele (m)")].Values[i-1]
 					verticalDist := *trkpt.Ele - prevEle
 					slope = math.Atan2(verticalDist, distance2d)
 					slope = radiansToDegrees(slope)
@@ -238,35 +238,35 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 					verticalAcceleration = verticalSpeed
 				}
 				if i > 1 {
-					prevDistance := data.Streams[idx("distance2d")].Values[i-1]
+					prevDistance := data.Streams[idx("distance2d (m)")].Values[i-1]
 					distance2d += prevDistance
-					prevSpeed2d := data.Streams[idx("speed2d")].Values[i-1]
+					prevSpeed2d := data.Streams[idx("speed2d (m/s)")].Values[i-1]
 					speed2dChange := speed2d - prevSpeed2d
 					acceleration2d = speed2dChange / duration
 					if trkpt.Ele != nil {
-						prevDistance3d := data.Streams[idx("distance3d")].Values[i-1]
+						prevDistance3d := data.Streams[idx("distance3d (m)")].Values[i-1]
 						distance3d += prevDistance3d
-						prevSpeed3d := data.Streams[idx("speed3d")].Values[i-1]
+						prevSpeed3d := data.Streams[idx("speed3d (m/s)")].Values[i-1]
 						speed3dChange := speed3d - prevSpeed3d
 						acceleration3d = speed3dChange / duration
-						prevVerticalSpeed := data.Streams[idx("verticalSpeed")].Values[i-1]
+						prevVerticalSpeed := data.Streams[idx("verticalSpeed (m/s)")].Values[i-1]
 						verticalSpeedChange := verticalSpeed - prevVerticalSpeed
 						verticalAcceleration = verticalSpeedChange / duration
 					}
 				}
 			}
 
-			data.Streams[idx("distance2d")] = appendToFloatStream(data, &distance2d, "distance2d")
-			data.Streams[idx("speed2d")] = appendToFloatStream(data, &speed2d, "speed2d")
-			data.Streams[idx("acceleration2d")] = appendToFloatStream(data, &acceleration2d, "acceleration2d")
-			data.Streams[idx("course")] = appendToFloatStream(data, &course, "course")
+			data.Streams[idx("distance2d (m)")] = appendToFloatStream(data, &distance2d, "distance2d (m)")
+			data.Streams[idx("speed2d (m/s)")] = appendToFloatStream(data, &speed2d, "speed2d (m/s)")
+			data.Streams[idx("acceleration2d (m/s²)")] = appendToFloatStream(data, &acceleration2d, "acceleration2d (m/s²)")
+			data.Streams[idx("course (°)")] = appendToFloatStream(data, &course, "course (°)")
 			if trkpt.Ele != nil {
-				data.Streams[idx("slope")] = appendToFloatStream(data, &slope, "slope")
-				data.Streams[idx("distance3d")] = appendToFloatStream(data, &distance3d, "distance3d")
-				data.Streams[idx("speed3d")] = appendToFloatStream(data, &speed3d, "speed3d")
-				data.Streams[idx("acceleration3d")] = appendToFloatStream(data, &acceleration3d, "acceleration3d")
-				data.Streams[idx("verticalSpeed")] = appendToFloatStream(data, &verticalSpeed, "verticalSpeed")
-				data.Streams[idx("verticalAcceleration")] = appendToFloatStream(data, &verticalAcceleration, "verticalAcceleration")
+				data.Streams[idx("slope (°)")] = appendToFloatStream(data, &slope, "slope (°)")
+				data.Streams[idx("distance3d (m)")] = appendToFloatStream(data, &distance3d, "distance3d (m)")
+				data.Streams[idx("speed3d (m/s)")] = appendToFloatStream(data, &speed3d, "speed3d (m/s)")
+				data.Streams[idx("acceleration3d (m/s²)")] = appendToFloatStream(data, &acceleration3d, "acceleration3d (m/s²)")
+				data.Streams[idx("verticalSpeed (m/s)")] = appendToFloatStream(data, &verticalSpeed, "verticalSpeed (m/s)")
+				data.Streams[idx("verticalAcceleration (m/s²)")] = appendToFloatStream(data, &verticalAcceleration, "verticalAcceleration (m/s²)")
 			}
 		}
 	}
