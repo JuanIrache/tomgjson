@@ -83,5 +83,5 @@ func ExampleFromGPX() {
 		converted.Streams[8].Values[sample],
 	)
 	//Output:
-	//At 11:45:55 the position was lat: 41.389212, lon: 2.147359 and the speed2d was 3.057694
+	//At 11:45:55 the position was lat (°): 41.389212, lon (°): 2.147359 and the speed2d (m/s) was 3.057694
 }
