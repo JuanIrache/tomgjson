@@ -59,5 +59,3 @@ Please make your changes to the **dev** branch, so that automated tests can be r
 
 - Import from json and other formats
 - Enable creating static fields? Non interpolable fields? Multidimensional fields?
-
-.
