@@ -29,7 +29,7 @@ func distanceInMBetweenEarthCoordinates(lat1, lon1, lat2, lon2 float64) float64 
 	return earthRadiusM * c
 }
 
-func angleFromCoordinate(lat1, lon1, lat2, lon2 float64) float64 {
+func angleFromCoordinate(lat1, lon1, lat2, lon2, prev float64) float64 {
 
 	dLon := lon2 - lon1
 
@@ -39,6 +39,14 @@ func angleFromCoordinate(lat1, lon1, lat2, lon2 float64) float64 {
 	brng := math.Atan2(y, x)
 
 	brng = radiansToDegrees(brng)
+
+	for math.Abs(brng-prev) > 180 {
+		if math.Signbit(brng - prev) {
+			brng += 360
+		} else {
+			brng -= 360
+		}
+	}
 
 	return brng
 }
@@ -223,7 +231,8 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 				duration = math.Max(duration, 1e-9)
 				speed2d = distance2d / duration
 				acceleration2d = speed2d
-				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon)
+				prevCourse := data.Streams[idx("course (°)")].Values[i-1]
+				course = angleFromCoordinate(*trkpt.Lat, *trkpt.Lon, prevLat, prevLon, prevCourse)
 				if trkpt.Ele != nil {
 					prevEle := data.Streams[idx("ele (m)")].Values[i-1]
 					verticalDist := *trkpt.Ele - prevEle
