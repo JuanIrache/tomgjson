@@ -31,16 +31,14 @@ func distanceInMBetweenEarthCoordinates(lat1, lon1, lat2, lon2 float64) float64 
 
 func angleFromCoordinate(lat1, lon1, lat2, lon2 float64) float64 {
 
-	dLon := degreesToRadians(lon2 - lon1)
+	dLon := lon2 - lon1
 
-	y := math.Sin(dLon) * math.Cos(lat2)
-	x := math.Cos(lat1)*math.Sin(lat2) - math.Sin(lat1)*math.Cos(lat2)*math.Cos(dLon)
+	x := math.Cos(lat2) * math.Sin(dLon)
+	y := math.Cos(lat1)*math.Sin(lat2) - math.Sin(lat1)*math.Cos(lat2)*math.Cos(dLon)
 
 	brng := math.Atan2(y, x)
 
 	brng = radiansToDegrees(brng)
-	brng = math.Mod(brng+360, 360)
-	brng = 360 - brng // count degrees counter-clockwise - remove to make clockwise
 
 	return brng
 }
