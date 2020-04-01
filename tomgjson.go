@@ -1,6 +1,6 @@
 // Package tomgjson converts time based data sources to Adobe's mgJSON format for After Effects.
 //
-// Initially, this supports appropriately formatted CSV files and simple GPS files (see sample_sources).
+// Initially, this supports appropriately formatted CSV files and simple GPX files (see sample_sources).
 //
 // A live version of this app can be found here: https://goprotelemetryextractor.com/csv-gpx-to-mgjson/.
 package tomgjson
