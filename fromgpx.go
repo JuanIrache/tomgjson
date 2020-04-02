@@ -40,6 +40,8 @@ func angleFromCoordinate(lat1, lon1, lat2, lon2, prev float64) float64 {
 
 	brng = radiansToDegrees(brng)
 
+	brng = 180 - brng
+
 	for math.Abs(brng-prev) > 180 {
 		if math.Signbit(brng - prev) {
 			brng += 360
