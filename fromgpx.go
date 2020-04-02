@@ -31,26 +31,26 @@ func distanceInMBetweenEarthCoordinates(lat1, lon1, lat2, lon2 float64) float64 
 
 func angleFromCoordinate(lat1, lon1, lat2, lon2, prev float64) float64 {
 
-	dLon := lon2 - lon1
+	lat1 = degreesToRadians(lat1)
+	lon1 = degreesToRadians(lon1)
+	lat2 = degreesToRadians(lat2)
+	lon2 = degreesToRadians(lon2)
 
-	x := math.Cos(lat2) * math.Sin(dLon)
-	y := math.Cos(lat1)*math.Sin(lat2) - math.Sin(lat1)*math.Cos(lat2)*math.Cos(dLon)
+	x := math.Cos(lat2) * math.Sin(lon2-lon1)
 
-	brng := math.Atan2(y, x)
+	y := math.Cos(lat1)*math.Sin(lat2) - math.Sin(lat1)*math.Cos(lat2)*math.Cos(lon2-lon1)
 
-	brng = radiansToDegrees(brng)
+	course := radiansToDegrees(math.Atan2(x, y))
 
-	brng = 180 - brng
-
-	for math.Abs(brng-prev) > 180 {
-		if math.Signbit(brng - prev) {
-			brng += 360
+	for math.Abs(course-prev) > 180 {
+		if math.Signbit(course - prev) {
+			course += 360
 		} else {
-			brng -= 360
+			course -= 360
 		}
 	}
 
-	return brng
+	return course
 }
 
 var ids = []string{
