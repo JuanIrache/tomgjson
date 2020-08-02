@@ -31,7 +31,6 @@ f.Write(doc)
 f.Close()
 ```
 
--
 See **all_test.go** for implementation examples.
 
 ## Sample project templates
