@@ -18,7 +18,7 @@ The simplest CSV file supported is a column with numbers. When a frame rate is s
 
 ### GPX
 
-GPS tracks with time fields can be parsed. For now, only the first track and its first track segment will be read. Based on the parsed data, additional data streams can be computed (speed, acceleration, course direction, distance...).
+GPS tracks with time fields can be parsed. For now, only the first track of a file will be read. Based on the parsed data, additional data streams can be computed (speed, acceleration, course direction, distance...).
 
 ## Usage
 
