@@ -172,20 +172,25 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		return data, fmt.Errorf("Error: No GPX trkseg")
 	}
 
-	// Just reading one trkseg for now
-	if len(gpx.Trk[0].Trkseg[0].Trkpt) < 1 {
-		return data, fmt.Errorf("Error: No GPX trkpt")
+	trkpts := []Trkpt{}
+
+	for _, trkseg := range gpx.Trk[0].Trkseg {
+		trkpts = append(trkpts, trkseg.Trkpt...)
+	}
+
+	if len(trkpts) < 2 {
+		return data, fmt.Errorf("Error: Not enough GPX trkpt")
 	}
 
 	// One Stream for each of the supported trkpt and custom fields
 	data.Streams = make([]Stream, len(ids))
-	data.Timing = make([]time.Time, len(gpx.Trk[0].Trkseg[0].Trkpt))
+	data.Timing = make([]time.Time, len(trkpts))
 
 	for _, st := range data.Streams {
-		st.Values = make([]float64, len(gpx.Trk[0].Trkseg[0].Trkpt))
+		st.Values = make([]float64, len(trkpts))
 	}
 
-	for i, trkpt := range gpx.Trk[0].Trkseg[0].Trkpt {
+	for i, trkpt := range trkpts {
 		if trkpt.Time == nil {
 			return data, fmt.Errorf("Error: Missing timiing data in GPX")
 		}
