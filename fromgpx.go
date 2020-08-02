@@ -274,14 +274,12 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 			data.Streams[idx("speed2d (m/s)")] = appendToFloatStream(data, &speed2d, "speed2d (m/s)")
 			data.Streams[idx("acceleration2d (m/s²)")] = appendToFloatStream(data, &acceleration2d, "acceleration2d (m/s²)")
 			data.Streams[idx("course (°)")] = appendToFloatStream(data, &course, "course (°)")
-			if trkpt.Ele != nil {
-				data.Streams[idx("slope (°)")] = appendToFloatStream(data, &slope, "slope (°)")
-				data.Streams[idx("distance3d (m)")] = appendToFloatStream(data, &distance3d, "distance3d (m)")
-				data.Streams[idx("speed3d (m/s)")] = appendToFloatStream(data, &speed3d, "speed3d (m/s)")
-				data.Streams[idx("acceleration3d (m/s²)")] = appendToFloatStream(data, &acceleration3d, "acceleration3d (m/s²)")
-				data.Streams[idx("verticalSpeed (m/s)")] = appendToFloatStream(data, &verticalSpeed, "verticalSpeed (m/s)")
-				data.Streams[idx("verticalAcceleration (m/s²)")] = appendToFloatStream(data, &verticalAcceleration, "verticalAcceleration (m/s²)")
-			}
+			data.Streams[idx("slope (°)")] = appendToFloatStream(data, &slope, "slope (°)")
+			data.Streams[idx("distance3d (m)")] = appendToFloatStream(data, &distance3d, "distance3d (m)")
+			data.Streams[idx("speed3d (m/s)")] = appendToFloatStream(data, &speed3d, "speed3d (m/s)")
+			data.Streams[idx("acceleration3d (m/s²)")] = appendToFloatStream(data, &acceleration3d, "acceleration3d (m/s²)")
+			data.Streams[idx("verticalSpeed (m/s)")] = appendToFloatStream(data, &verticalSpeed, "verticalSpeed (m/s)")
+			data.Streams[idx("verticalAcceleration (m/s²)")] = appendToFloatStream(data, &verticalAcceleration, "verticalAcceleration (m/s²)")
 		}
 	}
 
