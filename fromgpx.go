@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 	"time"
+	"strconv"
 )
 
 func degreesToRadians(degrees float64) float64 {
@@ -113,6 +114,14 @@ func appendToStringStream(data FormattedData, s *string, n string) Stream {
 	return st
 }
 
+func stringFirstNumber(s string) float64 {
+	n, err := strconv.ParseFloat(s[:1], 64)
+	if err != nil {
+		return 0.0
+	}
+	return n
+}
+
 // FromGPX formats a compatible GPX file as a struct ready for mgJSON and returns it. Or returns an error
 // The optional extra bool will compute additional streams based on the existing data
 func FromGPX(src []byte, extra bool) (FormattedData, error) {
@@ -132,7 +141,7 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		Ele           *float64 `xml:"ele"`
 		Magvar        *float64 `xml:"magvar"`
 		Geoidheight   *float64 `xml:"geoidheight"`
-		Fix           *float64 `xml:"fix"`
+		Fix           *string  `xml:"fix"`
 		Sat           *float64 `xml:"sat"`
 		Hdop          *float64 `xml:"hdop"`
 		Vdop          *float64 `xml:"vdop"`
@@ -207,7 +216,8 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		data.Streams[idx("ele (m)")] = appendToFloatStream(data, trkpt.Ele, "ele (m)")
 		data.Streams[idx("magvar (°)")] = appendToFloatStream(data, trkpt.Magvar, "magvar (°)")
 		data.Streams[idx("geoidheight (m)")] = appendToFloatStream(data, trkpt.Geoidheight, "geoidheight (m)")
-		data.Streams[idx("fix")] = appendToFloatStream(data, trkpt.Fix, "fix")
+		fixNum := stringFirstNumber(*trkpt.Fix)
+		data.Streams[idx("fix")] = appendToFloatStream(data, &fixNum, "fix")
 		data.Streams[idx("sat")] = appendToFloatStream(data, trkpt.Sat, "sat")
 		data.Streams[idx("hdop")] = appendToFloatStream(data, trkpt.Hdop, "hdop")
 		data.Streams[idx("vdop")] = appendToFloatStream(data, trkpt.Vdop, "vdop")
