@@ -114,12 +114,12 @@ func appendToStringStream(data FormattedData, s *string, n string) Stream {
 	return st
 }
 
-func stringFirstNumber(s string) float64 {
+func stringFirstNumber(s string) (float64, bool) {
 	n, err := strconv.ParseFloat(s[:1], 64)
 	if err != nil {
-		return 0.0
+		return 0, false
 	}
-	return n
+	return n, true
 }
 
 // FromGPX formats a compatible GPX file as a struct ready for mgJSON and returns it. Or returns an error
@@ -216,8 +216,12 @@ func FromGPX(src []byte, extra bool) (FormattedData, error) {
 		data.Streams[idx("ele (m)")] = appendToFloatStream(data, trkpt.Ele, "ele (m)")
 		data.Streams[idx("magvar (°)")] = appendToFloatStream(data, trkpt.Magvar, "magvar (°)")
 		data.Streams[idx("geoidheight (m)")] = appendToFloatStream(data, trkpt.Geoidheight, "geoidheight (m)")
-		fixNum := stringFirstNumber(*trkpt.Fix)
-		data.Streams[idx("fix")] = appendToFloatStream(data, &fixNum, "fix")
+		if trkpt.Fix != nil {
+			fixNum, validFixNum := stringFirstNumber(*trkpt.Fix)
+			if validFixNum {
+				data.Streams[idx("fix")] = appendToFloatStream(data, &fixNum, "fix")
+			}
+		}
 		data.Streams[idx("sat")] = appendToFloatStream(data, trkpt.Sat, "sat")
 		data.Streams[idx("hdop")] = appendToFloatStream(data, trkpt.Hdop, "hdop")
 		data.Streams[idx("vdop")] = appendToFloatStream(data, trkpt.Vdop, "vdop")
