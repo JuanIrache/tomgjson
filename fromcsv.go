@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"bytes"
 )
 
 // Returns valid streams with values or strings
@@ -55,12 +56,20 @@ func floatsToTimes(xf []float64) []time.Time {
 	return xt
 }
 
+func normalizeNewlines(d []byte) []byte {
+	// replace CR LF \r\n (windows) with LF \n (unix)
+	d = bytes.Replace(d, []byte{13, 10}, []byte{10}, -1)
+	// replace CF \r (mac) with LF \n (unix)
+	d = bytes.Replace(d, []byte{13}, []byte{10}, -1)
+	return d
+}
+
 // FromCSV formats a compatible CSV as a FormattedData struct ready for mgJSON and returns it. Or returns an error
 // The optional frame rate (fr) is used if timing data is not present
 func FromCSV(src []byte, fr float64) (FormattedData, error) {
 	var data FormattedData
 
-	r := csv.NewReader(strings.NewReader(string(src)))
+	r := csv.NewReader(strings.NewReader(string(normalizeNewlines(src))))
 	lines, err := r.ReadAll()
 	if err != nil {
 		return data, err
