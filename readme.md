@@ -59,3 +59,4 @@ Please make your changes to the **dev** branch, so that automated tests can be r
 
 - Import from json and other formats
 - Enable creating static fields? Non interpolable fields? Multidimensional fields?
+- Fully understand legal min and max. It seems if extreme values are used and their JSON formatting looks as an integer, AE limits the range of numbers it can display. For now it seems safer to just reuse the occuring min and max
