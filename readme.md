@@ -53,7 +53,7 @@ These apps can output mgJSON files:
 
 ## Contribution
 
-Please make your changes to the **dev** branch, so that automated tests can be run before merging to **master**. Also, if possible, provide tests for new functionality.
+Please, make your changes to the **dev** branch, so that automated tests can be run before merging to **master**. Also, if possible, provide tests for new functionality.
 
 ## To-Do
 
