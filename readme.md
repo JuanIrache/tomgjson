@@ -35,7 +35,7 @@ See **all_test.go** for implementation examples.
 
 ## Sample project templates
 
-You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the **Lite templates**.
+You can find sample After Effects projects that use mgJSON files on the [GoPro Telemetry Extractor page](https://goprotelemetryextractor.com). Look for the **Lite/Trial templates**.
 
 ## Videos made with mgJSON
 
