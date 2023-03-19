@@ -208,7 +208,7 @@ func ToMgjson(sd FormattedData, creator string) ([]byte, error) {
 					},
 					Range: mRange{
 						Occuring: minmax{min, max},
-						Legal:    minmax{-largestMgjsonNum, largestMgjsonNum},
+						Legal:    minmax{min, max},
 					},
 				},
 			}
